@@ -1,0 +1,4324 @@
+@prefix f1: <http://www.dei.unipd.it/database2/Formula1Ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+f1:driver1 a f1:Driver ;
+    f1:driverCode "HAM"^^xsd:string ;
+    f1:driverNumber "44"^^xsd:int ;
+    f1:firstName "Lewis"^^xsd:string ;
+    f1:lastName "Hamilton"^^xsd:string .
+
+f1:driver10 a f1:Driver ;
+    f1:driverCode "GLO"^^xsd:string ;
+    f1:firstName "Timo"^^xsd:string ;
+    f1:lastName "Glock"^^xsd:string .
+
+f1:driver100 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Érik"^^xsd:string ;
+    f1:lastName "Comas"^^xsd:string .
+
+f1:driver101 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Brabham"^^xsd:string .
+
+f1:driver102 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ayrton"^^xsd:string ;
+    f1:lastName "Senna"^^xsd:string .
+
+f1:driver103 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Éric"^^xsd:string ;
+    f1:lastName "Bernard"^^xsd:string .
+
+f1:driver104 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Christian"^^xsd:string ;
+    f1:lastName "Fittipaldi"^^xsd:string .
+
+f1:driver105 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Michele"^^xsd:string ;
+    f1:lastName "Alboreto"^^xsd:string .
+
+f1:driver106 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Olivier"^^xsd:string ;
+    f1:lastName "Beretta"^^xsd:string .
+
+f1:driver107 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roland"^^xsd:string ;
+    f1:lastName "Ratzenberger"^^xsd:string .
+
+f1:driver108 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "Belmondo"^^xsd:string .
+
+f1:driver109 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jyrki"^^xsd:string ;
+    f1:lastName "Järvilehto"^^xsd:string .
+
+f1:driver11 a f1:Driver ;
+    f1:driverCode "SAT"^^xsd:string ;
+    f1:firstName "Takuma"^^xsd:string ;
+    f1:lastName "Sato"^^xsd:string .
+
+f1:driver110 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Andrea"^^xsd:string ;
+    f1:lastName "de Cesaris"^^xsd:string .
+
+f1:driver111 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean-Marc"^^xsd:string ;
+    f1:lastName "Gounon"^^xsd:string .
+
+f1:driver112 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Philippe"^^xsd:string ;
+    f1:lastName "Alliot"^^xsd:string .
+
+f1:driver113 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Philippe"^^xsd:string ;
+    f1:lastName "Adams"^^xsd:string .
+
+f1:driver114 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Yannick"^^xsd:string ;
+    f1:lastName "Dalmas"^^xsd:string .
+
+f1:driver115 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hideki"^^xsd:string ;
+    f1:lastName "Noda"^^xsd:string .
+
+f1:driver116 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Franck"^^xsd:string ;
+    f1:lastName "Lagorce"^^xsd:string .
+
+f1:driver117 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alain"^^xsd:string ;
+    f1:lastName "Prost"^^xsd:string .
+
+f1:driver118 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Derek"^^xsd:string ;
+    f1:lastName "Warwick"^^xsd:string .
+
+f1:driver119 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Riccardo"^^xsd:string ;
+    f1:lastName "Patrese"^^xsd:string .
+
+f1:driver12 a f1:Driver ;
+    f1:driverCode "PIQ"^^xsd:string ;
+    f1:firstName "Nelson"^^xsd:string ;
+    f1:lastName "Piquet Jr."^^xsd:string .
+
+f1:driver120 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Fabrizio"^^xsd:string ;
+    f1:lastName "Barbazza"^^xsd:string .
+
+f1:driver121 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Michael"^^xsd:string ;
+    f1:lastName "Andretti"^^xsd:string .
+
+f1:driver122 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ivan"^^xsd:string ;
+    f1:lastName "Capelli"^^xsd:string .
+
+f1:driver123 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Thierry"^^xsd:string ;
+    f1:lastName "Boutsen"^^xsd:string .
+
+f1:driver124 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Marco"^^xsd:string ;
+    f1:lastName "Apicella"^^xsd:string .
+
+f1:driver125 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Emanuele"^^xsd:string ;
+    f1:lastName "Naspetti"^^xsd:string .
+
+f1:driver126 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Toshio"^^xsd:string ;
+    f1:lastName "Suzuki"^^xsd:string .
+
+f1:driver127 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Maurício"^^xsd:string ;
+    f1:lastName "Gugelmin"^^xsd:string .
+
+f1:driver128 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eric"^^xsd:string ;
+    f1:lastName "van de Poele"^^xsd:string .
+
+f1:driver129 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Olivier"^^xsd:string ;
+    f1:lastName "Grouillard"^^xsd:string .
+
+f1:driver13 a f1:Driver ;
+    f1:driverCode "MAS"^^xsd:string ;
+    f1:driverNumber "19"^^xsd:int ;
+    f1:firstName "Felipe"^^xsd:string ;
+    f1:lastName "Massa"^^xsd:string .
+
+f1:driver130 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Andrea"^^xsd:string ;
+    f1:lastName "Chiesa"^^xsd:string .
+
+f1:driver131 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Stefano"^^xsd:string ;
+    f1:lastName "Modena"^^xsd:string .
+
+f1:driver132 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giovanna"^^xsd:string ;
+    f1:lastName "Amati"^^xsd:string .
+
+f1:driver133 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alex"^^xsd:string ;
+    f1:lastName "Caffi"^^xsd:string .
+
+f1:driver134 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Enrico"^^xsd:string ;
+    f1:lastName "Bertaggia"^^xsd:string .
+
+f1:driver135 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Perry"^^xsd:string ;
+    f1:lastName "McCarthy"^^xsd:string .
+
+f1:driver136 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jan"^^xsd:string ;
+    f1:lastName "Lammers"^^xsd:string .
+
+f1:driver137 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nelson"^^xsd:string ;
+    f1:lastName "Piquet"^^xsd:string .
+
+f1:driver138 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Satoru"^^xsd:string ;
+    f1:lastName "Nakajima"^^xsd:string .
+
+f1:driver139 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Emanuele"^^xsd:string ;
+    f1:lastName "Pirro"^^xsd:string .
+
+f1:driver14 a f1:Driver ;
+    f1:driverCode "COU"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Coulthard"^^xsd:string .
+
+f1:driver140 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Stefan"^^xsd:string ;
+    f1:lastName "Johansson"^^xsd:string .
+
+f1:driver141 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Julian"^^xsd:string ;
+    f1:lastName "Bailey"^^xsd:string .
+
+f1:driver142 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pedro"^^xsd:string ;
+    f1:lastName "Chaves"^^xsd:string .
+
+f1:driver143 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Michael"^^xsd:string ;
+    f1:lastName "Bartels"^^xsd:string .
+
+f1:driver144 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Naoki"^^xsd:string ;
+    f1:lastName "Hattori"^^xsd:string .
+
+f1:driver145 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alessandro"^^xsd:string ;
+    f1:lastName "Nannini"^^xsd:string .
+
+f1:driver146 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bernd"^^xsd:string ;
+    f1:lastName "Schneider"^^xsd:string .
+
+f1:driver147 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paolo"^^xsd:string ;
+    f1:lastName "Barilla"^^xsd:string .
+
+f1:driver148 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gregor"^^xsd:string ;
+    f1:lastName "Foitek"^^xsd:string .
+
+f1:driver149 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Claudio"^^xsd:string ;
+    f1:lastName "Langes"^^xsd:string .
+
+f1:driver15 a f1:Driver ;
+    f1:driverCode "TRU"^^xsd:string ;
+    f1:firstName "Jarno"^^xsd:string ;
+    f1:lastName "Trulli"^^xsd:string .
+
+f1:driver150 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gary"^^xsd:string ;
+    f1:lastName "Brabham"^^xsd:string .
+
+f1:driver151 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Martin"^^xsd:string ;
+    f1:lastName "Donnelly"^^xsd:string .
+
+f1:driver152 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bruno"^^xsd:string ;
+    f1:lastName "Giacomelli"^^xsd:string .
+
+f1:driver153 a f1:Driver ;
+    f1:driverCode "ALG"^^xsd:string ;
+    f1:firstName "Jaime"^^xsd:string ;
+    f1:lastName "Alguersuari"^^xsd:string .
+
+f1:driver154 a f1:Driver ;
+    f1:driverCode "GRO"^^xsd:string ;
+    f1:driverNumber "8"^^xsd:int ;
+    f1:firstName "Romain"^^xsd:string ;
+    f1:lastName "Grosjean"^^xsd:string .
+
+f1:driver155 a f1:Driver ;
+    f1:driverCode "KOB"^^xsd:string ;
+    f1:driverNumber "10"^^xsd:int ;
+    f1:firstName "Kamui"^^xsd:string ;
+    f1:lastName "Kobayashi"^^xsd:string .
+
+f1:driver156 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jonathan"^^xsd:string ;
+    f1:lastName "Palmer"^^xsd:string .
+
+f1:driver157 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Christian"^^xsd:string ;
+    f1:lastName "Danner"^^xsd:string .
+
+f1:driver158 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eddie"^^xsd:string ;
+    f1:lastName "Cheever"^^xsd:string .
+
+f1:driver159 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luis"^^xsd:string ;
+    f1:lastName "Pérez-Sala"^^xsd:string .
+
+f1:driver16 a f1:Driver ;
+    f1:driverCode "SUT"^^xsd:string ;
+    f1:driverNumber "99"^^xsd:int ;
+    f1:firstName "Adrian"^^xsd:string ;
+    f1:lastName "Sutil"^^xsd:string .
+
+f1:driver160 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Piercarlo"^^xsd:string ;
+    f1:lastName "Ghinzani"^^xsd:string .
+
+f1:driver161 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Volker"^^xsd:string ;
+    f1:lastName "Weidler"^^xsd:string .
+
+f1:driver162 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pierre-Henri"^^xsd:string ;
+    f1:lastName "Raphanel"^^xsd:string .
+
+f1:driver163 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "René"^^xsd:string ;
+    f1:lastName "Arnoux"^^xsd:string .
+
+f1:driver164 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Joachim"^^xsd:string ;
+    f1:lastName "Winkelhock"^^xsd:string .
+
+f1:driver165 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Oscar"^^xsd:string ;
+    f1:lastName "Larrauri"^^xsd:string .
+
+f1:driver166 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Philippe"^^xsd:string ;
+    f1:lastName "Streiff"^^xsd:string .
+
+f1:driver167 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Adrián"^^xsd:string ;
+    f1:lastName "Campos"^^xsd:string .
+
+f1:driver168 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean-Louis"^^xsd:string ;
+    f1:lastName "Schlesser"^^xsd:string .
+
+f1:driver169 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pascal"^^xsd:string ;
+    f1:lastName "Fabre"^^xsd:string .
+
+f1:driver17 a f1:Driver ;
+    f1:driverCode "WEB"^^xsd:string ;
+    f1:firstName "Mark"^^xsd:string ;
+    f1:lastName "Webber"^^xsd:string .
+
+f1:driver170 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Teo"^^xsd:string ;
+    f1:lastName "Fabi"^^xsd:string .
+
+f1:driver171 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Franco"^^xsd:string ;
+    f1:lastName "Forini"^^xsd:string .
+
+f1:driver172 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jacques"^^xsd:string ;
+    f1:lastName "Laffite"^^xsd:string .
+
+f1:driver173 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Elio"^^xsd:string ;
+    f1:lastName "de Angelis"^^xsd:string .
+
+f1:driver174 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Dumfries"^^xsd:string .
+
+f1:driver175 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Patrick"^^xsd:string ;
+    f1:lastName "Tambay"^^xsd:string .
+
+f1:driver176 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Marc"^^xsd:string ;
+    f1:lastName "Surer"^^xsd:string .
+
+f1:driver177 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Keke"^^xsd:string ;
+    f1:lastName "Rosberg"^^xsd:string .
+
+f1:driver178 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alan"^^xsd:string ;
+    f1:lastName "Jones"^^xsd:string .
+
+f1:driver179 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Huub"^^xsd:string ;
+    f1:lastName "Rothengatter"^^xsd:string .
+
+f1:driver18 a f1:Driver ;
+    f1:driverCode "BUT"^^xsd:string ;
+    f1:driverNumber "22"^^xsd:int ;
+    f1:firstName "Jenson"^^xsd:string ;
+    f1:lastName "Button"^^xsd:string .
+
+f1:driver180 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Allen"^^xsd:string ;
+    f1:lastName "Berg"^^xsd:string .
+
+f1:driver181 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Manfred"^^xsd:string ;
+    f1:lastName "Winkelhock"^^xsd:string .
+
+f1:driver182 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Niki"^^xsd:string ;
+    f1:lastName "Lauda"^^xsd:string .
+
+f1:driver183 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "François"^^xsd:string ;
+    f1:lastName "Hesnault"^^xsd:string .
+
+f1:driver184 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mauro"^^xsd:string ;
+    f1:lastName "Baldi"^^xsd:string .
+
+f1:driver185 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Stefan"^^xsd:string ;
+    f1:lastName "Bellof"^^xsd:string .
+
+f1:driver186 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kenny"^^xsd:string ;
+    f1:lastName "Acheson"^^xsd:string .
+
+f1:driver187 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Watson"^^xsd:string .
+
+f1:driver188 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Cecotto"^^xsd:string .
+
+f1:driver189 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jo"^^xsd:string ;
+    f1:lastName "Gartner"^^xsd:string .
+
+f1:driver19 a f1:Driver ;
+    f1:driverCode "DAV"^^xsd:string ;
+    f1:firstName "Anthony"^^xsd:string ;
+    f1:lastName "Davidson"^^xsd:string .
+
+f1:driver190 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Corrado"^^xsd:string ;
+    f1:lastName "Fabi"^^xsd:string .
+
+f1:driver191 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Thackwell"^^xsd:string .
+
+f1:driver192 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chico"^^xsd:string ;
+    f1:lastName "Serra"^^xsd:string .
+
+f1:driver193 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Danny"^^xsd:string ;
+    f1:lastName "Sullivan"^^xsd:string .
+
+f1:driver194 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eliseo"^^xsd:string ;
+    f1:lastName "Salazar"^^xsd:string .
+
+f1:driver195 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roberto"^^xsd:string ;
+    f1:lastName "Guerrero"^^xsd:string .
+
+f1:driver196 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Raul"^^xsd:string ;
+    f1:lastName "Boesel"^^xsd:string .
+
+f1:driver197 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean-Pierre"^^xsd:string ;
+    f1:lastName "Jarier"^^xsd:string .
+
+f1:driver198 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jacques"^^xsd:string ;
+    f1:lastName "Villeneuve Sr."^^xsd:string .
+
+f1:driver199 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carlos"^^xsd:string ;
+    f1:lastName "Reutemann"^^xsd:string .
+
+f1:driver2 a f1:Driver ;
+    f1:driverCode "HEI"^^xsd:string ;
+    f1:firstName "Nick"^^xsd:string ;
+    f1:lastName "Heidfeld"^^xsd:string .
+
+f1:driver20 a f1:Driver ;
+    f1:driverCode "VET"^^xsd:string ;
+    f1:driverNumber "5"^^xsd:int ;
+    f1:firstName "Sebastian"^^xsd:string ;
+    f1:lastName "Vettel"^^xsd:string .
+
+f1:driver200 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jochen"^^xsd:string ;
+    f1:lastName "Mass"^^xsd:string .
+
+f1:driver201 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Slim"^^xsd:string ;
+    f1:lastName "Borgudd"^^xsd:string .
+
+f1:driver202 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Didier"^^xsd:string ;
+    f1:lastName "Pironi"^^xsd:string .
+
+f1:driver203 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gilles"^^xsd:string ;
+    f1:lastName "Villeneuve"^^xsd:string .
+
+f1:driver204 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Riccardo"^^xsd:string ;
+    f1:lastName "Paletti"^^xsd:string .
+
+f1:driver205 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brian"^^xsd:string ;
+    f1:lastName "Henton"^^xsd:string .
+
+f1:driver206 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Derek"^^xsd:string ;
+    f1:lastName "Daly"^^xsd:string .
+
+f1:driver207 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mario"^^xsd:string ;
+    f1:lastName "Andretti"^^xsd:string .
+
+f1:driver208 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Emilio"^^xsd:string ;
+    f1:lastName "de Villota"^^xsd:string .
+
+f1:driver209 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Geoff"^^xsd:string ;
+    f1:lastName "Lees"^^xsd:string .
+
+f1:driver21 a f1:Driver ;
+    f1:driverCode "FIS"^^xsd:string ;
+    f1:firstName "Giancarlo"^^xsd:string ;
+    f1:lastName "Fisichella"^^xsd:string .
+
+f1:driver210 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tommy"^^xsd:string ;
+    f1:lastName "Byrne"^^xsd:string .
+
+f1:driver211 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rupert"^^xsd:string ;
+    f1:lastName "Keegan"^^xsd:string .
+
+f1:driver212 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hector"^^xsd:string ;
+    f1:lastName "Rebaque"^^xsd:string .
+
+f1:driver213 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Beppe"^^xsd:string ;
+    f1:lastName "Gabbiani"^^xsd:string .
+
+f1:driver214 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kevin"^^xsd:string ;
+    f1:lastName "Cogan"^^xsd:string .
+
+f1:driver215 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Miguel Ángel"^^xsd:string ;
+    f1:lastName "Guerra"^^xsd:string .
+
+f1:driver216 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Siegfried"^^xsd:string ;
+    f1:lastName "Stohr"^^xsd:string .
+
+f1:driver217 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ricardo"^^xsd:string ;
+    f1:lastName "Zunino"^^xsd:string .
+
+f1:driver218 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ricardo"^^xsd:string ;
+    f1:lastName "Londoño"^^xsd:string .
+
+f1:driver219 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean-Pierre"^^xsd:string ;
+    f1:lastName "Jabouille"^^xsd:string .
+
+f1:driver22 a f1:Driver ;
+    f1:driverCode "BAR"^^xsd:string ;
+    f1:firstName "Rubens"^^xsd:string ;
+    f1:lastName "Barrichello"^^xsd:string .
+
+f1:driver220 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giorgio"^^xsd:string ;
+    f1:lastName "Francia"^^xsd:string .
+
+f1:driver221 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Patrick"^^xsd:string ;
+    f1:lastName "Depailler"^^xsd:string .
+
+f1:driver222 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jody"^^xsd:string ;
+    f1:lastName "Scheckter"^^xsd:string .
+
+f1:driver223 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Clay"^^xsd:string ;
+    f1:lastName "Regazzoni"^^xsd:string .
+
+f1:driver224 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Emerson"^^xsd:string ;
+    f1:lastName "Fittipaldi"^^xsd:string .
+
+f1:driver225 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dave"^^xsd:string ;
+    f1:lastName "Kennedy"^^xsd:string .
+
+f1:driver226 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Stephen"^^xsd:string ;
+    f1:lastName "South"^^xsd:string .
+
+f1:driver227 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tiff"^^xsd:string ;
+    f1:lastName "Needell"^^xsd:string .
+
+f1:driver228 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Desiré"^^xsd:string ;
+    f1:lastName "Wilson"^^xsd:string .
+
+f1:driver229 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Harald"^^xsd:string ;
+    f1:lastName "Ertl"^^xsd:string .
+
+f1:driver23 a f1:Driver ;
+    f1:driverCode "SCH"^^xsd:string ;
+    f1:firstName "Ralf"^^xsd:string ;
+    f1:lastName "Schumacher"^^xsd:string .
+
+f1:driver230 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Vittorio"^^xsd:string ;
+    f1:lastName "Brambilla"^^xsd:string .
+
+f1:driver231 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "James"^^xsd:string ;
+    f1:lastName "Hunt"^^xsd:string .
+
+f1:driver232 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Arturo"^^xsd:string ;
+    f1:lastName "Merzario"^^xsd:string .
+
+f1:driver233 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hans-Joachim"^^xsd:string ;
+    f1:lastName "Stuck"^^xsd:string .
+
+f1:driver234 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gianfranco"^^xsd:string ;
+    f1:lastName "Brancatelli"^^xsd:string .
+
+f1:driver235 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jacky"^^xsd:string ;
+    f1:lastName "Ickx"^^xsd:string .
+
+f1:driver236 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Patrick"^^xsd:string ;
+    f1:lastName "Gaillard"^^xsd:string .
+
+f1:driver237 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alex"^^xsd:string ;
+    f1:lastName "Ribeiro"^^xsd:string .
+
+f1:driver238 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ronnie"^^xsd:string ;
+    f1:lastName "Peterson"^^xsd:string .
+
+f1:driver239 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brett"^^xsd:string ;
+    f1:lastName "Lunger"^^xsd:string .
+
+f1:driver24 a f1:Driver ;
+    f1:driverCode "LIU"^^xsd:string ;
+    f1:firstName "Vitantonio"^^xsd:string ;
+    f1:lastName "Liuzzi"^^xsd:string .
+
+f1:driver240 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Danny"^^xsd:string ;
+    f1:lastName "Ongais"^^xsd:string .
+
+f1:driver241 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Lamberto"^^xsd:string ;
+    f1:lastName "Leoni"^^xsd:string .
+
+f1:driver242 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Divina"^^xsd:string ;
+    f1:lastName "Galica"^^xsd:string .
+
+f1:driver243 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rolf"^^xsd:string ;
+    f1:lastName "Stommelen"^^xsd:string .
+
+f1:driver244 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alberto"^^xsd:string ;
+    f1:lastName "Colombo"^^xsd:string .
+
+f1:driver245 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Trimmer"^^xsd:string .
+
+f1:driver246 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hans"^^xsd:string ;
+    f1:lastName "Binder"^^xsd:string .
+
+f1:driver247 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Michael"^^xsd:string ;
+    f1:lastName "Bleekemolen"^^xsd:string .
+
+f1:driver248 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carlo"^^xsd:string ;
+    f1:lastName "Franchi"^^xsd:string .
+
+f1:driver249 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bobby"^^xsd:string ;
+    f1:lastName "Rahal"^^xsd:string .
+
+f1:driver25 a f1:Driver ;
+    f1:driverCode "WUR"^^xsd:string ;
+    f1:firstName "Alexander"^^xsd:string ;
+    f1:lastName "Wurz"^^xsd:string .
+
+f1:driver250 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carlos"^^xsd:string ;
+    f1:lastName "Pace"^^xsd:string .
+
+f1:driver251 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ian"^^xsd:string ;
+    f1:lastName "Scheckter"^^xsd:string .
+
+f1:driver252 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tom"^^xsd:string ;
+    f1:lastName "Pryce"^^xsd:string .
+
+f1:driver253 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ingo"^^xsd:string ;
+    f1:lastName "Hoffmann"^^xsd:string .
+
+f1:driver254 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Renzo"^^xsd:string ;
+    f1:lastName "Zorzi"^^xsd:string .
+
+f1:driver255 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gunnar"^^xsd:string ;
+    f1:lastName "Nilsson"^^xsd:string .
+
+f1:driver256 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Larry"^^xsd:string ;
+    f1:lastName "Perkins"^^xsd:string .
+
+f1:driver257 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Boy"^^xsd:string ;
+    f1:lastName "Lunger"^^xsd:string .
+
+f1:driver258 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Patrick"^^xsd:string ;
+    f1:lastName "Nève"^^xsd:string .
+
+f1:driver259 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Purley"^^xsd:string .
+
+f1:driver26 a f1:Driver ;
+    f1:driverCode "SPE"^^xsd:string ;
+    f1:firstName "Scott"^^xsd:string ;
+    f1:lastName "Speed"^^xsd:string .
+
+f1:driver260 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Conny"^^xsd:string ;
+    f1:lastName "Andersson"^^xsd:string .
+
+f1:driver261 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bernard"^^xsd:string ;
+    f1:lastName "de Dryver"^^xsd:string .
+
+f1:driver262 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jackie"^^xsd:string ;
+    f1:lastName "Oliver"^^xsd:string .
+
+f1:driver263 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mikko"^^xsd:string ;
+    f1:lastName "Kozarowitzky"^^xsd:string .
+
+f1:driver264 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Andy"^^xsd:string ;
+    f1:lastName "Sutcliffe"^^xsd:string .
+
+f1:driver265 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Guy"^^xsd:string ;
+    f1:lastName "Edwards"^^xsd:string .
+
+f1:driver266 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brian"^^xsd:string ;
+    f1:lastName "McGuire"^^xsd:string .
+
+f1:driver267 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Vern"^^xsd:string ;
+    f1:lastName "Schuppan"^^xsd:string .
+
+f1:driver268 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hans"^^xsd:string ;
+    f1:lastName "Heyer"^^xsd:string .
+
+f1:driver269 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Teddy"^^xsd:string ;
+    f1:lastName "Pilette"^^xsd:string .
+
+f1:driver27 a f1:Driver ;
+    f1:driverCode "ALB"^^xsd:string ;
+    f1:firstName "Christijan"^^xsd:string ;
+    f1:lastName "Albers"^^xsd:string .
+
+f1:driver270 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ian"^^xsd:string ;
+    f1:lastName "Ashley"^^xsd:string .
+
+f1:driver271 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Loris"^^xsd:string ;
+    f1:lastName "Kessel"^^xsd:string .
+
+f1:driver272 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kunimitsu"^^xsd:string ;
+    f1:lastName "Takahashi"^^xsd:string .
+
+f1:driver273 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kazuyoshi"^^xsd:string ;
+    f1:lastName "Hoshino"^^xsd:string .
+
+f1:driver274 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Noritake"^^xsd:string ;
+    f1:lastName "Takahara"^^xsd:string .
+
+f1:driver275 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Lella"^^xsd:string ;
+    f1:lastName "Lombardi"^^xsd:string .
+
+f1:driver276 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Evans"^^xsd:string .
+
+f1:driver277 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Michel"^^xsd:string ;
+    f1:lastName "Leclère"^^xsd:string .
+
+f1:driver278 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chris"^^xsd:string ;
+    f1:lastName "Amon"^^xsd:string .
+
+f1:driver279 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Emilio"^^xsd:string ;
+    f1:lastName "Zapico"^^xsd:string .
+
+f1:driver28 a f1:Driver ;
+    f1:driverCode "WIN"^^xsd:string ;
+    f1:firstName "Markus"^^xsd:string ;
+    f1:lastName "Winkelhock"^^xsd:string .
+
+f1:driver280 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Henri"^^xsd:string ;
+    f1:lastName "Pescarolo"^^xsd:string .
+
+f1:driver281 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jac"^^xsd:string ;
+    f1:lastName "Nelleman"^^xsd:string .
+
+f1:driver282 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Damien"^^xsd:string ;
+    f1:lastName "Magee"^^xsd:string .
+
+f1:driver283 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Wilds"^^xsd:string .
+
+f1:driver284 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alessandro"^^xsd:string ;
+    f1:lastName "Pesenti-Rossi"^^xsd:string .
+
+f1:driver285 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Otto"^^xsd:string ;
+    f1:lastName "Stuppacher"^^xsd:string .
+
+f1:driver286 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Warwick"^^xsd:string ;
+    f1:lastName "Brown"^^xsd:string .
+
+f1:driver287 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Masahiro"^^xsd:string ;
+    f1:lastName "Hasemi"^^xsd:string .
+
+f1:driver288 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mark"^^xsd:string ;
+    f1:lastName "Donohue"^^xsd:string .
+
+f1:driver289 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Graham"^^xsd:string ;
+    f1:lastName "Hill"^^xsd:string .
+
+f1:driver29 a f1:Driver ;
+    f1:driverCode "YAM"^^xsd:string ;
+    f1:firstName "Sakon"^^xsd:string ;
+    f1:lastName "Yamamoto"^^xsd:string .
+
+f1:driver290 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Wilson"^^xsd:string ;
+    f1:lastName "Fittipaldi"^^xsd:string .
+
+f1:driver291 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Guy"^^xsd:string ;
+    f1:lastName "Tunmer"^^xsd:string .
+
+f1:driver292 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eddie"^^xsd:string ;
+    f1:lastName "Keizan"^^xsd:string .
+
+f1:driver293 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dave"^^xsd:string ;
+    f1:lastName "Charlton"^^xsd:string .
+
+f1:driver294 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Brise"^^xsd:string .
+
+f1:driver295 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roelof"^^xsd:string ;
+    f1:lastName "Wunderink"^^xsd:string .
+
+f1:driver296 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "François"^^xsd:string ;
+    f1:lastName "Migault"^^xsd:string .
+
+f1:driver297 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Torsten"^^xsd:string ;
+    f1:lastName "Palm"^^xsd:string .
+
+f1:driver298 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gijs"^^xsd:string ;
+    f1:lastName "van Lennep"^^xsd:string .
+
+f1:driver299 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hiroshi"^^xsd:string ;
+    f1:lastName "Fushida"^^xsd:string .
+
+f1:driver3 a f1:Driver ;
+    f1:driverCode "ROS"^^xsd:string ;
+    f1:driverNumber "6"^^xsd:int ;
+    f1:firstName "Nico"^^xsd:string ;
+    f1:lastName "Rosberg"^^xsd:string .
+
+f1:driver30 a f1:Driver ;
+    f1:driverCode "MSC"^^xsd:string ;
+    f1:firstName "Michael"^^xsd:string ;
+    f1:lastName "Schumacher"^^xsd:string .
+
+f1:driver300 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Nicholson"^^xsd:string .
+
+f1:driver301 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dave"^^xsd:string ;
+    f1:lastName "Morgan"^^xsd:string .
+
+f1:driver302 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jim"^^xsd:string ;
+    f1:lastName "Crawford"^^xsd:string .
+
+f1:driver303 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jo"^^xsd:string ;
+    f1:lastName "Vonlanthen"^^xsd:string .
+
+f1:driver304 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Denny"^^xsd:string ;
+    f1:lastName "Hulme"^^xsd:string .
+
+f1:driver305 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Hailwood"^^xsd:string .
+
+f1:driver306 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean-Pierre"^^xsd:string ;
+    f1:lastName "Beltoise"^^xsd:string .
+
+f1:driver307 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Howden"^^xsd:string ;
+    f1:lastName "Ganley"^^xsd:string .
+
+f1:driver308 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Richard"^^xsd:string ;
+    f1:lastName "Robarts"^^xsd:string .
+
+f1:driver309 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Revson"^^xsd:string .
+
+f1:driver31 a f1:Driver ;
+    f1:driverCode "MON"^^xsd:string ;
+    f1:firstName "Juan"^^xsd:string ;
+    f1:lastName "Pablo Montoya"^^xsd:string .
+
+f1:driver310 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paddy"^^xsd:string ;
+    f1:lastName "Driver"^^xsd:string .
+
+f1:driver311 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tom"^^xsd:string ;
+    f1:lastName "Belsø"^^xsd:string .
+
+f1:driver312 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brian"^^xsd:string ;
+    f1:lastName "Redman"^^xsd:string .
+
+f1:driver313 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rikky"^^xsd:string ;
+    f1:lastName "von Opel"^^xsd:string .
+
+f1:driver314 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tim"^^xsd:string ;
+    f1:lastName "Schenken"^^xsd:string .
+
+f1:driver315 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gérard"^^xsd:string ;
+    f1:lastName "Larrousse"^^xsd:string .
+
+f1:driver316 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Leo"^^xsd:string ;
+    f1:lastName "Kinnunen"^^xsd:string .
+
+f1:driver317 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Reine"^^xsd:string ;
+    f1:lastName "Wisell"^^xsd:string .
+
+f1:driver318 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bertil"^^xsd:string ;
+    f1:lastName "Roos"^^xsd:string .
+
+f1:driver319 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "José"^^xsd:string ;
+    f1:lastName "Dolhem"^^xsd:string .
+
+f1:driver32 a f1:Driver ;
+    f1:driverCode "KLI"^^xsd:string ;
+    f1:firstName "Christian"^^xsd:string ;
+    f1:lastName "Klien"^^xsd:string .
+
+f1:driver320 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Gethin"^^xsd:string .
+
+f1:driver321 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Derek"^^xsd:string ;
+    f1:lastName "Bell"^^xsd:string .
+
+f1:driver322 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Hobbs"^^xsd:string .
+
+f1:driver323 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dieter"^^xsd:string ;
+    f1:lastName "Quester"^^xsd:string .
+
+f1:driver324 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Helmuth"^^xsd:string ;
+    f1:lastName "Koinigg"^^xsd:string .
+
+f1:driver325 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carlo"^^xsd:string ;
+    f1:lastName "Facetti"^^xsd:string .
+
+f1:driver326 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eppie"^^xsd:string ;
+    f1:lastName "Wietzes"^^xsd:string .
+
+f1:driver327 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "François"^^xsd:string ;
+    f1:lastName "Cevert"^^xsd:string .
+
+f1:driver328 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jackie"^^xsd:string ;
+    f1:lastName "Stewart"^^xsd:string .
+
+f1:driver329 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Beuttler"^^xsd:string .
+
+f1:driver33 a f1:Driver ;
+    f1:driverCode "TMO"^^xsd:string ;
+    f1:firstName "Tiago"^^xsd:string ;
+    f1:lastName "Monteiro"^^xsd:string .
+
+f1:driver330 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nanni"^^xsd:string ;
+    f1:lastName "Galli"^^xsd:string .
+
+f1:driver331 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luiz"^^xsd:string ;
+    f1:lastName "Bueno"^^xsd:string .
+
+f1:driver332 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Follmer"^^xsd:string .
+
+f1:driver333 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Andrea"^^xsd:string ;
+    f1:lastName "de Adamich"^^xsd:string .
+
+f1:driver334 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jackie"^^xsd:string ;
+    f1:lastName "Pretorius"^^xsd:string .
+
+f1:driver335 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roger"^^xsd:string ;
+    f1:lastName "Williamson"^^xsd:string .
+
+f1:driver336 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Graham"^^xsd:string ;
+    f1:lastName "McRae"^^xsd:string .
+
+f1:driver337 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Helmut"^^xsd:string ;
+    f1:lastName "Marko"^^xsd:string .
+
+f1:driver338 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Walker"^^xsd:string .
+
+f1:driver339 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alex"^^xsd:string ;
+    f1:lastName "Soler-Roig"^^xsd:string .
+
+f1:driver34 a f1:Driver ;
+    f1:driverCode "IDE"^^xsd:string ;
+    f1:firstName "Yuji"^^xsd:string ;
+    f1:lastName "Ide"^^xsd:string .
+
+f1:driver340 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Love"^^xsd:string .
+
+f1:driver341 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Surtees"^^xsd:string .
+
+f1:driver342 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Skip"^^xsd:string ;
+    f1:lastName "Barber"^^xsd:string .
+
+f1:driver343 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Brack"^^xsd:string .
+
+f1:driver344 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Sam"^^xsd:string ;
+    f1:lastName "Posey"^^xsd:string .
+
+f1:driver345 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pedro"^^xsd:string ;
+    f1:lastName "Rodríguez"^^xsd:string .
+
+f1:driver346 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jo"^^xsd:string ;
+    f1:lastName "Siffert"^^xsd:string .
+
+f1:driver347 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jo"^^xsd:string ;
+    f1:lastName "Bonnier"^^xsd:string .
+
+f1:driver348 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "François"^^xsd:string ;
+    f1:lastName "Mazet"^^xsd:string .
+
+f1:driver349 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Max"^^xsd:string ;
+    f1:lastName "Jean"^^xsd:string .
+
+f1:driver35 a f1:Driver ;
+    f1:driverCode "VIL"^^xsd:string ;
+    f1:firstName "Jacques"^^xsd:string ;
+    f1:lastName "Villeneuve"^^xsd:string .
+
+f1:driver350 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Vic"^^xsd:string ;
+    f1:lastName "Elford"^^xsd:string .
+
+f1:driver351 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Silvio"^^xsd:string ;
+    f1:lastName "Moser"^^xsd:string .
+
+f1:driver352 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Eaton"^^xsd:string .
+
+f1:driver353 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pete"^^xsd:string ;
+    f1:lastName "Lovely"^^xsd:string .
+
+f1:driver354 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chris"^^xsd:string ;
+    f1:lastName "Craft"^^xsd:string .
+
+f1:driver355 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Cannon"^^xsd:string .
+
+f1:driver356 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jack"^^xsd:string ;
+    f1:lastName "Brabham"^^xsd:string .
+
+f1:driver357 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Miles"^^xsd:string .
+
+f1:driver358 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jochen"^^xsd:string ;
+    f1:lastName "Rindt"^^xsd:string .
+
+f1:driver359 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Servoz-Gavin"^^xsd:string .
+
+f1:driver36 a f1:Driver ;
+    f1:driverCode "FMO"^^xsd:string ;
+    f1:firstName "Franck"^^xsd:string ;
+    f1:lastName "Montagny"^^xsd:string .
+
+f1:driver360 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bruce"^^xsd:string ;
+    f1:lastName "McLaren"^^xsd:string .
+
+f1:driver361 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Piers"^^xsd:string ;
+    f1:lastName "Courage"^^xsd:string .
+
+f1:driver362 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "de Klerk"^^xsd:string .
+
+f1:driver363 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ignazio"^^xsd:string ;
+    f1:lastName "Giunti"^^xsd:string .
+
+f1:driver364 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dan"^^xsd:string ;
+    f1:lastName "Gurney"^^xsd:string .
+
+f1:driver365 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hubert"^^xsd:string ;
+    f1:lastName "Hahne"^^xsd:string .
+
+f1:driver366 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gus"^^xsd:string ;
+    f1:lastName "Hutchison"^^xsd:string .
+
+f1:driver367 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Westbury"^^xsd:string .
+
+f1:driver368 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Sam"^^xsd:string ;
+    f1:lastName "Tingle"^^xsd:string .
+
+f1:driver369 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Basil"^^xsd:string ;
+    f1:lastName "van Rooyen"^^xsd:string .
+
+f1:driver37 a f1:Driver ;
+    f1:driverCode "DLR"^^xsd:string ;
+    f1:firstName "Pedro"^^xsd:string ;
+    f1:lastName "de la Rosa"^^xsd:string .
+
+f1:driver370 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Richard"^^xsd:string ;
+    f1:lastName "Attwood"^^xsd:string .
+
+f1:driver371 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Al"^^xsd:string ;
+    f1:lastName "Pease"^^xsd:string .
+
+f1:driver372 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Cordts"^^xsd:string .
+
+f1:driver373 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jim"^^xsd:string ;
+    f1:lastName "Clark"^^xsd:string .
+
+f1:driver374 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Spence"^^xsd:string .
+
+f1:driver375 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ludovico"^^xsd:string ;
+    f1:lastName "Scarfiotti"^^xsd:string .
+
+f1:driver376 a f1:Driver ;
+    f1:driverCode "BIA"^^xsd:string ;
+    f1:firstName "Lucien"^^xsd:string ;
+    f1:lastName "Bianchi"^^xsd:string .
+
+f1:driver377 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jo"^^xsd:string ;
+    f1:lastName "Schlesser"^^xsd:string .
+
+f1:driver378 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Robin"^^xsd:string ;
+    f1:lastName "Widdows"^^xsd:string .
+
+f1:driver379 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kurt"^^xsd:string ;
+    f1:lastName "Ahrens"^^xsd:string .
+
+f1:driver38 a f1:Driver ;
+    f1:driverCode "DOO"^^xsd:string ;
+    f1:firstName "Robert"^^xsd:string ;
+    f1:lastName "Doornbos"^^xsd:string .
+
+f1:driver380 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Frank"^^xsd:string ;
+    f1:lastName "Gardner"^^xsd:string .
+
+f1:driver381 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bobby"^^xsd:string ;
+    f1:lastName "Unser"^^xsd:string .
+
+f1:driver382 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Moisés"^^xsd:string ;
+    f1:lastName "Solana"^^xsd:string .
+
+f1:driver383 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Anderson"^^xsd:string .
+
+f1:driver384 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luki"^^xsd:string ;
+    f1:lastName "Botha"^^xsd:string .
+
+f1:driver385 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Lorenzo"^^xsd:string ;
+    f1:lastName "Bandini"^^xsd:string .
+
+f1:driver386 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Richie"^^xsd:string ;
+    f1:lastName "Ginther"^^xsd:string .
+
+f1:driver387 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Parkes"^^xsd:string .
+
+f1:driver388 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chris"^^xsd:string ;
+    f1:lastName "Irwin"^^xsd:string .
+
+f1:driver389 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Guy"^^xsd:string ;
+    f1:lastName "Ligier"^^xsd:string .
+
+f1:driver39 a f1:Driver ;
+    f1:driverCode "KAR"^^xsd:string ;
+    f1:firstName "Narain"^^xsd:string ;
+    f1:lastName "Karthikeyan"^^xsd:string .
+
+f1:driver390 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alan"^^xsd:string ;
+    f1:lastName "Rees"^^xsd:string .
+
+f1:driver391 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brian"^^xsd:string ;
+    f1:lastName "Hart"^^xsd:string .
+
+f1:driver392 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Fisher"^^xsd:string .
+
+f1:driver393 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tom"^^xsd:string ;
+    f1:lastName "Jones"^^xsd:string .
+
+f1:driver394 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giancarlo"^^xsd:string ;
+    f1:lastName "Baghetti"^^xsd:string .
+
+f1:driver395 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jonathan"^^xsd:string ;
+    f1:lastName "Williams"^^xsd:string .
+
+f1:driver396 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Bondurant"^^xsd:string .
+
+f1:driver397 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Arundell"^^xsd:string .
+
+f1:driver398 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Vic"^^xsd:string ;
+    f1:lastName "Wilson"^^xsd:string .
+
+f1:driver399 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Taylor"^^xsd:string .
+
+f1:driver4 a f1:Driver ;
+    f1:driverCode "ALO"^^xsd:string ;
+    f1:driverNumber "14"^^xsd:int ;
+    f1:firstName "Fernando"^^xsd:string ;
+    f1:lastName "Alonso"^^xsd:string .
+
+f1:driver40 a f1:Driver ;
+    f1:driverCode "FRI"^^xsd:string ;
+    f1:firstName "Patrick"^^xsd:string ;
+    f1:lastName "Friesacher"^^xsd:string .
+
+f1:driver400 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chris"^^xsd:string ;
+    f1:lastName "Lawrence"^^xsd:string .
+
+f1:driver401 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Trevor"^^xsd:string ;
+    f1:lastName "Taylor"^^xsd:string .
+
+f1:driver402 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giacomo"^^xsd:string ;
+    f1:lastName "Russo"^^xsd:string .
+
+f1:driver403 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Phil"^^xsd:string ;
+    f1:lastName "Hill"^^xsd:string .
+
+f1:driver404 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Innes"^^xsd:string ;
+    f1:lastName "Ireland"^^xsd:string .
+
+f1:driver405 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ronnie"^^xsd:string ;
+    f1:lastName "Bucknum"^^xsd:string .
+
+f1:driver406 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "Hawkins"^^xsd:string .
+
+f1:driver407 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Prophet"^^xsd:string .
+
+f1:driver408 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Maggs"^^xsd:string .
+
+f1:driver409 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Trevor"^^xsd:string ;
+    f1:lastName "Blokdyk"^^xsd:string .
+
+f1:driver41 a f1:Driver ;
+    f1:driverCode "ZON"^^xsd:string ;
+    f1:firstName "Ricardo"^^xsd:string ;
+    f1:lastName "Zonta"^^xsd:string .
+
+f1:driver410 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Neville"^^xsd:string ;
+    f1:lastName "Lederle"^^xsd:string .
+
+f1:driver411 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Doug"^^xsd:string ;
+    f1:lastName "Serrurier"^^xsd:string .
+
+f1:driver412 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brausch"^^xsd:string ;
+    f1:lastName "Niemann"^^xsd:string .
+
+f1:driver413 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ernie"^^xsd:string ;
+    f1:lastName "Pieterse"^^xsd:string .
+
+f1:driver414 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Clive"^^xsd:string ;
+    f1:lastName "Puzey"^^xsd:string .
+
+f1:driver415 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ray"^^xsd:string ;
+    f1:lastName "Reed"^^xsd:string .
+
+f1:driver416 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Clapham"^^xsd:string .
+
+f1:driver417 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alex"^^xsd:string ;
+    f1:lastName "Blignaut"^^xsd:string .
+
+f1:driver418 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Masten"^^xsd:string ;
+    f1:lastName "Gregory"^^xsd:string .
+
+f1:driver419 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Rhodes"^^xsd:string .
+
+f1:driver42 a f1:Driver ;
+    f1:driverCode "PIZ"^^xsd:string ;
+    f1:firstName "Antônio"^^xsd:string ;
+    f1:lastName "Pizzonia"^^xsd:string .
+
+f1:driver420 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ian"^^xsd:string ;
+    f1:lastName "Raby"^^xsd:string .
+
+f1:driver421 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alan"^^xsd:string ;
+    f1:lastName "Rollinson"^^xsd:string .
+
+f1:driver422 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brian"^^xsd:string ;
+    f1:lastName "Gubby"^^xsd:string .
+
+f1:driver423 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gerhard"^^xsd:string ;
+    f1:lastName "Mitter"^^xsd:string .
+
+f1:driver424 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roberto"^^xsd:string ;
+    f1:lastName "Bussinello"^^xsd:string .
+
+f1:driver425 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nino"^^xsd:string ;
+    f1:lastName "Vaccarella"^^xsd:string .
+
+f1:driver426 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giorgio"^^xsd:string ;
+    f1:lastName "Bassi"^^xsd:string .
+
+f1:driver427 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Maurice"^^xsd:string ;
+    f1:lastName "Trintignant"^^xsd:string .
+
+f1:driver428 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bernard"^^xsd:string ;
+    f1:lastName "Collomb"^^xsd:string .
+
+f1:driver429 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "André"^^xsd:string ;
+    f1:lastName "Pilette"^^xsd:string .
+
+f1:driver43 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Cristiano"^^xsd:string ;
+    f1:lastName "da Matta"^^xsd:string .
+
+f1:driver430 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carel Godin"^^xsd:string ;
+    f1:lastName "de Beaufort"^^xsd:string .
+
+f1:driver431 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Edgar"^^xsd:string ;
+    f1:lastName "Barth"^^xsd:string .
+
+f1:driver432 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mário de Araújo"^^xsd:string ;
+    f1:lastName "Cabral"^^xsd:string .
+
+f1:driver433 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Walt"^^xsd:string ;
+    f1:lastName "Hansgen"^^xsd:string .
+
+f1:driver434 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hap"^^xsd:string ;
+    f1:lastName "Sharp"^^xsd:string .
+
+f1:driver435 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Willy"^^xsd:string ;
+    f1:lastName "Mairesse"^^xsd:string .
+
+f1:driver436 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Campbell-Jones"^^xsd:string .
+
+f1:driver437 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ian"^^xsd:string ;
+    f1:lastName "Burgess"^^xsd:string .
+
+f1:driver438 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Settember"^^xsd:string .
+
+f1:driver439 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nasif"^^xsd:string ;
+    f1:lastName "Estéfano"^^xsd:string .
+
+f1:driver44 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Olivier"^^xsd:string ;
+    f1:lastName "Panis"^^xsd:string .
+
+f1:driver440 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jim"^^xsd:string ;
+    f1:lastName "Hall"^^xsd:string .
+
+f1:driver441 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tim"^^xsd:string ;
+    f1:lastName "Parnell"^^xsd:string .
+
+f1:driver442 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kurt"^^xsd:string ;
+    f1:lastName "Kuhnke"^^xsd:string .
+
+f1:driver443 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ernesto"^^xsd:string ;
+    f1:lastName "Brambilla"^^xsd:string .
+
+f1:driver444 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roberto"^^xsd:string ;
+    f1:lastName "Lippi"^^xsd:string .
+
+f1:driver445 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Günther"^^xsd:string ;
+    f1:lastName "Seiffert"^^xsd:string .
+
+f1:driver446 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carlo"^^xsd:string ;
+    f1:lastName "Abate"^^xsd:string .
+
+f1:driver447 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gaetano"^^xsd:string ;
+    f1:lastName "Starrabba"^^xsd:string .
+
+f1:driver448 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Broeker"^^xsd:string .
+
+f1:driver449 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rodger"^^xsd:string ;
+    f1:lastName "Ward"^^xsd:string .
+
+f1:driver45 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giorgio"^^xsd:string ;
+    f1:lastName "Pantano"^^xsd:string .
+
+f1:driver450 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ernie"^^xsd:string ;
+    f1:lastName "de Vos"^^xsd:string .
+
+f1:driver451 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Frank"^^xsd:string ;
+    f1:lastName "Dochnal"^^xsd:string .
+
+f1:driver452 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Thomas"^^xsd:string ;
+    f1:lastName "Monarch"^^xsd:string .
+
+f1:driver453 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jackie"^^xsd:string ;
+    f1:lastName "Lewis"^^xsd:string .
+
+f1:driver454 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ricardo"^^xsd:string ;
+    f1:lastName "Rodríguez"^^xsd:string .
+
+f1:driver455 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Wolfgang"^^xsd:string ;
+    f1:lastName "Seidel"^^xsd:string .
+
+f1:driver456 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roy"^^xsd:string ;
+    f1:lastName "Salvadori"^^xsd:string .
+
+f1:driver457 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ben"^^xsd:string ;
+    f1:lastName "Pon"^^xsd:string .
+
+f1:driver458 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rob"^^xsd:string ;
+    f1:lastName "Slotemaker"^^xsd:string .
+
+f1:driver459 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Marsh"^^xsd:string .
+
+f1:driver46 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gianmaria"^^xsd:string ;
+    f1:lastName "Bruni"^^xsd:string .
+
+f1:driver460 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gerry"^^xsd:string ;
+    f1:lastName "Ashmore"^^xsd:string .
+
+f1:driver461 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Heinz"^^xsd:string ;
+    f1:lastName "Schiller"^^xsd:string .
+
+f1:driver462 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Colin"^^xsd:string ;
+    f1:lastName "Davis"^^xsd:string .
+
+f1:driver463 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jay"^^xsd:string ;
+    f1:lastName "Chamberlain"^^xsd:string .
+
+f1:driver464 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Shelly"^^xsd:string .
+
+f1:driver465 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Keith"^^xsd:string ;
+    f1:lastName "Greene"^^xsd:string .
+
+f1:driver466 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Heini"^^xsd:string ;
+    f1:lastName "Walter"^^xsd:string .
+
+f1:driver467 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ernesto"^^xsd:string ;
+    f1:lastName "Prinoth"^^xsd:string .
+
+f1:driver468 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roger"^^xsd:string ;
+    f1:lastName "Penske"^^xsd:string .
+
+f1:driver469 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rob"^^xsd:string ;
+    f1:lastName "Schroeder"^^xsd:string .
+
+f1:driver47 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Zsolt"^^xsd:string ;
+    f1:lastName "Baumgartner"^^xsd:string .
+
+f1:driver470 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Timmy"^^xsd:string ;
+    f1:lastName "Mayer"^^xsd:string .
+
+f1:driver471 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bruce"^^xsd:string ;
+    f1:lastName "Johnstone"^^xsd:string .
+
+f1:driver472 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Harris"^^xsd:string .
+
+f1:driver473 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gary"^^xsd:string ;
+    f1:lastName "Hocking"^^xsd:string .
+
+f1:driver474 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Syd"^^xsd:string ;
+    f1:lastName "van der Vyver"^^xsd:string .
+
+f1:driver475 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Stirling"^^xsd:string ;
+    f1:lastName "Moss"^^xsd:string .
+
+f1:driver476 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Wolfgang"^^xsd:string ;
+    f1:lastName "von Trips"^^xsd:string .
+
+f1:driver477 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Cliff"^^xsd:string ;
+    f1:lastName "Allison"^^xsd:string .
+
+f1:driver478 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hans"^^xsd:string ;
+    f1:lastName "Herrmann"^^xsd:string .
+
+f1:driver479 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Brooks"^^xsd:string .
+
+f1:driver48 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Marc"^^xsd:string ;
+    f1:lastName "Gené"^^xsd:string .
+
+f1:driver480 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Michael"^^xsd:string ;
+    f1:lastName "May"^^xsd:string .
+
+f1:driver481 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Henry"^^xsd:string ;
+    f1:lastName "Taylor"^^xsd:string .
+
+f1:driver482 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Olivier"^^xsd:string ;
+    f1:lastName "Gendebien"^^xsd:string .
+
+f1:driver483 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giorgio"^^xsd:string ;
+    f1:lastName "Scarlatti"^^xsd:string .
+
+f1:driver484 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brian"^^xsd:string ;
+    f1:lastName "Naylor"^^xsd:string .
+
+f1:driver485 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Juan Manuel"^^xsd:string ;
+    f1:lastName "Bordeu"^^xsd:string .
+
+f1:driver486 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jack"^^xsd:string ;
+    f1:lastName "Fairman"^^xsd:string .
+
+f1:driver487 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Massimo"^^xsd:string ;
+    f1:lastName "Natili"^^xsd:string .
+
+f1:driver488 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Monteverdi"^^xsd:string .
+
+f1:driver489 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Renato"^^xsd:string ;
+    f1:lastName "Pirocchi"^^xsd:string .
+
+f1:driver49 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Heinz-Harald"^^xsd:string ;
+    f1:lastName "Frentzen"^^xsd:string .
+
+f1:driver490 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Geoff"^^xsd:string ;
+    f1:lastName "Duke"^^xsd:string .
+
+f1:driver491 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alfonso"^^xsd:string ;
+    f1:lastName "Thiele"^^xsd:string .
+
+f1:driver492 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Menato"^^xsd:string ;
+    f1:lastName "Boffa"^^xsd:string .
+
+f1:driver493 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Ryan"^^xsd:string .
+
+f1:driver494 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Lloyd"^^xsd:string ;
+    f1:lastName "Ruby"^^xsd:string .
+
+f1:driver495 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ken"^^xsd:string ;
+    f1:lastName "Miles"^^xsd:string .
+
+f1:driver496 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carlos"^^xsd:string ;
+    f1:lastName "Menditeguy"^^xsd:string .
+
+f1:driver497 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alberto Rodriguez"^^xsd:string ;
+    f1:lastName "Larreta"^^xsd:string .
+
+f1:driver498 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "José Froilán"^^xsd:string ;
+    f1:lastName "González"^^xsd:string .
+
+f1:driver499 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roberto"^^xsd:string ;
+    f1:lastName "Bonomi"^^xsd:string .
+
+f1:driver5 a f1:Driver ;
+    f1:driverCode "KOV"^^xsd:string ;
+    f1:firstName "Heikki"^^xsd:string ;
+    f1:lastName "Kovalainen"^^xsd:string .
+
+f1:driver50 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jos"^^xsd:string ;
+    f1:lastName "Verstappen"^^xsd:string .
+
+f1:driver500 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gino"^^xsd:string ;
+    f1:lastName "Munaron"^^xsd:string .
+
+f1:driver501 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Harry"^^xsd:string ;
+    f1:lastName "Schell"^^xsd:string .
+
+f1:driver502 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alan"^^xsd:string ;
+    f1:lastName "Stacey"^^xsd:string .
+
+f1:driver503 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ettore"^^xsd:string ;
+    f1:lastName "Chimeri"^^xsd:string .
+
+f1:driver504 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Antonio"^^xsd:string ;
+    f1:lastName "Creus"^^xsd:string .
+
+f1:driver505 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chris"^^xsd:string ;
+    f1:lastName "Bristow"^^xsd:string .
+
+f1:driver506 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bruce"^^xsd:string ;
+    f1:lastName "Halford"^^xsd:string .
+
+f1:driver507 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chuck"^^xsd:string ;
+    f1:lastName "Daigh"^^xsd:string .
+
+f1:driver508 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Lance"^^xsd:string ;
+    f1:lastName "Reventlow"^^xsd:string .
+
+f1:driver509 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jim"^^xsd:string ;
+    f1:lastName "Rathmann"^^xsd:string .
+
+f1:driver51 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Justin"^^xsd:string ;
+    f1:lastName "Wilson"^^xsd:string .
+
+f1:driver510 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "Goldsmith"^^xsd:string .
+
+f1:driver511 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Don"^^xsd:string ;
+    f1:lastName "Branson"^^xsd:string .
+
+f1:driver512 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Thomson"^^xsd:string .
+
+f1:driver513 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eddie"^^xsd:string ;
+    f1:lastName "Johnson"^^xsd:string .
+
+f1:driver514 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Veith"^^xsd:string .
+
+f1:driver515 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bud"^^xsd:string ;
+    f1:lastName "Tingelstad"^^xsd:string .
+
+f1:driver516 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Christie"^^xsd:string .
+
+f1:driver517 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Red"^^xsd:string ;
+    f1:lastName "Amick"^^xsd:string .
+
+f1:driver518 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Duane"^^xsd:string ;
+    f1:lastName "Carter"^^xsd:string .
+
+f1:driver519 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Homeier"^^xsd:string .
+
+f1:driver52 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ralph"^^xsd:string ;
+    f1:lastName "Firman"^^xsd:string .
+
+f1:driver520 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gene"^^xsd:string ;
+    f1:lastName "Hartley"^^xsd:string .
+
+f1:driver521 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chuck"^^xsd:string ;
+    f1:lastName "Stevenson"^^xsd:string .
+
+f1:driver522 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bobby"^^xsd:string ;
+    f1:lastName "Grim"^^xsd:string .
+
+f1:driver523 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Shorty"^^xsd:string ;
+    f1:lastName "Templeman"^^xsd:string .
+
+f1:driver524 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jim"^^xsd:string ;
+    f1:lastName "Hurtubise"^^xsd:string .
+
+f1:driver525 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jimmy"^^xsd:string ;
+    f1:lastName "Bryan"^^xsd:string .
+
+f1:driver526 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Troy"^^xsd:string ;
+    f1:lastName "Ruttman"^^xsd:string .
+
+f1:driver527 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eddie"^^xsd:string ;
+    f1:lastName "Sachs"^^xsd:string .
+
+f1:driver528 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Don"^^xsd:string ;
+    f1:lastName "Freeland"^^xsd:string .
+
+f1:driver529 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Bettenhausen"^^xsd:string .
+
+f1:driver53 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nicolas"^^xsd:string ;
+    f1:lastName "Kiesa"^^xsd:string .
+
+f1:driver530 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Wayne"^^xsd:string ;
+    f1:lastName "Weiler"^^xsd:string .
+
+f1:driver531 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Anthony"^^xsd:string ;
+    f1:lastName "Foyt"^^xsd:string .
+
+f1:driver532 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eddie"^^xsd:string ;
+    f1:lastName "Russo"^^xsd:string .
+
+f1:driver533 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Boyd"^^xsd:string .
+
+f1:driver534 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gene"^^xsd:string ;
+    f1:lastName "Force"^^xsd:string .
+
+f1:driver535 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jim"^^xsd:string ;
+    f1:lastName "McWithey"^^xsd:string .
+
+f1:driver536 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Len"^^xsd:string ;
+    f1:lastName "Sutton"^^xsd:string .
+
+f1:driver537 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dick"^^xsd:string ;
+    f1:lastName "Rathmann"^^xsd:string .
+
+f1:driver538 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Al"^^xsd:string ;
+    f1:lastName "Herman"^^xsd:string .
+
+f1:driver539 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dempsey"^^xsd:string ;
+    f1:lastName "Wilson"^^xsd:string .
+
+f1:driver54 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luciano"^^xsd:string ;
+    f1:lastName "Burti"^^xsd:string .
+
+f1:driver540 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Taylor"^^xsd:string .
+
+f1:driver541 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ron"^^xsd:string ;
+    f1:lastName "Flockhart"^^xsd:string .
+
+f1:driver542 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Piper"^^xsd:string .
+
+f1:driver543 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giulio"^^xsd:string ;
+    f1:lastName "Cabianca"^^xsd:string .
+
+f1:driver544 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Piero"^^xsd:string ;
+    f1:lastName "Drogo"^^xsd:string .
+
+f1:driver545 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Fred"^^xsd:string ;
+    f1:lastName "Gamble"^^xsd:string .
+
+f1:driver546 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Arthur"^^xsd:string ;
+    f1:lastName "Owen"^^xsd:string .
+
+f1:driver547 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Horace"^^xsd:string ;
+    f1:lastName "Gould"^^xsd:string .
+
+f1:driver548 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Drake"^^xsd:string .
+
+f1:driver549 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ivor"^^xsd:string ;
+    f1:lastName "Bueb"^^xsd:string .
+
+f1:driver55 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean"^^xsd:string ;
+    f1:lastName "Alesi"^^xsd:string .
+
+f1:driver550 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alain"^^xsd:string ;
+    f1:lastName "de Changy"^^xsd:string .
+
+f1:driver551 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Maria"^^xsd:string ;
+    f1:lastName "de Filippis"^^xsd:string .
+
+f1:driver552 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean"^^xsd:string ;
+    f1:lastName "Lucienbonnet"^^xsd:string .
+
+f1:driver553 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "André"^^xsd:string ;
+    f1:lastName "Testut"^^xsd:string .
+
+f1:driver554 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean"^^xsd:string ;
+    f1:lastName "Behra"^^xsd:string .
+
+f1:driver555 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "Russo"^^xsd:string .
+
+f1:driver556 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jimmy"^^xsd:string ;
+    f1:lastName "Daywalt"^^xsd:string .
+
+f1:driver557 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chuck"^^xsd:string ;
+    f1:lastName "Arnold"^^xsd:string .
+
+f1:driver558 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Al"^^xsd:string ;
+    f1:lastName "Keller"^^xsd:string .
+
+f1:driver559 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pat"^^xsd:string ;
+    f1:lastName "Flaherty"^^xsd:string .
+
+f1:driver56 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eddie"^^xsd:string ;
+    f1:lastName "Irvine"^^xsd:string .
+
+f1:driver560 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Cheesbourg"^^xsd:string .
+
+f1:driver561 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ray"^^xsd:string ;
+    f1:lastName "Crawford"^^xsd:string .
+
+f1:driver562 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jack"^^xsd:string ;
+    f1:lastName "Turner"^^xsd:string .
+
+f1:driver563 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chuck"^^xsd:string ;
+    f1:lastName "Weyant"^^xsd:string .
+
+f1:driver564 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jud"^^xsd:string ;
+    f1:lastName "Larson"^^xsd:string .
+
+f1:driver565 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Magill"^^xsd:string .
+
+f1:driver566 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carroll"^^xsd:string ;
+    f1:lastName "Shelby"^^xsd:string .
+
+f1:driver567 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Fritz"^^xsd:string ;
+    f1:lastName "d'Orey"^^xsd:string .
+
+f1:driver568 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Azdrubal"^^xsd:string ;
+    f1:lastName "Fontes"^^xsd:string .
+
+f1:driver569 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Ashdown"^^xsd:string .
+
+f1:driver57 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mika"^^xsd:string ;
+    f1:lastName "Häkkinen"^^xsd:string .
+
+f1:driver570 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Moss"^^xsd:string .
+
+f1:driver571 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dennis"^^xsd:string ;
+    f1:lastName "Taylor"^^xsd:string .
+
+f1:driver572 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Harry"^^xsd:string ;
+    f1:lastName "Blanchard"^^xsd:string .
+
+f1:driver573 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alessandro"^^xsd:string ;
+    f1:lastName "de Tomaso"^^xsd:string .
+
+f1:driver574 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Constantine"^^xsd:string .
+
+f1:driver575 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Said"^^xsd:string .
+
+f1:driver576 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Phil"^^xsd:string ;
+    f1:lastName "Cade"^^xsd:string .
+
+f1:driver577 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luigi"^^xsd:string ;
+    f1:lastName "Musso"^^xsd:string .
+
+f1:driver578 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Hawthorn"^^xsd:string .
+
+f1:driver579 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Juan"^^xsd:string ;
+    f1:lastName "Fangio"^^xsd:string .
+
+f1:driver58 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tarso"^^xsd:string ;
+    f1:lastName "Marques"^^xsd:string .
+
+f1:driver580 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paco"^^xsd:string ;
+    f1:lastName "Godia"^^xsd:string .
+
+f1:driver581 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Collins"^^xsd:string .
+
+f1:driver582 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ken"^^xsd:string ;
+    f1:lastName "Kavanagh"^^xsd:string .
+
+f1:driver583 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gerino"^^xsd:string ;
+    f1:lastName "Gerini"^^xsd:string .
+
+f1:driver584 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bruce"^^xsd:string ;
+    f1:lastName "Kessler"^^xsd:string .
+
+f1:driver585 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "Emery"^^xsd:string .
+
+f1:driver586 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luigi"^^xsd:string ;
+    f1:lastName "Piotti"^^xsd:string .
+
+f1:driver587 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bernie"^^xsd:string ;
+    f1:lastName "Ecclestone"^^xsd:string .
+
+f1:driver588 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luigi"^^xsd:string ;
+    f1:lastName "Taramazzo"^^xsd:string .
+
+f1:driver589 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Louis"^^xsd:string ;
+    f1:lastName "Chiron"^^xsd:string .
+
+f1:driver59 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Enrique"^^xsd:string ;
+    f1:lastName "Bernoldi"^^xsd:string .
+
+f1:driver590 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Stuart"^^xsd:string ;
+    f1:lastName "Lewis-Evans"^^xsd:string .
+
+f1:driver591 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Amick"^^xsd:string .
+
+f1:driver592 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jimmy"^^xsd:string ;
+    f1:lastName "Reece"^^xsd:string .
+
+f1:driver593 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnnie"^^xsd:string ;
+    f1:lastName "Parsons"^^xsd:string .
+
+f1:driver594 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnnie"^^xsd:string ;
+    f1:lastName "Tolan"^^xsd:string .
+
+f1:driver595 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Billy"^^xsd:string ;
+    f1:lastName "Garrett"^^xsd:string .
+
+f1:driver596 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ed"^^xsd:string ;
+    f1:lastName "Elisian"^^xsd:string .
+
+f1:driver597 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pat"^^xsd:string ;
+    f1:lastName "O'Connor"^^xsd:string .
+
+f1:driver598 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jerry"^^xsd:string ;
+    f1:lastName "Unser"^^xsd:string .
+
+f1:driver599 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Art"^^xsd:string ;
+    f1:lastName "Bisch"^^xsd:string .
+
+f1:driver6 a f1:Driver ;
+    f1:driverCode "NAK"^^xsd:string ;
+    f1:firstName "Kazuki"^^xsd:string ;
+    f1:lastName "Nakajima"^^xsd:string .
+
+f1:driver60 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gastón"^^xsd:string ;
+    f1:lastName "Mazzacane"^^xsd:string .
+
+f1:driver600 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Christian"^^xsd:string ;
+    f1:lastName "Goethals"^^xsd:string .
+
+f1:driver601 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dick"^^xsd:string ;
+    f1:lastName "Gibson"^^xsd:string .
+
+f1:driver602 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Robert"^^xsd:string ;
+    f1:lastName "La Caze"^^xsd:string .
+
+f1:driver603 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "André"^^xsd:string ;
+    f1:lastName "Guelfi"^^xsd:string .
+
+f1:driver604 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "François"^^xsd:string ;
+    f1:lastName "Picard"^^xsd:string .
+
+f1:driver605 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tom"^^xsd:string ;
+    f1:lastName "Bridger"^^xsd:string .
+
+f1:driver606 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alfonso"^^xsd:string ;
+    f1:lastName "de Portago"^^xsd:string .
+
+f1:driver607 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Cesare"^^xsd:string ;
+    f1:lastName "Perdisa"^^xsd:string .
+
+f1:driver608 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eugenio"^^xsd:string ;
+    f1:lastName "Castellotti"^^xsd:string .
+
+f1:driver609 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "André"^^xsd:string ;
+    f1:lastName "Simon"^^xsd:string .
+
+f1:driver61 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tomáš"^^xsd:string ;
+    f1:lastName "Enge"^^xsd:string .
+
+f1:driver610 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Les"^^xsd:string ;
+    f1:lastName "Leston"^^xsd:string .
+
+f1:driver611 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Sam"^^xsd:string ;
+    f1:lastName "Hanks"^^xsd:string .
+
+f1:driver612 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Andy"^^xsd:string ;
+    f1:lastName "Linden"^^xsd:string .
+
+f1:driver613 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Marshall"^^xsd:string ;
+    f1:lastName "Teague"^^xsd:string .
+
+f1:driver614 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Don"^^xsd:string ;
+    f1:lastName "Edmunds"^^xsd:string .
+
+f1:driver615 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Fred"^^xsd:string ;
+    f1:lastName "Agabashian"^^xsd:string .
+
+f1:driver616 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Elmer"^^xsd:string ;
+    f1:lastName "George"^^xsd:string .
+
+f1:driver617 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "MacDowel"^^xsd:string .
+
+f1:driver618 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Herbert"^^xsd:string ;
+    f1:lastName "MacKay-Fraser"^^xsd:string .
+
+f1:driver619 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Gerard"^^xsd:string .
+
+f1:driver62 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alex"^^xsd:string ;
+    f1:lastName "Yoong"^^xsd:string .
+
+f1:driver620 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Umberto"^^xsd:string ;
+    f1:lastName "Maglioli"^^xsd:string .
+
+f1:driver621 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "England"^^xsd:string .
+
+f1:driver622 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chico"^^xsd:string ;
+    f1:lastName "Landi"^^xsd:string .
+
+f1:driver623 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alberto"^^xsd:string ;
+    f1:lastName "Uria"^^xsd:string .
+
+f1:driver624 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hernando"^^xsd:string ;
+    f1:lastName "da Silva Ramos"^^xsd:string .
+
+f1:driver625 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Élie"^^xsd:string ;
+    f1:lastName "Bayol"^^xsd:string .
+
+f1:driver626 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Robert"^^xsd:string ;
+    f1:lastName "Manzon"^^xsd:string .
+
+f1:driver627 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Louis"^^xsd:string ;
+    f1:lastName "Rosier"^^xsd:string .
+
+f1:driver628 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Sweikert"^^xsd:string .
+
+f1:driver629 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Cliff"^^xsd:string ;
+    f1:lastName "Griffith"^^xsd:string .
+
+f1:driver63 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mika"^^xsd:string ;
+    f1:lastName "Salo"^^xsd:string .
+
+f1:driver630 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Duke"^^xsd:string ;
+    f1:lastName "Dinsmore"^^xsd:string .
+
+f1:driver631 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Keith"^^xsd:string ;
+    f1:lastName "Andrews"^^xsd:string .
+
+f1:driver632 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "Frère"^^xsd:string .
+
+f1:driver633 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luigi"^^xsd:string ;
+    f1:lastName "Villoresi"^^xsd:string .
+
+f1:driver634 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Piero"^^xsd:string ;
+    f1:lastName "Scotti"^^xsd:string .
+
+f1:driver635 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Colin"^^xsd:string ;
+    f1:lastName "Chapman"^^xsd:string .
+
+f1:driver636 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Desmond"^^xsd:string ;
+    f1:lastName "Titterington"^^xsd:string .
+
+f1:driver637 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Archie"^^xsd:string ;
+    f1:lastName "Scott Brown"^^xsd:string .
+
+f1:driver638 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ottorino"^^xsd:string ;
+    f1:lastName "Volonterio"^^xsd:string .
+
+f1:driver639 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "André"^^xsd:string ;
+    f1:lastName "Milhoux"^^xsd:string .
+
+f1:driver64 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pedro"^^xsd:string ;
+    f1:lastName "Diniz"^^xsd:string .
+
+f1:driver640 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Toulo"^^xsd:string ;
+    f1:lastName "de Graffenried"^^xsd:string .
+
+f1:driver641 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Piero"^^xsd:string ;
+    f1:lastName "Taruffi"^^xsd:string .
+
+f1:driver642 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nino"^^xsd:string ;
+    f1:lastName "Farina"^^xsd:string .
+
+f1:driver643 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roberto"^^xsd:string ;
+    f1:lastName "Mieres"^^xsd:string .
+
+f1:driver644 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Sergio"^^xsd:string ;
+    f1:lastName "Mantovani"^^xsd:string .
+
+f1:driver645 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Clemar"^^xsd:string ;
+    f1:lastName "Bucci"^^xsd:string .
+
+f1:driver646 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jesús"^^xsd:string ;
+    f1:lastName "Iglesias"^^xsd:string .
+
+f1:driver647 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alberto"^^xsd:string ;
+    f1:lastName "Ascari"^^xsd:string .
+
+f1:driver648 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Karl"^^xsd:string ;
+    f1:lastName "Kling"^^xsd:string .
+
+f1:driver649 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pablo"^^xsd:string ;
+    f1:lastName "Birger"^^xsd:string .
+
+f1:driver65 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Herbert"^^xsd:string .
+
+f1:driver650 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jacques"^^xsd:string ;
+    f1:lastName "Pollet"^^xsd:string .
+
+f1:driver651 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Lance"^^xsd:string ;
+    f1:lastName "Macklin"^^xsd:string .
+
+f1:driver652 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ted"^^xsd:string ;
+    f1:lastName "Whiteaway"^^xsd:string .
+
+f1:driver653 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jimmy"^^xsd:string ;
+    f1:lastName "Davies"^^xsd:string .
+
+f1:driver654 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Walt"^^xsd:string ;
+    f1:lastName "Faulkner"^^xsd:string .
+
+f1:driver655 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Cal"^^xsd:string ;
+    f1:lastName "Niday"^^xsd:string .
+
+f1:driver656 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Art"^^xsd:string ;
+    f1:lastName "Cross"^^xsd:string .
+
+f1:driver657 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Vukovich"^^xsd:string .
+
+f1:driver658 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jack"^^xsd:string ;
+    f1:lastName "McGrath"^^xsd:string .
+
+f1:driver659 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jerry"^^xsd:string ;
+    f1:lastName "Hoyt"^^xsd:string .
+
+f1:driver66 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Allan"^^xsd:string ;
+    f1:lastName "McNish"^^xsd:string .
+
+f1:driver660 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Claes"^^xsd:string .
+
+f1:driver661 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Walker"^^xsd:string .
+
+f1:driver662 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Sparken"^^xsd:string .
+
+f1:driver663 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ken"^^xsd:string ;
+    f1:lastName "Wharton"^^xsd:string .
+
+f1:driver664 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kenneth"^^xsd:string ;
+    f1:lastName "McAlpine"^^xsd:string .
+
+f1:driver665 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Leslie"^^xsd:string ;
+    f1:lastName "Marr"^^xsd:string .
+
+f1:driver666 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Rolt"^^xsd:string .
+
+f1:driver667 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Fitch"^^xsd:string .
+
+f1:driver668 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean"^^xsd:string ;
+    f1:lastName "Lucas"^^xsd:string .
+
+f1:driver669 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Prince"^^xsd:string ;
+    f1:lastName "Bira"^^xsd:string .
+
+f1:driver67 a f1:Driver ;
+    f1:driverCode "BUE"^^xsd:string ;
+    f1:firstName "Sébastien"^^xsd:string ;
+    f1:lastName "Buemi"^^xsd:string .
+
+f1:driver670 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Onofre"^^xsd:string ;
+    f1:lastName "Marimón"^^xsd:string .
+
+f1:driver671 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roger"^^xsd:string ;
+    f1:lastName "Loyer"^^xsd:string .
+
+f1:driver672 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jorge"^^xsd:string ;
+    f1:lastName "Daponte"^^xsd:string .
+
+f1:driver673 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mike"^^xsd:string ;
+    f1:lastName "Nazaruk"^^xsd:string .
+
+f1:driver674 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Larry"^^xsd:string ;
+    f1:lastName "Crockett"^^xsd:string .
+
+f1:driver675 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Manny"^^xsd:string ;
+    f1:lastName "Ayulo"^^xsd:string .
+
+f1:driver676 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Frank"^^xsd:string ;
+    f1:lastName "Armi"^^xsd:string .
+
+f1:driver677 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Travis"^^xsd:string ;
+    f1:lastName "Webb"^^xsd:string .
+
+f1:driver678 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Len"^^xsd:string ;
+    f1:lastName "Duncan"^^xsd:string .
+
+f1:driver679 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ernie"^^xsd:string ;
+    f1:lastName "McCoy"^^xsd:string .
+
+f1:driver68 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Toranosuke"^^xsd:string ;
+    f1:lastName "Takagi"^^xsd:string .
+
+f1:driver680 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jacques"^^xsd:string ;
+    f1:lastName "Swaters"^^xsd:string .
+
+f1:driver681 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Georges"^^xsd:string ;
+    f1:lastName "Berger"^^xsd:string .
+
+f1:driver682 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Don"^^xsd:string ;
+    f1:lastName "Beauman"^^xsd:string .
+
+f1:driver683 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Leslie"^^xsd:string ;
+    f1:lastName "Thorne"^^xsd:string .
+
+f1:driver684 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Whitehouse"^^xsd:string .
+
+f1:driver685 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Riseley-Prichard"^^xsd:string .
+
+f1:driver686 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Reg"^^xsd:string ;
+    f1:lastName "Parnell"^^xsd:string .
+
+f1:driver687 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Whitehead"^^xsd:string .
+
+f1:driver688 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eric"^^xsd:string ;
+    f1:lastName "Brandon"^^xsd:string .
+
+f1:driver689 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alan"^^xsd:string ;
+    f1:lastName "Brown"^^xsd:string .
+
+f1:driver69 a f1:Driver ;
+    f1:driverCode "BAD"^^xsd:string ;
+    f1:firstName "Luca"^^xsd:string ;
+    f1:lastName "Badoer"^^xsd:string .
+
+f1:driver690 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rodney"^^xsd:string ;
+    f1:lastName "Nuckey"^^xsd:string .
+
+f1:driver691 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hermann"^^xsd:string ;
+    f1:lastName "Lang"^^xsd:string .
+
+f1:driver692 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Theo"^^xsd:string ;
+    f1:lastName "Helfrich"^^xsd:string .
+
+f1:driver693 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Fred"^^xsd:string ;
+    f1:lastName "Wacker"^^xsd:string .
+
+f1:driver694 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giovanni"^^xsd:string ;
+    f1:lastName "de Riu"^^xsd:string .
+
+f1:driver695 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Oscar"^^xsd:string ;
+    f1:lastName "Gálvez"^^xsd:string .
+
+f1:driver696 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "Barber"^^xsd:string .
+
+f1:driver697 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Felice"^^xsd:string ;
+    f1:lastName "Bonetto"^^xsd:string .
+
+f1:driver698 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Adolfo"^^xsd:string ;
+    f1:lastName "Cruz"^^xsd:string .
+
+f1:driver699 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Duke"^^xsd:string ;
+    f1:lastName "Nalon"^^xsd:string .
+
+f1:driver7 a f1:Driver ;
+    f1:driverCode "BOU"^^xsd:string ;
+    f1:firstName "Sébastien"^^xsd:string ;
+    f1:lastName "Bourdais"^^xsd:string .
+
+f1:driver70 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alessandro"^^xsd:string ;
+    f1:lastName "Zanardi"^^xsd:string .
+
+f1:driver700 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carl"^^xsd:string ;
+    f1:lastName "Scarborough"^^xsd:string .
+
+f1:driver701 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Holland"^^xsd:string .
+
+f1:driver702 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bob"^^xsd:string ;
+    f1:lastName "Scott"^^xsd:string .
+
+f1:driver703 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Arthur"^^xsd:string ;
+    f1:lastName "Legat"^^xsd:string .
+
+f1:driver704 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Yves"^^xsd:string ;
+    f1:lastName "Cabantous"^^xsd:string .
+
+f1:driver705 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Crook"^^xsd:string .
+
+f1:driver706 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jimmy"^^xsd:string ;
+    f1:lastName "Stewart"^^xsd:string .
+
+f1:driver707 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ian"^^xsd:string ;
+    f1:lastName "Stewart"^^xsd:string .
+
+f1:driver708 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Duncan"^^xsd:string ;
+    f1:lastName "Hamilton"^^xsd:string .
+
+f1:driver709 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ernst"^^xsd:string ;
+    f1:lastName "Klodwig"^^xsd:string .
+
+f1:driver71 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Damon"^^xsd:string ;
+    f1:lastName "Hill"^^xsd:string .
+
+f1:driver710 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rudolf"^^xsd:string ;
+    f1:lastName "Krause"^^xsd:string .
+
+f1:driver711 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Oswald"^^xsd:string ;
+    f1:lastName "Karch"^^xsd:string .
+
+f1:driver712 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Willi"^^xsd:string ;
+    f1:lastName "Heeks"^^xsd:string .
+
+f1:driver713 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Theo"^^xsd:string ;
+    f1:lastName "Fitzau"^^xsd:string .
+
+f1:driver714 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Kurt"^^xsd:string ;
+    f1:lastName "Adolff"^^xsd:string .
+
+f1:driver715 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Günther"^^xsd:string ;
+    f1:lastName "Bechem"^^xsd:string .
+
+f1:driver716 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Erwin"^^xsd:string ;
+    f1:lastName "Bauer"^^xsd:string .
+
+f1:driver717 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hans"^^xsd:string ;
+    f1:lastName "von Stuck"^^xsd:string .
+
+f1:driver718 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ernst"^^xsd:string ;
+    f1:lastName "Loof"^^xsd:string .
+
+f1:driver719 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Albert"^^xsd:string ;
+    f1:lastName "Scherrer"^^xsd:string .
+
+f1:driver72 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Stéphane"^^xsd:string ;
+    f1:lastName "Sarrazin"^^xsd:string .
+
+f1:driver720 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Max"^^xsd:string ;
+    f1:lastName "de Terra"^^xsd:string .
+
+f1:driver721 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Peter"^^xsd:string ;
+    f1:lastName "Hirt"^^xsd:string .
+
+f1:driver722 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Piero"^^xsd:string ;
+    f1:lastName "Carini"^^xsd:string .
+
+f1:driver723 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rudi"^^xsd:string ;
+    f1:lastName "Fischer"^^xsd:string .
+
+f1:driver724 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Toni"^^xsd:string ;
+    f1:lastName "Ulmen"^^xsd:string .
+
+f1:driver725 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Abecassis"^^xsd:string .
+
+f1:driver726 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Connor"^^xsd:string .
+
+f1:driver727 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jim"^^xsd:string ;
+    f1:lastName "Rigsby"^^xsd:string .
+
+f1:driver728 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Joe"^^xsd:string ;
+    f1:lastName "James"^^xsd:string .
+
+f1:driver729 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Schindler"^^xsd:string .
+
+f1:driver73 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ricardo"^^xsd:string ;
+    f1:lastName "Rosset"^^xsd:string .
+
+f1:driver730 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Fonder"^^xsd:string .
+
+f1:driver731 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Henry"^^xsd:string ;
+    f1:lastName "Banks"^^xsd:string .
+
+f1:driver732 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "McDowell"^^xsd:string .
+
+f1:driver733 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Chet"^^xsd:string ;
+    f1:lastName "Miller"^^xsd:string .
+
+f1:driver734 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bobby"^^xsd:string ;
+    f1:lastName "Ball"^^xsd:string .
+
+f1:driver735 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Charles"^^xsd:string ;
+    f1:lastName "de Tornaco"^^xsd:string .
+
+f1:driver736 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roger"^^xsd:string ;
+    f1:lastName "Laurent"^^xsd:string .
+
+f1:driver737 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Robert"^^xsd:string ;
+    f1:lastName "O'Brien"^^xsd:string .
+
+f1:driver738 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Tony"^^xsd:string ;
+    f1:lastName "Gaze"^^xsd:string .
+
+f1:driver739 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Robin"^^xsd:string ;
+    f1:lastName "Montgomerie-Charrington"^^xsd:string .
+
+f1:driver74 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Esteban"^^xsd:string ;
+    f1:lastName "Tuero"^^xsd:string .
+
+f1:driver740 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Franco"^^xsd:string ;
+    f1:lastName "Comotti"^^xsd:string .
+
+f1:driver741 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Philippe"^^xsd:string ;
+    f1:lastName "Étancelin"^^xsd:string .
+
+f1:driver742 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dennis"^^xsd:string ;
+    f1:lastName "Poore"^^xsd:string .
+
+f1:driver743 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eric"^^xsd:string ;
+    f1:lastName "Thompson"^^xsd:string .
+
+f1:driver744 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ken"^^xsd:string ;
+    f1:lastName "Downing"^^xsd:string .
+
+f1:driver745 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Graham"^^xsd:string ;
+    f1:lastName "Whitehead"^^xsd:string .
+
+f1:driver746 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gino"^^xsd:string ;
+    f1:lastName "Bianco"^^xsd:string .
+
+f1:driver747 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Murray"^^xsd:string .
+
+f1:driver748 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eitel"^^xsd:string ;
+    f1:lastName "Cantoni"^^xsd:string .
+
+f1:driver749 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Aston"^^xsd:string .
+
+f1:driver75 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Shinji"^^xsd:string ;
+    f1:lastName "Nakano"^^xsd:string .
+
+f1:driver750 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Adolf"^^xsd:string ;
+    f1:lastName "Brudes"^^xsd:string .
+
+f1:driver751 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Fritz"^^xsd:string ;
+    f1:lastName "Riess"^^xsd:string .
+
+f1:driver752 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Helmut"^^xsd:string ;
+    f1:lastName "Niedermayr"^^xsd:string .
+
+f1:driver753 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Hans"^^xsd:string ;
+    f1:lastName "Klenk"^^xsd:string .
+
+f1:driver754 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Marcel"^^xsd:string ;
+    f1:lastName "Balsa"^^xsd:string .
+
+f1:driver755 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Rudolf"^^xsd:string ;
+    f1:lastName "Schoeller"^^xsd:string .
+
+f1:driver756 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "Pietsch"^^xsd:string .
+
+f1:driver757 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Josef"^^xsd:string ;
+    f1:lastName "Peters"^^xsd:string .
+
+f1:driver758 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dries"^^xsd:string ;
+    f1:lastName "van der Lof"^^xsd:string .
+
+f1:driver759 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jan"^^xsd:string ;
+    f1:lastName "Flinterman"^^xsd:string .
+
+f1:driver76 a f1:Driver ;
+    f1:driverCode "MAG"^^xsd:string ;
+    f1:firstName "Jan"^^xsd:string ;
+    f1:lastName "Magnussen"^^xsd:string .
+
+f1:driver760 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Piero"^^xsd:string ;
+    f1:lastName "Dusio"^^xsd:string .
+
+f1:driver761 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alberto"^^xsd:string ;
+    f1:lastName "Crespo"^^xsd:string .
+
+f1:driver762 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Franco"^^xsd:string ;
+    f1:lastName "Rol"^^xsd:string .
+
+f1:driver763 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Consalvo"^^xsd:string ;
+    f1:lastName "Sanesi"^^xsd:string .
+
+f1:driver764 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Guy"^^xsd:string ;
+    f1:lastName "Mairesse"^^xsd:string .
+
+f1:driver765 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Henri"^^xsd:string ;
+    f1:lastName "Louveau"^^xsd:string .
+
+f1:driver766 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Lee"^^xsd:string ;
+    f1:lastName "Wallard"^^xsd:string .
+
+f1:driver767 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Carl"^^xsd:string ;
+    f1:lastName "Forberg"^^xsd:string .
+
+f1:driver768 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mauri"^^xsd:string ;
+    f1:lastName "Rose"^^xsd:string .
+
+f1:driver769 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Mackey"^^xsd:string .
+
+f1:driver77 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gerhard"^^xsd:string ;
+    f1:lastName "Berger"^^xsd:string .
+
+f1:driver770 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Cecil"^^xsd:string ;
+    f1:lastName "Green"^^xsd:string .
+
+f1:driver771 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Walt"^^xsd:string ;
+    f1:lastName "Brown"^^xsd:string .
+
+f1:driver772 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mack"^^xsd:string ;
+    f1:lastName "Hellings"^^xsd:string .
+
+f1:driver773 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pierre"^^xsd:string ;
+    f1:lastName "Levegh"^^xsd:string .
+
+f1:driver774 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eugène"^^xsd:string ;
+    f1:lastName "Chaboud"^^xsd:string .
+
+f1:driver775 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Aldo"^^xsd:string ;
+    f1:lastName "Gordini"^^xsd:string .
+
+f1:driver776 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Joe"^^xsd:string ;
+    f1:lastName "Kelly"^^xsd:string .
+
+f1:driver777 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Philip"^^xsd:string ;
+    f1:lastName "Fotheringham-Parker"^^xsd:string .
+
+f1:driver778 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Brian"^^xsd:string ;
+    f1:lastName "Shawe Taylor"^^xsd:string .
+
+f1:driver779 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "John"^^xsd:string ;
+    f1:lastName "James"^^xsd:string .
+
+f1:driver78 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nicola"^^xsd:string ;
+    f1:lastName "Larini"^^xsd:string .
+
+f1:driver780 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Toni"^^xsd:string ;
+    f1:lastName "Branca"^^xsd:string .
+
+f1:driver781 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ken"^^xsd:string ;
+    f1:lastName "Richardson"^^xsd:string .
+
+f1:driver782 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Juan"^^xsd:string ;
+    f1:lastName "Jover"^^xsd:string .
+
+f1:driver783 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Georges"^^xsd:string ;
+    f1:lastName "Grignard"^^xsd:string .
+
+f1:driver784 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "David"^^xsd:string ;
+    f1:lastName "Hampshire"^^xsd:string .
+
+f1:driver785 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Geoff"^^xsd:string ;
+    f1:lastName "Crossley"^^xsd:string .
+
+f1:driver786 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Luigi"^^xsd:string ;
+    f1:lastName "Fagioli"^^xsd:string .
+
+f1:driver787 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Cuth"^^xsd:string ;
+    f1:lastName "Harrison"^^xsd:string .
+
+f1:driver788 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Joe"^^xsd:string ;
+    f1:lastName "Fry"^^xsd:string .
+
+f1:driver789 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Eugène"^^xsd:string ;
+    f1:lastName "Martin"^^xsd:string .
+
+f1:driver79 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Ukyo"^^xsd:string ;
+    f1:lastName "Katayama"^^xsd:string .
+
+f1:driver790 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Leslie"^^xsd:string ;
+    f1:lastName "Johnson"^^xsd:string .
+
+f1:driver791 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Clemente"^^xsd:string ;
+    f1:lastName "Biondetti"^^xsd:string .
+
+f1:driver792 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Alfredo"^^xsd:string ;
+    f1:lastName "Pián"^^xsd:string .
+
+f1:driver793 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Raymond"^^xsd:string ;
+    f1:lastName "Sommer"^^xsd:string .
+
+f1:driver794 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Joie"^^xsd:string ;
+    f1:lastName "Chitwood"^^xsd:string .
+
+f1:driver795 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Myron"^^xsd:string ;
+    f1:lastName "Fohr"^^xsd:string .
+
+f1:driver796 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Walt"^^xsd:string ;
+    f1:lastName "Ader"^^xsd:string .
+
+f1:driver797 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jackie"^^xsd:string ;
+    f1:lastName "Holmes"^^xsd:string .
+
+f1:driver798 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bayliss"^^xsd:string ;
+    f1:lastName "Levrett"^^xsd:string .
+
+f1:driver799 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jimmy"^^xsd:string ;
+    f1:lastName "Jackson"^^xsd:string .
+
+f1:driver8 a f1:Driver ;
+    f1:driverCode "RAI"^^xsd:string ;
+    f1:driverNumber "7"^^xsd:int ;
+    f1:firstName "Kimi"^^xsd:string ;
+    f1:lastName "Räikkönen"^^xsd:string .
+
+f1:driver80 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Vincenzo"^^xsd:string ;
+    f1:lastName "Sospiri"^^xsd:string .
+
+f1:driver800 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nello"^^xsd:string ;
+    f1:lastName "Pagani"^^xsd:string .
+
+f1:driver801 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Charles"^^xsd:string ;
+    f1:lastName "Pozzi"^^xsd:string .
+
+f1:driver802 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Dorino"^^xsd:string ;
+    f1:lastName "Serafini"^^xsd:string .
+
+f1:driver803 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bill"^^xsd:string ;
+    f1:lastName "Cantrell"^^xsd:string .
+
+f1:driver804 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Johnny"^^xsd:string ;
+    f1:lastName "Mantz"^^xsd:string .
+
+f1:driver805 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Danny"^^xsd:string ;
+    f1:lastName "Kladis"^^xsd:string .
+
+f1:driver806 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Óscar"^^xsd:string ;
+    f1:lastName "González"^^xsd:string .
+
+f1:driver807 a f1:Driver ;
+    f1:driverCode "HUL"^^xsd:string ;
+    f1:driverNumber "27"^^xsd:int ;
+    f1:firstName "Nico"^^xsd:string ;
+    f1:lastName "Hülkenberg"^^xsd:string .
+
+f1:driver808 a f1:Driver ;
+    f1:driverCode "PET"^^xsd:string ;
+    f1:firstName "Vitaly"^^xsd:string ;
+    f1:lastName "Petrov"^^xsd:string .
+
+f1:driver81 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gianni"^^xsd:string ;
+    f1:lastName "Morbidelli"^^xsd:string .
+
+f1:driver810 a f1:Driver ;
+    f1:driverCode "DIG"^^xsd:string ;
+    f1:firstName "Lucas"^^xsd:string ;
+    f1:lastName "di Grassi"^^xsd:string .
+
+f1:driver811 a f1:Driver ;
+    f1:driverCode "SEN"^^xsd:string ;
+    f1:firstName "Bruno"^^xsd:string ;
+    f1:lastName "Senna"^^xsd:string .
+
+f1:driver812 a f1:Driver ;
+    f1:driverCode "CHA"^^xsd:string ;
+    f1:firstName "Karun"^^xsd:string ;
+    f1:lastName "Chandhok"^^xsd:string .
+
+f1:driver813 a f1:Driver ;
+    f1:driverCode "MAL"^^xsd:string ;
+    f1:driverNumber "13"^^xsd:int ;
+    f1:firstName "Pastor"^^xsd:string ;
+    f1:lastName "Maldonado"^^xsd:string .
+
+f1:driver814 a f1:Driver ;
+    f1:driverCode "DIR"^^xsd:string ;
+    f1:firstName "Paul"^^xsd:string ;
+    f1:lastName "di Resta"^^xsd:string .
+
+f1:driver815 a f1:Driver ;
+    f1:driverCode "PER"^^xsd:string ;
+    f1:driverNumber "11"^^xsd:int ;
+    f1:firstName "Sergio"^^xsd:string ;
+    f1:lastName "Pérez"^^xsd:string .
+
+f1:driver816 a f1:Driver ;
+    f1:driverCode "DAM"^^xsd:string ;
+    f1:firstName "Jérôme"^^xsd:string ;
+    f1:lastName "d'Ambrosio"^^xsd:string .
+
+f1:driver817 a f1:Driver ;
+    f1:driverCode "RIC"^^xsd:string ;
+    f1:driverNumber "3"^^xsd:int ;
+    f1:firstName "Daniel"^^xsd:string ;
+    f1:lastName "Ricciardo"^^xsd:string .
+
+f1:driver818 a f1:Driver ;
+    f1:driverCode "VER"^^xsd:string ;
+    f1:driverNumber "25"^^xsd:int ;
+    f1:firstName "Jean-Éric"^^xsd:string ;
+    f1:lastName "Vergne"^^xsd:string .
+
+f1:driver819 a f1:Driver ;
+    f1:driverCode "PIC"^^xsd:string ;
+    f1:firstName "Charles"^^xsd:string ;
+    f1:lastName "Pic"^^xsd:string .
+
+f1:driver82 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Norberto"^^xsd:string ;
+    f1:lastName "Fontana"^^xsd:string .
+
+f1:driver820 a f1:Driver ;
+    f1:driverCode "CHI"^^xsd:string ;
+    f1:driverNumber "4"^^xsd:int ;
+    f1:firstName "Max"^^xsd:string ;
+    f1:lastName "Chilton"^^xsd:string .
+
+f1:driver821 a f1:Driver ;
+    f1:driverCode "GUT"^^xsd:string ;
+    f1:driverNumber "21"^^xsd:int ;
+    f1:firstName "Esteban"^^xsd:string ;
+    f1:lastName "Gutiérrez"^^xsd:string .
+
+f1:driver822 a f1:Driver ;
+    f1:driverCode "BOT"^^xsd:string ;
+    f1:driverNumber "77"^^xsd:int ;
+    f1:firstName "Valtteri"^^xsd:string ;
+    f1:lastName "Bottas"^^xsd:string .
+
+f1:driver823 a f1:Driver ;
+    f1:driverCode "VDG"^^xsd:string ;
+    f1:firstName "Giedo"^^xsd:string ;
+    f1:lastName "van der Garde"^^xsd:string .
+
+f1:driver824 a f1:Driver ;
+    f1:driverCode "BIA"^^xsd:string ;
+    f1:driverNumber "17"^^xsd:int ;
+    f1:firstName "Jules"^^xsd:string ;
+    f1:lastName "Bianchi"^^xsd:string .
+
+f1:driver825 a f1:Driver ;
+    f1:driverCode "MAG"^^xsd:string ;
+    f1:driverNumber "20"^^xsd:int ;
+    f1:firstName "Kevin"^^xsd:string ;
+    f1:lastName "Magnussen"^^xsd:string .
+
+f1:driver826 a f1:Driver ;
+    f1:driverCode "KVY"^^xsd:string ;
+    f1:driverNumber "26"^^xsd:int ;
+    f1:firstName "Daniil"^^xsd:string ;
+    f1:lastName "Kvyat"^^xsd:string .
+
+f1:driver827 a f1:Driver ;
+    f1:driverCode "LOT"^^xsd:string ;
+    f1:driverNumber "45"^^xsd:int ;
+    f1:firstName "André"^^xsd:string ;
+    f1:lastName "Lotterer"^^xsd:string .
+
+f1:driver828 a f1:Driver ;
+    f1:driverCode "ERI"^^xsd:string ;
+    f1:driverNumber "9"^^xsd:int ;
+    f1:firstName "Marcus"^^xsd:string ;
+    f1:lastName "Ericsson"^^xsd:string .
+
+f1:driver829 a f1:Driver ;
+    f1:driverCode "STE"^^xsd:string ;
+    f1:driverNumber "28"^^xsd:int ;
+    f1:firstName "Will"^^xsd:string ;
+    f1:lastName "Stevens"^^xsd:string .
+
+f1:driver83 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pedro"^^xsd:string ;
+    f1:lastName "Lamy"^^xsd:string .
+
+f1:driver830 a f1:Driver ;
+    f1:driverCode "VER"^^xsd:string ;
+    f1:driverNumber "33"^^xsd:int ;
+    f1:firstName "Max"^^xsd:string ;
+    f1:lastName "Verstappen"^^xsd:string .
+
+f1:driver831 a f1:Driver ;
+    f1:driverCode "NAS"^^xsd:string ;
+    f1:driverNumber "12"^^xsd:int ;
+    f1:firstName "Felipe"^^xsd:string ;
+    f1:lastName "Nasr"^^xsd:string .
+
+f1:driver832 a f1:Driver ;
+    f1:driverCode "SAI"^^xsd:string ;
+    f1:driverNumber "55"^^xsd:int ;
+    f1:firstName "Carlos"^^xsd:string ;
+    f1:lastName "Sainz"^^xsd:string .
+
+f1:driver833 a f1:Driver ;
+    f1:driverCode "MER"^^xsd:string ;
+    f1:driverNumber "98"^^xsd:int ;
+    f1:firstName "Roberto"^^xsd:string ;
+    f1:lastName "Merhi"^^xsd:string .
+
+f1:driver834 a f1:Driver ;
+    f1:driverCode "RSS"^^xsd:string ;
+    f1:driverNumber "53"^^xsd:int ;
+    f1:firstName "Alexander"^^xsd:string ;
+    f1:lastName "Rossi"^^xsd:string .
+
+f1:driver835 a f1:Driver ;
+    f1:driverCode "PAL"^^xsd:string ;
+    f1:driverNumber "30"^^xsd:int ;
+    f1:firstName "Jolyon"^^xsd:string ;
+    f1:lastName "Palmer"^^xsd:string .
+
+f1:driver836 a f1:Driver ;
+    f1:driverCode "WEH"^^xsd:string ;
+    f1:driverNumber "94"^^xsd:int ;
+    f1:firstName "Pascal"^^xsd:string ;
+    f1:lastName "Wehrlein"^^xsd:string .
+
+f1:driver837 a f1:Driver ;
+    f1:driverCode "HAR"^^xsd:string ;
+    f1:driverNumber "88"^^xsd:int ;
+    f1:firstName "Rio"^^xsd:string ;
+    f1:lastName "Haryanto"^^xsd:string .
+
+f1:driver838 a f1:Driver ;
+    f1:driverCode "VAN"^^xsd:string ;
+    f1:driverNumber "2"^^xsd:int ;
+    f1:firstName "Stoffel"^^xsd:string ;
+    f1:lastName "Vandoorne"^^xsd:string .
+
+f1:driver839 a f1:Driver ;
+    f1:driverCode "OCO"^^xsd:string ;
+    f1:driverNumber "31"^^xsd:int ;
+    f1:firstName "Esteban"^^xsd:string ;
+    f1:lastName "Ocon"^^xsd:string .
+
+f1:driver84 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Martin"^^xsd:string ;
+    f1:lastName "Brundle"^^xsd:string .
+
+f1:driver840 a f1:Driver ;
+    f1:driverCode "STR"^^xsd:string ;
+    f1:driverNumber "18"^^xsd:int ;
+    f1:firstName "Lance"^^xsd:string ;
+    f1:lastName "Stroll"^^xsd:string .
+
+f1:driver841 a f1:Driver ;
+    f1:driverCode "GIO"^^xsd:string ;
+    f1:driverNumber "99"^^xsd:int ;
+    f1:firstName "Antonio"^^xsd:string ;
+    f1:lastName "Giovinazzi"^^xsd:string .
+
+f1:driver842 a f1:Driver ;
+    f1:driverCode "GAS"^^xsd:string ;
+    f1:driverNumber "10"^^xsd:int ;
+    f1:firstName "Pierre"^^xsd:string ;
+    f1:lastName "Gasly"^^xsd:string .
+
+f1:driver843 a f1:Driver ;
+    f1:driverCode "HAR"^^xsd:string ;
+    f1:driverNumber "28"^^xsd:int ;
+    f1:firstName "Brendon"^^xsd:string ;
+    f1:lastName "Hartley"^^xsd:string .
+
+f1:driver844 a f1:Driver ;
+    f1:driverCode "LEC"^^xsd:string ;
+    f1:driverNumber "16"^^xsd:int ;
+    f1:firstName "Charles"^^xsd:string ;
+    f1:lastName "Leclerc"^^xsd:string .
+
+f1:driver845 a f1:Driver ;
+    f1:driverCode "SIR"^^xsd:string ;
+    f1:driverNumber "35"^^xsd:int ;
+    f1:firstName "Sergey"^^xsd:string ;
+    f1:lastName "Sirotkin"^^xsd:string .
+
+f1:driver846 a f1:Driver ;
+    f1:driverCode "NOR"^^xsd:string ;
+    f1:driverNumber "4"^^xsd:int ;
+    f1:firstName "Lando"^^xsd:string ;
+    f1:lastName "Norris"^^xsd:string .
+
+f1:driver847 a f1:Driver ;
+    f1:driverCode "RUS"^^xsd:string ;
+    f1:driverNumber "63"^^xsd:int ;
+    f1:firstName "George"^^xsd:string ;
+    f1:lastName "Russell"^^xsd:string .
+
+f1:driver848 a f1:Driver ;
+    f1:driverCode "ALB"^^xsd:string ;
+    f1:driverNumber "23"^^xsd:int ;
+    f1:firstName "Alexander"^^xsd:string ;
+    f1:lastName "Albon"^^xsd:string .
+
+f1:driver849 a f1:Driver ;
+    f1:driverCode "LAT"^^xsd:string ;
+    f1:driverNumber "6"^^xsd:int ;
+    f1:firstName "Nicholas"^^xsd:string ;
+    f1:lastName "Latifi"^^xsd:string .
+
+f1:driver85 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Andrea"^^xsd:string ;
+    f1:lastName "Montermini"^^xsd:string .
+
+f1:driver850 a f1:Driver ;
+    f1:driverCode "FIT"^^xsd:string ;
+    f1:driverNumber "51"^^xsd:int ;
+    f1:firstName "Pietro"^^xsd:string ;
+    f1:lastName "Fittipaldi"^^xsd:string .
+
+f1:driver851 a f1:Driver ;
+    f1:driverCode "AIT"^^xsd:string ;
+    f1:driverNumber "89"^^xsd:int ;
+    f1:firstName "Jack"^^xsd:string ;
+    f1:lastName "Aitken"^^xsd:string .
+
+f1:driver852 a f1:Driver ;
+    f1:driverCode "TSU"^^xsd:string ;
+    f1:driverNumber "22"^^xsd:int ;
+    f1:firstName "Yuki"^^xsd:string ;
+    f1:lastName "Tsunoda"^^xsd:string .
+
+f1:driver853 a f1:Driver ;
+    f1:driverCode "MAZ"^^xsd:string ;
+    f1:driverNumber "9"^^xsd:int ;
+    f1:firstName "Nikita"^^xsd:string ;
+    f1:lastName "Mazepin"^^xsd:string .
+
+f1:driver854 a f1:Driver ;
+    f1:driverCode "MSC"^^xsd:string ;
+    f1:driverNumber "47"^^xsd:int ;
+    f1:firstName "Mick"^^xsd:string ;
+    f1:lastName "Schumacher"^^xsd:string .
+
+f1:driver855 a f1:Driver ;
+    f1:driverCode "ZHO"^^xsd:string ;
+    f1:driverNumber "24"^^xsd:int ;
+    f1:firstName "Guanyu"^^xsd:string ;
+    f1:lastName "Zhou"^^xsd:string .
+
+f1:driver86 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Giovanni"^^xsd:string ;
+    f1:lastName "Lavaggi"^^xsd:string .
+
+f1:driver87 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Mark"^^xsd:string ;
+    f1:lastName "Blundell"^^xsd:string .
+
+f1:driver88 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Aguri"^^xsd:string ;
+    f1:lastName "Suzuki"^^xsd:string .
+
+f1:driver89 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Taki"^^xsd:string ;
+    f1:lastName "Inoue"^^xsd:string .
+
+f1:driver9 a f1:Driver ;
+    f1:driverCode "KUB"^^xsd:string ;
+    f1:driverNumber "88"^^xsd:int ;
+    f1:firstName "Robert"^^xsd:string ;
+    f1:lastName "Kubica"^^xsd:string .
+
+f1:driver90 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Roberto"^^xsd:string ;
+    f1:lastName "Moreno"^^xsd:string .
+
+f1:driver91 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Karl"^^xsd:string ;
+    f1:lastName "Wendlinger"^^xsd:string .
+
+f1:driver92 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Bertrand"^^xsd:string ;
+    f1:lastName "Gachot"^^xsd:string .
+
+f1:driver93 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Domenico"^^xsd:string ;
+    f1:lastName "Schiattarella"^^xsd:string .
+
+f1:driver94 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Pierluigi"^^xsd:string ;
+    f1:lastName "Martini"^^xsd:string .
+
+f1:driver95 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Nigel"^^xsd:string ;
+    f1:lastName "Mansell"^^xsd:string .
+
+f1:driver96 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean-Christophe"^^xsd:string ;
+    f1:lastName "Boullion"^^xsd:string .
+
+f1:driver97 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Massimiliano"^^xsd:string ;
+    f1:lastName "Papis"^^xsd:string .
+
+f1:driver98 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Jean-Denis"^^xsd:string ;
+    f1:lastName "Délétraz"^^xsd:string .
+
+f1:driver99 a f1:Driver ;
+    f1:driverCode "\\N"^^xsd:string ;
+    f1:firstName "Gabriele"^^xsd:string ;
+    f1:lastName "Tarquini"^^xsd:string .
+
