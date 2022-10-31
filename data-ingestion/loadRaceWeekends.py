@@ -35,10 +35,10 @@ for index, row in races.iterrows():
     # the node has the namespace + the league id as URI
     
     #create id for the Driver
-    idR = "race"+str(index)
+    idRWE = "raceWeekEnd"+str(index)
     
     #create the Driver object
-    Race = URIRef(F1[idR])
+    Race = URIRef(F1[idRWE])
     
     # Add triples using store's add() method.
     g.add((Race, RDF.type, F1.RaceWeekend))
