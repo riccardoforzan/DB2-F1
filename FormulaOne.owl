@@ -4,11 +4,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntology> .
+@base <http://www.dei.unipd.it/database2/Formula1Ontology> .
 
-<http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntology> rdf:type owl:Ontology ;
-                                                                         rdfs:comment "An Ontology to model Formula1 Championships from 1950 until 2022. It is used to model single races with their results, the drivers and the teams that competed in it."^^xsd:string ;
-                                                                         rdfs:title "Formula One Ontology"^^xsd:string .
+<http://www.dei.unipd.it/database2/Formula1Ontology> rdf:type owl:Ontology ;
+                                                      rdfs:comment "An Ontology to model Formula1 Championships from 1950 until 2022. It is used to model single races with their results, the drivers and the teams that competed in it."^^xsd:string ;
+                                                      rdfs:title "Formula One Ontology"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -34,107 +34,123 @@ xsd:time rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#driveFor
+###  http://www.dei.unipd.it/database2/Formula1Ontology#appearIn
+:appearIn rdf:type owl:ObjectProperty ,
+                   owl:InverseFunctionalProperty ;
+          rdfs:domain :Driver ;
+          rdfs:range :Drive .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#driveFor
 :driveFor rdf:type owl:ObjectProperty ,
                    owl:FunctionalProperty ;
-          rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
+          rdfs:domain :Drive ;
           rdfs:range <http://dbpedia.org/resource/FormulaOneTeam> .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#during
+###  http://www.dei.unipd.it/database2/Formula1Ontology#during
 :during rdf:type owl:ObjectProperty ,
                  owl:FunctionalProperty ;
         rdfs:domain [ rdf:type owl:Class ;
-                      owl:unionOf ( :Partecipate
-                                    <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive>
+                      owl:unionOf ( :Drive
+                                    :Partecipate
                                   )
                     ] ;
         rdfs:range :RaceWeekend .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#hasDrive
+###  http://www.dei.unipd.it/database2/Formula1Ontology#hasCountry
+:hasCountry rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
+                                        :Circuit
+                                        <http://xmlns.com/foaf/0.1/Person>
+                                      )
+                        ] ;
+            rdfs:range <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#hasDrive
 :hasDrive rdf:type owl:ObjectProperty ,
                    owl:InverseFunctionalProperty ;
           rdfs:domain :RaceWeekend ;
-          rdfs:range <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> .
+          rdfs:range :Drive .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#hasDriver
+###  http://www.dei.unipd.it/database2/Formula1Ontology#hasDriver
 :hasDriver rdf:type owl:ObjectProperty ,
                     owl:FunctionalProperty ;
-           rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
-           rdfs:range <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Driver> .
+           rdfs:domain :Drive ;
+           rdfs:range :Driver .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#partecipateIn
+###  http://www.dei.unipd.it/database2/Formula1Ontology#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ,
+                      owl:SymmetricProperty ;
+             rdfs:domain :Circuit ;
+             rdfs:range :Location .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#partecipateIn
 :partecipateIn rdf:type owl:ObjectProperty ,
                         owl:InverseFunctionalProperty ;
                rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
                rdfs:range :Partecipate .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#takePlaceIn
+###  http://www.dei.unipd.it/database2/Formula1Ontology#takePlaceIn
 :takePlaceIn rdf:type owl:ObjectProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :RaceWeekend ;
-             rdfs:range <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Circuit> .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#appearIn
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#appearIn> rdf:type owl:ObjectProperty ,
-                                                                                            owl:InverseFunctionalProperty ;
-                                                                                   rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Driver> ;
-                                                                                   rdfs:range <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#hasCountry
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#hasCountry> rdf:type owl:ObjectProperty ,
-                                                                                              owl:FunctionalProperty ;
-                                                                                     rdfs:domain [ rdf:type owl:Class ;
-                                                                                                   owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
-                                                                                                                 <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Circuit>
-                                                                                                                 <http://xmlns.com/foaf/0.1/Person>
-                                                                                                               )
-                                                                                                 ] ;
-                                                                                     rdfs:range <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#hasLocation
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#hasLocation> rdf:type owl:ObjectProperty ,
-                                                                                               owl:FunctionalProperty ,
-                                                                                               owl:SymmetricProperty ;
-                                                                                      rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Circuit> ;
-                                                                                      rdfs:range <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Location> .
+             rdfs:range :Circuit .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#date
+###  http://www.dei.unipd.it/database2/Formula1Ontology#altitude
+:altitude rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Location ;
+          rdfs:range xsd:decimal ;
+          rdfs:comment "Altitude for a location"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#code
+:code rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain :Driver ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The code assigned to a driver"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#date
 :date rdf:type owl:DatatypeProperty ;
       rdfs:domain :RaceWeekend ;
       rdfs:range xsd:date ;
       rdfs:comment "Date set for a Race Weekend"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#fastest_lap
+###  http://www.dei.unipd.it/database2/Formula1Ontology#fastest_lap
 :fastest_lap rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
-             rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
+             rdfs:domain :Drive ;
              rdfs:range xsd:time ;
              rdfs:comment "Time for the fastest lap performed by a driver during a race"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#fastest_lap_quali
+###  http://www.dei.unipd.it/database2/Formula1Ontology#fastest_lap_quali
 :fastest_lap_quali rdf:type owl:DatatypeProperty ,
                             owl:FunctionalProperty ;
-                   rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
+                   rdfs:domain :Drive ;
                    rdfs:range xsd:time ;
                    rdfs:comment "Time for the fastest lap performed by a driver during a qualification race"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#fastest_pitstop
+###  http://www.dei.unipd.it/database2/Formula1Ontology#fastest_pitstop
 :fastest_pitstop rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
@@ -142,19 +158,27 @@ xsd:time rdf:type rdfs:Datatype .
                  rdfs:comment "Time for the fastest pitstop performed by a team"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#final_position
+###  http://www.dei.unipd.it/database2/Formula1Ontology#final_position
 :final_position rdf:type owl:DatatypeProperty ,
                          owl:FunctionalProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
-                                            <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive>
+                                            :Drive
                                           )
                             ] ;
                 rdfs:range xsd:int ;
                 rdfs:comment "The position reached by a Driver at the end of a race or the position of the team for a Race Weekend"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#longest_pitstop
+###  http://www.dei.unipd.it/database2/Formula1Ontology#latitude
+:latitude rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Location ;
+          rdfs:range xsd:decimal ;
+          rdfs:comment "Latitude coordinate for a location"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#longest_pitstop
 :longest_pitstop rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
@@ -162,7 +186,50 @@ xsd:time rdf:type rdfs:Datatype .
                  rdfs:comment "Time for the slowest pitstop performed by a team"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#pitstop_count
+###  http://www.dei.unipd.it/database2/Formula1Ontology#longitude
+:longitude rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Location ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "Longistude coordinate for a location"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#max_speed
+:max_speed rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Drive ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "Highest speed reached by a driver during a race"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#name
+:name rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
+                                  :Circuit
+                                  :RaceWeekend
+                                )
+                  ] ;
+      rdfs:range xsd:string .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#number
+:number rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Driver ;
+        rdfs:range [ rdf:type rdfs:Datatype ;
+                     owl:onDatatype xsd:int ;
+                     owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
+                                            ]
+                                            [ xsd:maxInclusive "99"^^xsd:int
+                                            ]
+                                          )
+                   ] ;
+        rdfs:comment "Number choosen by a driver"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#pitstop_count
 :pitstop_count rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
                rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
@@ -170,19 +237,35 @@ xsd:time rdf:type rdfs:Datatype .
                rdfs:comment "Number of pitsops performed during a race"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#points_after_race
+###  http://www.dei.unipd.it/database2/Formula1Ontology#points_after_race
 :points_after_race rdf:type owl:DatatypeProperty ,
                             owl:FunctionalProperty ;
                    rdfs:domain [ rdf:type owl:Class ;
                                  owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
-                                               <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive>
+                                               :Drive
                                              )
                                ] ;
                    rdfs:range xsd:int ;
                    rdfs:comment "The points obtained by a Driver at the end of a race or the final position of the team for a Race Weekend"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#rating
+###  http://www.dei.unipd.it/database2/Formula1Ontology#quali_position
+:quali_position rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Drive ;
+                rdfs:range xsd:int ;
+                rdfs:comment "The initial position of a qualification race"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#race_position
+:race_position rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Drive ;
+               rdfs:range xsd:int ;
+               rdfs:comment "The initial position of a standard race"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#rating
 :rating rdf:type owl:DatatypeProperty ;
         rdfs:domain :RaceWeekend ;
         rdfs:range [ rdf:type rdfs:Datatype ;
@@ -196,16 +279,22 @@ xsd:time rdf:type rdfs:Datatype .
         rdfs:comment "Rating assigned by fans to a RaceWeekend"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#round
+###  http://www.dei.unipd.it/database2/Formula1Ontology#round
 :round rdf:type owl:DatatypeProperty ,
                 owl:FunctionalProperty ;
        rdfs:domain :RaceWeekend ;
        rdfs:range xsd:int .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#status
+###  http://www.dei.unipd.it/database2/Formula1Ontology#sprint_position
+:sprint_position rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Drive ;
+                 rdfs:range xsd:int .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#status
 :status rdf:type owl:DatatypeProperty ;
-        rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
+        rdfs:domain :Drive ;
         rdfs:range [ rdf:type rdfs:Datatype ;
                      owl:oneOf [ rdf:type rdf:List ;
                                  rdf:first "+1 Laps" ;
@@ -610,100 +699,11 @@ xsd:time rdf:type rdfs:Datatype .
                    ] .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#year
+###  http://www.dei.unipd.it/database2/Formula1Ontology#year
 :year rdf:type owl:DatatypeProperty ,
                owl:FunctionalProperty ;
       rdfs:domain :RaceWeekend ;
       rdfs:range xsd:int .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntology#altitude
-:altitude rdf:type owl:DatatypeProperty ,
-                   owl:FunctionalProperty ;
-          rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Location> ;
-          rdfs:range xsd:decimal ;
-          rdfs:comment "Altitude for a location"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntology#latitude
-:latitude rdf:type owl:DatatypeProperty ,
-                   owl:FunctionalProperty ;
-          rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Location> ;
-          rdfs:range xsd:decimal ;
-          rdfs:comment "Latitude coordinate for a location"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntology#longitude
-:longitude rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Location> ;
-           rdfs:range xsd:decimal ;
-           rdfs:comment "Longistude coordinate for a location"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#code
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#code> rdf:type owl:DatatypeProperty ,
-                                                                                        owl:FunctionalProperty ;
-                                                                               rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Driver> ;
-                                                                               rdfs:range xsd:string ;
-                                                                               rdfs:comment "The code assigned to a driver"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#max_speed
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#max_speed> rdf:type owl:DatatypeProperty ,
-                                                                                             owl:FunctionalProperty ;
-                                                                                    rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
-                                                                                    rdfs:range xsd:decimal ;
-                                                                                    rdfs:comment "Highest speed reached by a driver during a race"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#name
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#name> rdf:type owl:DatatypeProperty ,
-                                                                                        owl:FunctionalProperty ;
-                                                                               rdfs:domain [ rdf:type owl:Class ;
-                                                                                             owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
-                                                                                                           :RaceWeekend
-                                                                                                           <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Circuit>
-                                                                                                         )
-                                                                                           ] ;
-                                                                               rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#number
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#number> rdf:type owl:DatatypeProperty ,
-                                                                                          owl:FunctionalProperty ;
-                                                                                 rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Driver> ;
-                                                                                 rdfs:range [ rdf:type rdfs:Datatype ;
-                                                                                              owl:onDatatype xsd:int ;
-                                                                                              owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
-                                                                                                                     ]
-                                                                                                                     [ xsd:maxInclusive "99"^^xsd:int
-                                                                                                                     ]
-                                                                                                                   )
-                                                                                            ] ;
-                                                                                 rdfs:comment "Number choosen by a driver"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#quali_position
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#quali_position> rdf:type owl:DatatypeProperty ,
-                                                                                                  owl:FunctionalProperty ;
-                                                                                         rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
-                                                                                         rdfs:range xsd:int ;
-                                                                                         rdfs:comment "The initial position of a qualification race"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#race_position
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#race_position> rdf:type owl:DatatypeProperty ,
-                                                                                                 owl:FunctionalProperty ;
-                                                                                        rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
-                                                                                        rdfs:range xsd:int ;
-                                                                                        rdfs:comment "The initial position of a standard race"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#sprint_position
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#sprint_position> rdf:type owl:DatatypeProperty ;
-                                                                                          rdfs:domain <http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> ;
-                                                                                          rdfs:range xsd:int .
 
 
 #################################################################
@@ -720,35 +720,35 @@ xsd:time rdf:type rdfs:Datatype .
                                                               rdfs:comment "The class of world countries"@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#Partecipate
+###  http://www.dei.unipd.it/database2/Formula1Ontology#Circuit
+:Circuit rdf:type owl:Class ;
+         rdfs:comment "This class models the Circuits in which the races take place"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#Drive
+:Drive rdf:type owl:Class ;
+       rdfs:comment "The class that models each race individually"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#Driver
+:Driver rdf:type owl:Class ;
+        rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+        rdfs:comment "The class of Fromula One drivers"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#Location
+:Location rdf:type owl:Class ;
+          rdfs:comment "This class models the coordinates of circuit"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#Partecipate
 :Partecipate rdf:type owl:Class ;
              rdfs:comment "This class models the appearance of a team in a race weekend."@en .
 
 
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/FormulaOneOntolgy#RaceWeekend
+###  http://www.dei.unipd.it/database2/Formula1Ontology#RaceWeekend
 :RaceWeekend rdf:type owl:Class ;
              rdfs:comment "The class that models the Gran Prix races for the Formula One championships."@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Circuit
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Circuit> rdf:type owl:Class ;
-                                                                                  rdfs:comment "This class models the Circuits in which the races take place"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Drive> rdf:type owl:Class ;
-                                                                                rdfs:comment "The class that models each race individually"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Driver
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Driver> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
-                                                                                 rdfs:comment "The class of Fromula One drivers"@en .
-
-
-###  http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Location
-<http://www.semanticweb.org/alelo/ontologies/2022/9/untitled-ontology-29#Location> rdf:type owl:Class ;
-                                                                                   rdfs:comment "This class models the coordinates of circuit"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
