@@ -35,13 +35,6 @@ xsd:time rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.dei.unipd.it/database2/Formula1Ontology#appearIn
-f1:appearIn rdf:type owl:ObjectProperty ,
-                     owl:InverseFunctionalProperty ;
-            rdfs:domain f1:Driver ;
-            rdfs:range f1:Drive .
-
-
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#driveFor
 f1:driveFor rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
@@ -77,6 +70,13 @@ f1:hasDrive rdf:type owl:ObjectProperty ,
                      owl:InverseFunctionalProperty ;
             rdfs:domain f1:RaceWeekend ;
             rdfs:range f1:Drive .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#hasDrivenIn
+f1:hasDrivenIn rdf:type owl:ObjectProperty ,
+                        owl:InverseFunctionalProperty ;
+               rdfs:domain f1:Driver ;
+               rdfs:range f1:Drive .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#hasDriver
@@ -115,40 +115,61 @@ f1:takePlaceIn rdf:type owl:ObjectProperty ,
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#altitude
 f1:altitude rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
-            rdfs:domain f1:Location ;
+            rdfs:domain f1:Circuit ;
             rdfs:range xsd:decimal ;
-            rdfs:comment "Altitude for a location"@en .
+            rdfs:comment "Altitude for a circuit"@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#code
-f1:code rdf:type owl:DatatypeProperty ,
-                 owl:FunctionalProperty ;
+f1:code rdf:type owl:DatatypeProperty ;
         rdfs:domain f1:Driver ;
         rdfs:range xsd:string ;
         rdfs:comment "The code assigned to a driver"@en .
 
 
+###  http://www.dei.unipd.it/database2/Formula1Ontology#cp_points_after_race
+f1:cp_points_after_race rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( f1:Drive
+                                                    f1:Partecipate
+                                                  )
+                                    ] ;
+                        rdfs:range xsd:int ;
+                        rdfs:comment "The championship points at the end of a Race Weekend for a Driver or a team"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#cp_position_after_race
+f1:cp_position_after_race rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( f1:Drive
+                                                      f1:Partecipate
+                                                    )
+                                      ] ;
+                          rdfs:range xsd:int ;
+                          rdfs:comment "The championship position after a Race Weekend for a Driver or a team"@en .
+
+
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#date
 f1:date rdf:type owl:DatatypeProperty ;
         rdfs:domain f1:RaceWeekend ;
-        rdfs:range xsd:date ;
+        rdfs:range xsd:string ;
         rdfs:comment "Date set for a Race Weekend"@en .
 
 
-###  http://www.dei.unipd.it/database2/Formula1Ontology#fastest_lap
-f1:fastest_lap rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain f1:Drive ;
-               rdfs:range xsd:time ;
-               rdfs:comment "Time for the fastest lap performed by a driver during a race"@en .
-
-
-###  http://www.dei.unipd.it/database2/Formula1Ontology#fastest_lap_quali
-f1:fastest_lap_quali rdf:type owl:DatatypeProperty ,
-                              owl:FunctionalProperty ;
-                     rdfs:domain f1:Drive ;
-                     rdfs:range xsd:time ;
-                     rdfs:comment "Time for the fastest lap performed by a driver during a qualification race"@en .
+###  http://www.dei.unipd.it/database2/Formula1Ontology#fans_rating
+f1:fans_rating rdf:type owl:DatatypeProperty ;
+               rdfs:domain f1:RaceWeekend ;
+               rdfs:range [ rdf:type rdfs:Datatype ;
+                            owl:onDatatype xsd:decimal ;
+                            owl:withRestrictions ( [ xsd:minInclusive "0"
+                                                   ]
+                                                   [ xsd:maxInclusive "10"
+                                                   ]
+                                                 )
+                          ] ;
+               rdfs:comment "Rating assigned by fans to a RaceWeekend"@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#fastest_pitstop
@@ -157,18 +178,6 @@ f1:fastest_pitstop rdf:type owl:DatatypeProperty ,
                    rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
                    rdfs:range xsd:decimal ;
                    rdfs:comment "Time for the fastest pitstop performed by a team"@en .
-
-
-###  http://www.dei.unipd.it/database2/Formula1Ontology#final_position
-f1:final_position rdf:type owl:DatatypeProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
-                                              f1:Drive
-                                            )
-                              ] ;
-                  rdfs:range xsd:int ;
-                  rdfs:comment "The position reached by a Driver at the end of a race or the position of the team for a Race Weekend"@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#latitude
@@ -210,6 +219,7 @@ f1:name rdf:type owl:DatatypeProperty ,
                       owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
                                     f1:Circuit
                                     f1:RaceWeekend
+                                    <http://xmlns.com/foaf/0.1/Person>
                                   )
                     ] ;
         rdfs:range xsd:string .
@@ -233,51 +243,54 @@ f1:number rdf:type owl:DatatypeProperty ,
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#pitstop_count
 f1:pitstop_count rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
-                 rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
+                 rdfs:domain f1:Drive ;
                  rdfs:range xsd:int ;
                  rdfs:comment "Number of pitsops performed during a race"@en .
 
 
-###  http://www.dei.unipd.it/database2/Formula1Ontology#points_after_race
-f1:points_after_race rdf:type owl:DatatypeProperty ,
-                              owl:FunctionalProperty ;
-                     rdfs:domain [ rdf:type owl:Class ;
-                                   owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
-                                                 f1:Drive
-                                               )
-                                 ] ;
-                     rdfs:range xsd:int ;
-                     rdfs:comment "The points obtained by a Driver at the end of a race or the final position of the team for a Race Weekend"@en .
+###  http://www.dei.unipd.it/database2/Formula1Ontology#q1_time
+f1:q1_time rdf:type owl:DatatypeProperty ;
+           rdfs:domain f1:Drive ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "The best time for the first round of qualifiers"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#q2_time
+f1:q2_time rdf:type owl:DatatypeProperty ;
+           rdfs:domain f1:Drive ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "The best time for the second round of qualifiers"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#q3_time
+f1:q3_time rdf:type owl:DatatypeProperty ;
+           rdfs:domain f1:Drive ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "The best time for the third round of qualifiers"@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#quali_position
 f1:quali_position rdf:type owl:DatatypeProperty ,
                            owl:FunctionalProperty ;
                   rdfs:domain f1:Drive ;
-                  rdfs:range xsd:int ;
-                  rdfs:comment "The initial position of a qualification race"@en .
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The final position obtained during qualifications"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#race_fastest_lap
+f1:race_fastest_lap rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain f1:Drive ;
+                    rdfs:range xsd:time ;
+                    rdfs:comment "Time for the fastest lap performed by a driver during a race"@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#race_position
 f1:race_position rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain f1:Drive ;
-                 rdfs:range xsd:int ;
-                 rdfs:comment "The initial position of a standard race"@en .
-
-
-###  http://www.dei.unipd.it/database2/Formula1Ontology#rating
-f1:rating rdf:type owl:DatatypeProperty ;
-          rdfs:domain f1:RaceWeekend ;
-          rdfs:range [ rdf:type rdfs:Datatype ;
-                       owl:onDatatype xsd:decimal ;
-                       owl:withRestrictions ( [ xsd:minInclusive "0"
-                                              ]
-                                              [ xsd:maxInclusive "10"
-                                              ]
-                                            )
-                     ] ;
-          rdfs:comment "Rating assigned by fans to a RaceWeekend"@en .
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The final position of a standard race"@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#round
@@ -290,7 +303,8 @@ f1:round rdf:type owl:DatatypeProperty ,
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#sprint_position
 f1:sprint_position rdf:type owl:DatatypeProperty ;
                    rdfs:domain f1:Drive ;
-                   rdfs:range xsd:int .
+                   rdfs:range xsd:string ;
+                   rdfs:comment "The final position of a sprint race."@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#status
@@ -697,7 +711,15 @@ f1:status rdf:type owl:DatatypeProperty ;
                                                        ]
                                             ]
                                  ]
-                     ] .
+                     ] ;
+          rdfs:comment "Models the car and race conditions"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#surname
+f1:surname rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+           rdfs:range xsd:string .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#year
