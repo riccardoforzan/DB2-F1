@@ -166,7 +166,7 @@ xsd:time rdf:type rdfs:Datatype .
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#fastest_pitstop
 :fastest_pitstop rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
-                 rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
+                 rdfs:domain :Drive ;
                  rdfs:range xsd:decimal ;
                  rdfs:comment "Time for the fastest pitstop performed by a team"@en .
 
