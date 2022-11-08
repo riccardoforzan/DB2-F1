@@ -34,6 +34,13 @@ xsd:time rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://dbpedia.org/resource/nationality
+<http://dbpedia.org/resource/nationality> rdf:type owl:ObjectProperty ,
+                                                   owl:FunctionalProperty ;
+                                          rdfs:domain <https://w3id.org/MON/person.owl#Person> ;
+                                          rdfs:range <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> .
+
+
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#driveFor
 :driveFor rdf:type owl:ObjectProperty ,
                    owl:FunctionalProperty ;
@@ -65,7 +72,6 @@ xsd:time rdf:type rdfs:Datatype .
             rdfs:domain [ rdf:type owl:Class ;
                           owl:unionOf ( <http://dbpedia.org/resource/FormulaOneTeam>
                                         :Circuit
-                                        <https://w3id.org/MON/person.owl#Person>
                                       )
                         ] ;
             rdfs:range <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> .
@@ -228,6 +234,17 @@ xsd:time rdf:type rdfs:Datatype .
                                           )
                    ] ;
         rdfs:comment "Number choosen by a driver"@en .
+
+
+###  http://www.dei.unipd.it/database2/Formula1Ontology#number_of_wins
+:number_of_wins rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Drive
+                                            :Partecipate
+                                          )
+                            ] ;
+                rdfs:range xsd:int ;
+                rdfs:comment "Number of times the driver or the team has won a Race in the season, counting also the current race weekend"@en .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#pitstop_count
