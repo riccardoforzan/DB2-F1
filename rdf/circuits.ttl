@@ -1,382 +1,611 @@
+@prefix cities: <https://schema.org/City#> .
 @prefix countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#> .
 @prefix f1: <http://www.dei.unipd.it/database2/Formula1Ontology#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 f1:circuit1 a f1:Circuit ;
     f1:altitude "10"^^xsd:int ;
+    f1:hasCity cities:Melbourne ;
     f1:hasCountry countries:Australia ;
+    f1:latitude -37.8497 ;
+    f1:longitude 144.968 ;
     f1:name "Albert Park Grand Prix Circuit"^^xsd:string .
 
 f1:circuit10 a f1:Circuit ;
     f1:altitude "103"^^xsd:int ;
+    f1:hasCity cities:Hockenheim ;
     f1:hasCountry countries:Germany ;
+    f1:latitude 49.3278 ;
+    f1:longitude 8.56583 ;
     f1:name "Hockenheimring"^^xsd:string .
 
 f1:circuit11 a f1:Circuit ;
     f1:altitude "264"^^xsd:int ;
+    f1:hasCity cities:Budapest ;
     f1:hasCountry countries:Hungary ;
+    f1:latitude 47.5789 ;
+    f1:longitude 19.2486 ;
     f1:name "Hungaroring"^^xsd:string .
 
 f1:circuit12 a f1:Circuit ;
     f1:altitude "4"^^xsd:int ;
+    f1:hasCity cities:Valencia ;
     f1:hasCountry countries:Spain ;
+    f1:latitude 39.4589 ;
+    f1:longitude -0.331667 ;
     f1:name "Valencia Street Circuit"^^xsd:string .
 
 f1:circuit13 a f1:Circuit ;
     f1:altitude "401"^^xsd:int ;
+    f1:hasCity cities:Spa ;
     f1:hasCountry countries:Belgium ;
+    f1:latitude 50.4372 ;
+    f1:longitude 5.97139 ;
     f1:name "Circuit de Spa-Francorchamps"^^xsd:string .
 
 f1:circuit14 a f1:Circuit ;
     f1:altitude "162"^^xsd:int ;
+    f1:hasCity cities:Monza ;
     f1:hasCountry countries:Italy ;
+    f1:latitude 45.6156 ;
+    f1:longitude 9.28111 ;
     f1:name "Autodromo Nazionale di Monza"^^xsd:string .
 
 f1:circuit15 a f1:Circuit ;
     f1:altitude "18"^^xsd:int ;
+    f1:hasCity cities:MarinaBay ;
     f1:hasCountry countries:Singapore ;
+    f1:latitude 1.2914 ;
+    f1:longitude 103.864 ;
     f1:name "Marina Bay Street Circuit"^^xsd:string .
 
 f1:circuit16 a f1:Circuit ;
     f1:altitude "583"^^xsd:int ;
+    f1:hasCity cities:Oyama ;
     f1:hasCountry countries:Japan ;
+    f1:latitude 35.3717 ;
+    f1:longitude 138.927 ;
     f1:name "Fuji Speedway"^^xsd:string .
 
 f1:circuit17 a f1:Circuit ;
     f1:altitude "5"^^xsd:int ;
+    f1:hasCity cities:Shanghai ;
     f1:hasCountry countries:China ;
+    f1:latitude 31.3389 ;
+    f1:longitude 121.22 ;
     f1:name "Shanghai International Circuit"^^xsd:string .
 
 f1:circuit18 a f1:Circuit ;
     f1:altitude "785"^^xsd:int ;
+    f1:hasCity cities:SãoPaulo ;
     f1:hasCountry countries:Brazil ;
+    f1:latitude -23.7036 ;
+    f1:longitude -46.6997 ;
     f1:name "Autódromo José Carlos Pace"^^xsd:string .
 
 f1:circuit19 a f1:Circuit ;
     f1:altitude "223"^^xsd:int ;
+    f1:hasCity cities:Indianapolis ;
     f1:hasCountry countries:USA ;
+    f1:latitude 39.795 ;
+    f1:longitude -86.2347 ;
     f1:name "Indianapolis Motor Speedway"^^xsd:string .
 
 f1:circuit2 a f1:Circuit ;
     f1:altitude "18"^^xsd:int ;
+    f1:hasCity cities:KualaLumpur ;
     f1:hasCountry countries:Malaysia ;
+    f1:latitude 2.76083 ;
+    f1:longitude 101.738 ;
     f1:name "Sepang International Circuit"^^xsd:string .
 
 f1:circuit20 a f1:Circuit ;
     f1:altitude "578"^^xsd:int ;
+    f1:hasCity cities:Nürburg ;
     f1:hasCountry countries:Germany ;
+    f1:latitude 50.3356 ;
+    f1:longitude 6.9475 ;
     f1:name "Nürburgring"^^xsd:string .
 
 f1:circuit21 a f1:Circuit ;
     f1:altitude "37"^^xsd:int ;
+    f1:hasCity cities:Imola ;
     f1:hasCountry countries:Italy ;
+    f1:latitude 44.3439 ;
+    f1:longitude 11.7167 ;
     f1:name "Autodromo Enzo e Dino Ferrari"^^xsd:string .
 
 f1:circuit22 a f1:Circuit ;
     f1:altitude "45"^^xsd:int ;
+    f1:hasCity cities:Suzuka ;
     f1:hasCountry countries:Japan ;
+    f1:latitude 34.8431 ;
+    f1:longitude 136.541 ;
     f1:name "Suzuka Circuit"^^xsd:string .
 
 f1:circuit24 a f1:Circuit ;
     f1:altitude "3"^^xsd:int ;
+    f1:hasCity cities:AbuDhabi ;
     f1:hasCountry countries:UAE ;
+    f1:latitude 24.4672 ;
+    f1:longitude 54.6031 ;
     f1:name "Yas Marina Circuit"^^xsd:string .
 
 f1:circuit25 a f1:Circuit ;
     f1:altitude "8"^^xsd:int ;
+    f1:hasCity cities:BuenosAires ;
     f1:hasCountry countries:Argentina ;
+    f1:latitude -34.6943 ;
+    f1:longitude -58.4593 ;
     f1:name "Autódromo Juan y Oscar Gálvez"^^xsd:string .
 
 f1:circuit26 a f1:Circuit ;
     f1:altitude "37"^^xsd:int ;
+    f1:hasCity cities:JerezdelaFrontera ;
     f1:hasCountry countries:Spain ;
+    f1:latitude 36.7083 ;
+    f1:longitude -6.03417 ;
     f1:name "Circuito de Jerez"^^xsd:string .
 
 f1:circuit27 a f1:Circuit ;
     f1:altitude "130"^^xsd:int ;
+    f1:hasCity cities:Estoril ;
     f1:hasCountry countries:Portugal ;
+    f1:latitude 38.7506 ;
+    f1:longitude -9.39417 ;
     f1:name "Autódromo do Estoril"^^xsd:string .
 
 f1:circuit28 a f1:Circuit ;
     f1:altitude "266"^^xsd:int ;
+    f1:hasCity cities:Okayama ;
     f1:hasCountry countries:Japan ;
+    f1:latitude 34.915 ;
+    f1:longitude 134.221 ;
     f1:name "Okayama International Circuit"^^xsd:string .
 
 f1:circuit29 a f1:Circuit ;
     f1:altitude "58"^^xsd:int ;
+    f1:hasCity cities:Adelaide ;
     f1:hasCountry countries:Australia ;
+    f1:latitude -34.9272 ;
+    f1:longitude 138.617 ;
     f1:name "Adelaide Street Circuit"^^xsd:string .
 
 f1:circuit3 a f1:Circuit ;
     f1:altitude "7"^^xsd:int ;
+    f1:hasCity cities:Sakhir ;
     f1:hasCountry countries:Bahrain ;
+    f1:latitude 26.0325 ;
+    f1:longitude 50.5106 ;
     f1:name "Bahrain International Circuit"^^xsd:string .
 
 f1:circuit30 a f1:Circuit ;
     f1:altitude "1460"^^xsd:int ;
+    f1:hasCity cities:Midrand ;
     f1:hasCountry countries:SouthAfrica ;
+    f1:latitude -25.9894 ;
+    f1:longitude 28.0767 ;
     f1:name "Kyalami"^^xsd:string .
 
 f1:circuit31 a f1:Circuit ;
     f1:altitude "88"^^xsd:int ;
+    f1:hasCity cities:CastleDonington ;
     f1:hasCountry countries:UK ;
+    f1:latitude 52.8306 ;
+    f1:longitude -1.37528 ;
     f1:name "Donington Park"^^xsd:string .
 
 f1:circuit32 a f1:Circuit ;
     f1:altitude "2227"^^xsd:int ;
+    f1:hasCity cities:MexicoCity ;
     f1:hasCountry countries:Mexico ;
+    f1:latitude 19.4042 ;
+    f1:longitude -99.0907 ;
     f1:name "Autódromo Hermanos Rodríguez"^^xsd:string .
 
 f1:circuit33 a f1:Circuit ;
     f1:altitude "345"^^xsd:int ;
+    f1:hasCity cities:Phoenix ;
     f1:hasCountry countries:USA ;
+    f1:latitude 33.4479 ;
+    f1:longitude -112.075 ;
     f1:name "Phoenix street circuit"^^xsd:string .
 
 f1:circuit34 a f1:Circuit ;
     f1:altitude "432"^^xsd:int ;
+    f1:hasCity cities:LeCastellet ;
     f1:hasCountry countries:France ;
+    f1:latitude 43.2506 ;
+    f1:longitude 5.79167 ;
     f1:name "Circuit Paul Ricard"^^xsd:string .
 
 f1:circuit35 a f1:Circuit ;
     f1:altitude "0"^^xsd:int ;
+    f1:hasCity cities:YeongamCounty ;
     f1:hasCountry countries:Korea ;
+    f1:latitude 34.7333 ;
+    f1:longitude 126.417 ;
     f1:name "Korean International Circuit"^^xsd:string .
 
 f1:circuit36 a f1:Circuit ;
     f1:altitude "1126"^^xsd:int ;
+    f1:hasCity cities:RiodeJaneiro ;
     f1:hasCountry countries:Brazil ;
+    f1:latitude -22.9756 ;
+    f1:longitude -43.395 ;
     f1:name "Autódromo Internacional Nelson Piquet"^^xsd:string .
 
 f1:circuit37 a f1:Circuit ;
     f1:altitude "177"^^xsd:int ;
+    f1:hasCity cities:Detroit ;
     f1:hasCountry countries:USA ;
+    f1:latitude 42.3298 ;
+    f1:longitude -83.0401 ;
     f1:name "Detroit Street Circuit"^^xsd:string .
 
 f1:circuit38 a f1:Circuit ;
     f1:altitude "145"^^xsd:int ;
+    f1:hasCity cities:Kent ;
     f1:hasCountry countries:UK ;
+    f1:latitude 51.3569 ;
+    f1:longitude 0.263056 ;
     f1:name "Brands Hatch"^^xsd:string .
 
 f1:circuit39 a f1:Circuit ;
     f1:altitude "6"^^xsd:int ;
+    f1:hasCity cities:Zandvoort ;
     f1:hasCountry countries:Netherlands ;
+    f1:latitude 52.3888 ;
+    f1:longitude 4.54092 ;
     f1:name "Circuit Park Zandvoort"^^xsd:string .
 
 f1:circuit4 a f1:Circuit ;
     f1:altitude "109"^^xsd:int ;
+    f1:hasCity cities:Montmeló ;
     f1:hasCountry countries:Spain ;
+    f1:latitude 41.57 ;
+    f1:longitude 2.26111 ;
     f1:name "Circuit de Barcelona-Catalunya"^^xsd:string .
 
 f1:circuit40 a f1:Circuit ;
     f1:altitude "36"^^xsd:int ;
+    f1:hasCity cities:Heusden-Zolder ;
     f1:hasCountry countries:Belgium ;
+    f1:latitude 50.9894 ;
+    f1:longitude 5.25694 ;
     f1:name "Zolder"^^xsd:string .
 
 f1:circuit41 a f1:Circuit ;
     f1:altitude "484"^^xsd:int ;
+    f1:hasCity cities:Dijon ;
     f1:hasCountry countries:France ;
+    f1:latitude 47.3625 ;
+    f1:longitude 4.89913 ;
     f1:name "Dijon-Prenois"^^xsd:string .
 
 f1:circuit42 a f1:Circuit ;
     f1:altitude "139"^^xsd:int ;
+    f1:hasCity cities:Dallas ;
     f1:hasCountry countries:USA ;
+    f1:latitude 32.7774 ;
+    f1:longitude -96.7587 ;
     f1:name "Fair Park"^^xsd:string .
 
 f1:circuit43 a f1:Circuit ;
     f1:altitude "12"^^xsd:int ;
+    f1:hasCity cities:California ;
     f1:hasCountry countries:USA ;
+    f1:latitude 33.7651 ;
+    f1:longitude -118.189 ;
     f1:name "Long Beach"^^xsd:string .
 
 f1:circuit44 a f1:Circuit ;
     f1:altitude "639"^^xsd:int ;
+    f1:hasCity cities:Nevada ;
     f1:hasCountry countries:USA ;
+    f1:latitude 36.1162 ;
+    f1:longitude -115.174 ;
     f1:name "Las Vegas Street Circuit"^^xsd:string .
 
 f1:circuit45 a f1:Circuit ;
     f1:altitude "609"^^xsd:int ;
+    f1:hasCity cities:Madrid ;
     f1:hasCountry countries:Spain ;
+    f1:latitude 40.6171 ;
+    f1:longitude -3.58558 ;
     f1:name "Jarama"^^xsd:string .
 
 f1:circuit46 a f1:Circuit ;
     f1:altitude "485"^^xsd:int ;
+    f1:hasCity cities:NewYorkState ;
     f1:hasCountry countries:USA ;
+    f1:latitude 42.3369 ;
+    f1:longitude -76.9272 ;
     f1:name "Watkins Glen"^^xsd:string .
 
 f1:circuit47 a f1:Circuit ;
     f1:altitude "153"^^xsd:int ;
+    f1:hasCity cities:Anderstorp ;
     f1:hasCountry countries:Sweden ;
+    f1:latitude 57.2653 ;
+    f1:longitude 13.6042 ;
     f1:name "Scandinavian Raceway"^^xsd:string .
 
 f1:circuit48 a f1:Circuit ;
     f1:altitude "332"^^xsd:int ;
+    f1:hasCity cities:Ontario ;
     f1:hasCountry countries:Canada ;
+    f1:latitude 44.0481 ;
+    f1:longitude -78.6756 ;
     f1:name "Mosport International Raceway"^^xsd:string .
 
 f1:circuit49 a f1:Circuit ;
     f1:altitude "79"^^xsd:int ;
+    f1:hasCity cities:Barcelona ;
     f1:hasCountry countries:Spain ;
+    f1:latitude 41.3664 ;
+    f1:longitude 2.15167 ;
     f1:name "Montjuïc"^^xsd:string .
 
 f1:circuit5 a f1:Circuit ;
     f1:altitude "130"^^xsd:int ;
+    f1:hasCity cities:Istanbul ;
     f1:hasCountry countries:Turkey ;
+    f1:latitude 40.9517 ;
+    f1:longitude 29.405 ;
     f1:name "Istanbul Park"^^xsd:string .
 
 f1:circuit50 a f1:Circuit ;
     f1:altitude "139"^^xsd:int ;
+    f1:hasCity cities:Brussels ;
     f1:hasCountry countries:Belgium ;
+    f1:latitude 50.6211 ;
+    f1:longitude 4.32694 ;
     f1:name "Nivelles-Baulers"^^xsd:string .
 
 f1:circuit51 a f1:Circuit ;
     f1:altitude "790"^^xsd:int ;
+    f1:hasCity cities:Clermont-Ferrand ;
     f1:hasCountry countries:France ;
+    f1:latitude 45.7472 ;
+    f1:longitude 3.03889 ;
     f1:name "Charade Circuit"^^xsd:string .
 
 f1:circuit52 a f1:Circuit ;
     f1:altitude "214"^^xsd:int ;
+    f1:hasCity cities:Quebec ;
     f1:hasCountry countries:Canada ;
+    f1:latitude 46.1877 ;
+    f1:longitude -74.6099 ;
     f1:name "Circuit Mont-Tremblant"^^xsd:string .
 
 f1:circuit53 a f1:Circuit ;
     f1:altitude "81"^^xsd:int ;
+    f1:hasCity cities:Rouen ;
     f1:hasCountry countries:France ;
+    f1:latitude 49.3306 ;
+    f1:longitude 1.00458 ;
     f1:name "Rouen-Les-Essarts"^^xsd:string .
 
 f1:circuit54 a f1:Circuit ;
     f1:altitude "67"^^xsd:int ;
+    f1:hasCity cities:LeMans ;
     f1:hasCountry countries:France ;
+    f1:latitude 47.95 ;
+    f1:longitude 0.224231 ;
     f1:name "Le Mans"^^xsd:string .
 
 f1:circuit55 a f1:Circuit ;
     f1:altitude "88"^^xsd:int ;
+    f1:hasCity cities:Reims ;
     f1:hasCountry countries:France ;
+    f1:latitude 49.2542 ;
+    f1:longitude 3.93083 ;
     f1:name "Reims-Gueux"^^xsd:string .
 
 f1:circuit56 a f1:Circuit ;
     f1:altitude "15"^^xsd:int ;
+    f1:hasCity cities:EasternCapeProvince ;
     f1:hasCountry countries:SouthAfrica ;
+    f1:latitude -33.0486 ;
+    f1:longitude 27.8736 ;
     f1:name "Prince George Circuit"^^xsd:string .
 
 f1:circuit57 a f1:Circuit ;
     f1:altitude "676"^^xsd:int ;
+    f1:hasCity cities:Styria ;
     f1:hasCountry countries:Austria ;
+    f1:latitude 47.2039 ;
+    f1:longitude 14.7478 ;
     f1:name "Zeltweg"^^xsd:string .
 
 f1:circuit58 a f1:Circuit ;
     f1:altitude "20"^^xsd:int ;
+    f1:hasCity cities:Liverpool ;
     f1:hasCountry countries:UK ;
+    f1:latitude 53.4769 ;
+    f1:longitude -2.94056 ;
     f1:name "Aintree"^^xsd:string .
 
 f1:circuit59 a f1:Circuit ;
     f1:altitude "28"^^xsd:int ;
+    f1:hasCity cities:Oporto ;
     f1:hasCountry countries:Portugal ;
+    f1:latitude 41.1705 ;
+    f1:longitude -8.67325 ;
     f1:name "Circuito da Boavista"^^xsd:string .
 
 f1:circuit6 a f1:Circuit ;
     f1:altitude "7"^^xsd:int ;
+    f1:hasCity cities:Monte-Carlo ;
     f1:hasCountry countries:Monaco ;
+    f1:latitude 43.7347 ;
+    f1:longitude 7.42056 ;
     f1:name "Circuit de Monaco"^^xsd:string .
 
 f1:circuit60 a f1:Circuit ;
     f1:altitude "470"^^xsd:int ;
+    f1:hasCity cities:California ;
     f1:hasCountry countries:USA ;
+    f1:latitude 33.937 ;
+    f1:longitude -117.273 ;
     f1:name "Riverside International Raceway"^^xsd:string .
 
 f1:circuit61 a f1:Circuit ;
     f1:altitude "53"^^xsd:int ;
+    f1:hasCity cities:Berlin ;
     f1:hasCountry countries:Germany ;
+    f1:latitude 52.4806 ;
+    f1:longitude 13.2514 ;
     f1:name "AVUS"^^xsd:string .
 
 f1:circuit62 a f1:Circuit ;
     f1:altitude "158"^^xsd:int ;
+    f1:hasCity cities:Lisbon ;
     f1:hasCountry countries:Portugal ;
+    f1:latitude 38.7197 ;
+    f1:longitude -9.20306 ;
     f1:name "Monsanto Park Circuit"^^xsd:string .
 
 f1:circuit63 a f1:Circuit ;
     f1:altitude "18"^^xsd:int ;
+    f1:hasCity cities:Florida ;
     f1:hasCountry countries:USA ;
+    f1:latitude 27.4547 ;
+    f1:longitude -81.3483 ;
     f1:name "Sebring International Raceway"^^xsd:string .
 
 f1:circuit64 a f1:Circuit ;
     f1:altitude "19"^^xsd:int ;
+    f1:hasCity cities:Casablanca ;
     f1:hasCountry countries:Morocco ;
+    f1:latitude 33.5786 ;
+    f1:longitude -7.6875 ;
     f1:name "Ain Diab"^^xsd:string .
 
 f1:circuit65 a f1:Circuit ;
     f1:altitude "129"^^xsd:int ;
+    f1:hasCity cities:Pescara ;
     f1:hasCountry countries:Italy ;
+    f1:latitude 42.475 ;
+    f1:longitude 14.1508 ;
     f1:name "Pescara Circuit"^^xsd:string .
 
 f1:circuit66 a f1:Circuit ;
     f1:altitude "551"^^xsd:int ;
+    f1:hasCity cities:Bern ;
     f1:hasCountry countries:Switzerland ;
+    f1:latitude 46.9589 ;
+    f1:longitude 7.40194 ;
     f1:name "Circuit Bremgarten"^^xsd:string .
 
 f1:circuit67 a f1:Circuit ;
     f1:altitude "85"^^xsd:int ;
+    f1:hasCity cities:Barcelona ;
     f1:hasCountry countries:Spain ;
+    f1:latitude 41.3903 ;
+    f1:longitude 2.11667 ;
     f1:name "Circuit de Pedralbes"^^xsd:string .
 
 f1:circuit68 a f1:Circuit ;
     f1:altitude "194"^^xsd:int ;
+    f1:hasCity cities:UttarPradesh ;
     f1:hasCountry countries:India ;
+    f1:latitude 28.3487 ;
+    f1:longitude 77.5331 ;
     f1:name "Buddh International Circuit"^^xsd:string .
 
 f1:circuit69 a f1:Circuit ;
     f1:altitude "161"^^xsd:int ;
+    f1:hasCity cities:Austin ;
     f1:hasCountry countries:USA ;
+    f1:latitude 30.1328 ;
+    f1:longitude -97.6411 ;
     f1:name "Circuit of the Americas"^^xsd:string .
 
 f1:circuit7 a f1:Circuit ;
     f1:altitude "13"^^xsd:int ;
+    f1:hasCity cities:Montreal ;
     f1:hasCountry countries:Canada ;
+    f1:latitude 45.5 ;
+    f1:longitude -73.5228 ;
     f1:name "Circuit Gilles Villeneuve"^^xsd:string .
 
 f1:circuit70 a f1:Circuit ;
     f1:altitude "678"^^xsd:int ;
+    f1:hasCity cities:Spielberg ;
     f1:hasCountry countries:Austria ;
+    f1:latitude 47.2197 ;
+    f1:longitude 14.7647 ;
     f1:name "Red Bull Ring"^^xsd:string .
 
 f1:circuit71 a f1:Circuit ;
     f1:altitude "2"^^xsd:int ;
+    f1:hasCity cities:Sochi ;
     f1:hasCountry countries:Russia ;
+    f1:latitude 43.4057 ;
+    f1:longitude 39.9578 ;
     f1:name "Sochi Autodrom"^^xsd:string .
 
 f1:circuit73 a f1:Circuit ;
     f1:altitude "-7"^^xsd:int ;
+    f1:hasCity cities:Baku ;
     f1:hasCountry countries:Azerbaijan ;
+    f1:latitude 40.3725 ;
+    f1:longitude 49.8533 ;
     f1:name "Baku City Circuit"^^xsd:string .
 
 f1:circuit75 a f1:Circuit ;
     f1:altitude "108"^^xsd:int ;
+    f1:hasCity cities:Portimão ;
     f1:hasCountry countries:Portugal ;
+    f1:latitude 37.227 ;
+    f1:longitude -8.6267 ;
     f1:name "Autódromo Internacional do Algarve"^^xsd:string .
 
 f1:circuit76 a f1:Circuit ;
     f1:altitude "255"^^xsd:int ;
+    f1:hasCity cities:Mugello ;
     f1:hasCountry countries:Italy ;
+    f1:latitude 43.9975 ;
+    f1:longitude 11.3719 ;
     f1:name "Autodromo Internazionale del Mugello"^^xsd:string .
 
 f1:circuit77 a f1:Circuit ;
     f1:altitude "15"^^xsd:int ;
+    f1:hasCity cities:Jeddah ;
     f1:hasCountry countries:SaudiArabia ;
+    f1:latitude 21.6319 ;
+    f1:longitude 39.1044 ;
     f1:name "Jeddah Corniche Circuit"^^xsd:string .
 
 f1:circuit78 a f1:Circuit ;
+    f1:hasCity cities:AlDaayen ;
     f1:hasCountry countries:Qatar ;
+    f1:latitude 25.49 ;
+    f1:longitude 51.4542 ;
     f1:name "Losail International Circuit"^^xsd:string .
 
 f1:circuit79 a f1:Circuit ;
+    f1:hasCity cities:Miami ;
     f1:hasCountry countries:USA ;
+    f1:latitude 25.9581 ;
+    f1:longitude -80.2389 ;
     f1:name "Miami International Autodrome"^^xsd:string .
 
 f1:circuit8 a f1:Circuit ;
     f1:altitude "228"^^xsd:int ;
+    f1:hasCity cities:MagnyCours ;
     f1:hasCountry countries:France ;
+    f1:latitude 46.8642 ;
+    f1:longitude 3.16361 ;
     f1:name "Circuit de Nevers Magny-Cours"^^xsd:string .
 
 f1:circuit9 a f1:Circuit ;
     f1:altitude "153"^^xsd:int ;
+    f1:hasCity cities:Silverstone ;
     f1:hasCountry countries:UK ;
+    f1:latitude 52.0786 ;
+    f1:longitude -1.01694 ;
     f1:name "Silverstone Circuit"^^xsd:string .
 
