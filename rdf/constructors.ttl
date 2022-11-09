@@ -4,11 +4,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dbpedia_f1:constructor0 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "McLaren"^^xsd:string .
 
 dbpedia_f1:constructor1 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Williams"^^xsd:string ;
     f1:partecipateIn f1:participation0,
         f1:participation10001,
@@ -886,7 +886,7 @@ dbpedia_f1:constructor1 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9989 .
 
 dbpedia_f1:constructor10 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Pacific"^^xsd:string ;
     f1:partecipateIn f1:participation10006,
         f1:participation10016,
@@ -1102,12 +1102,12 @@ dbpedia_f1:constructor10 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9992 .
 
 dbpedia_f1:constructor100 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "AGS"^^xsd:string ;
     f1:partecipateIn f1:participation8194 .
 
 dbpedia_f1:constructor101 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Martini"^^xsd:string ;
     f1:partecipateIn f1:participation8214,
         f1:participation8241,
@@ -1117,23 +1117,23 @@ dbpedia_f1:constructor101 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8699 .
 
 dbpedia_f1:constructor102 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Matra"^^xsd:string ;
     f1:partecipateIn f1:participation8234 .
 
 dbpedia_f1:constructor103 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Gordini"^^xsd:string ;
     f1:partecipateIn f1:participation8236 .
 
 dbpedia_f1:constructor104 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Bugatti"^^xsd:string ;
     f1:partecipateIn f1:participation8269,
         f1:participation8690 .
 
 dbpedia_f1:constructor105 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Simca"^^xsd:string ;
     f1:partecipateIn f1:participation10307,
         f1:participation10487,
@@ -1157,7 +1157,7 @@ dbpedia_f1:constructor105 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8666 .
 
 dbpedia_f1:constructor106 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Talbot-Lago"^^xsd:string ;
     f1:partecipateIn f1:participation8661,
         f1:participation8663,
@@ -1166,25 +1166,25 @@ dbpedia_f1:constructor106 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8711 .
 
 dbpedia_f1:constructor107 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Matra-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation8675,
         f1:participation8676 .
 
 dbpedia_f1:constructor108 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Alpine F1 Team"^^xsd:string ;
     f1:partecipateIn f1:participation8315,
         f1:participation8674 .
 
 dbpedia_f1:constructor109 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Toro Rosso"^^xsd:string ;
     f1:partecipateIn f1:participation8257,
         f1:participation8673 .
 
 dbpedia_f1:constructor11 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Simtek"^^xsd:string ;
     f1:partecipateIn f1:participation10,
         f1:participation103,
@@ -1276,47 +1276,47 @@ dbpedia_f1:constructor11 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8760 .
 
 dbpedia_f1:constructor110 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Ferrari"^^xsd:string ;
     f1:partecipateIn f1:participation8316,
         f1:participation8672 .
 
 dbpedia_f1:constructor111 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Minardi"^^xsd:string ;
     f1:partecipateIn f1:participation8671 .
 
 dbpedia_f1:constructor112 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Benetton"^^xsd:string ;
     f1:partecipateIn f1:participation8670 .
 
 dbpedia_f1:constructor113 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Forti"^^xsd:string ;
     f1:partecipateIn f1:participation8280,
         f1:participation8314,
         f1:participation8669 .
 
 dbpedia_f1:constructor114 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Dallara"^^xsd:string ;
     f1:partecipateIn f1:participation8262,
         f1:participation8668 .
 
 dbpedia_f1:constructor115 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Fondmetal"^^xsd:string ;
     f1:partecipateIn f1:participation8256,
         f1:participation8667 .
 
 dbpedia_f1:constructor116 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Andrea Moda"^^xsd:string ;
     f1:partecipateIn f1:participation8306 .
 
 dbpedia_f1:constructor117 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Lambo"^^xsd:string ;
     f1:partecipateIn f1:participation11735,
         f1:participation11744,
@@ -1361,7 +1361,7 @@ dbpedia_f1:constructor117 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8700 .
 
 dbpedia_f1:constructor118 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Coloni"^^xsd:string ;
     f1:partecipateIn f1:participation8298,
         f1:participation8329,
@@ -1376,12 +1376,12 @@ dbpedia_f1:constructor118 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8662 .
 
 dbpedia_f1:constructor119 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Euro Brun"^^xsd:string ;
     f1:partecipateIn f1:participation8261 .
 
 dbpedia_f1:constructor12 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Team Lotus"^^xsd:string ;
     f1:partecipateIn f1:participation194,
         f1:participation205,
@@ -1402,57 +1402,57 @@ dbpedia_f1:constructor12 a dbpedia_f1:FormulaOneTeam ;
         f1:participation368 .
 
 dbpedia_f1:constructor120 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Osella"^^xsd:string ;
     f1:partecipateIn f1:participation8260 .
 
 dbpedia_f1:constructor121 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Life"^^xsd:string ;
     f1:partecipateIn f1:participation8258 .
 
 dbpedia_f1:constructor122 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "ATS"^^xsd:string ;
     f1:partecipateIn f1:participation8283 .
 
 dbpedia_f1:constructor123 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Merzario"^^xsd:string ;
     f1:partecipateIn f1:participation8297 .
 
 dbpedia_f1:constructor124 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Tecno"^^xsd:string ;
     f1:partecipateIn f1:participation8278 .
 
 dbpedia_f1:constructor125 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "De Tomaso"^^xsd:string ;
     f1:partecipateIn f1:participation8276,
         f1:participation8349,
         f1:participation8381 .
 
 dbpedia_f1:constructor126 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Behra-Porsche"^^xsd:string .
 
 dbpedia_f1:constructor127 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Maserati"^^xsd:string ;
     f1:partecipateIn f1:participation8380 .
 
 dbpedia_f1:constructor128 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Tec-Mec"^^xsd:string ;
     f1:partecipateIn f1:participation10308 .
 
 dbpedia_f1:constructor129 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "OSCA"^^xsd:string .
 
 dbpedia_f1:constructor13 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Brabham"^^xsd:string ;
     f1:partecipateIn f1:participation380,
         f1:participation389,
@@ -1470,11 +1470,11 @@ dbpedia_f1:constructor13 a dbpedia_f1:FormulaOneTeam ;
         f1:participation523 .
 
 dbpedia_f1:constructor130 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Lancia"^^xsd:string .
 
 dbpedia_f1:constructor131 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Arzani-Volpini"^^xsd:string ;
     f1:partecipateIn f1:participation10005,
         f1:participation10017,
@@ -1728,39 +1728,39 @@ dbpedia_f1:constructor131 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9994 .
 
 dbpedia_f1:constructor132 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Cisitalia"^^xsd:string .
 
 dbpedia_f1:constructor133 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "Milano"^^xsd:string .
 
 dbpedia_f1:constructor134 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "De Tomaso-Osca"^^xsd:string .
 
 dbpedia_f1:constructor135 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "De Tomaso-Alfa Romeo"^^xsd:string .
 
 dbpedia_f1:constructor136 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "De Tomaso-Ferrari"^^xsd:string .
 
 dbpedia_f1:constructor137 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IT ;
+    f1:hasCountry countries:it ;
     f1:name "AlphaTauri"^^xsd:string .
 
 dbpedia_f1:constructor138 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:JP ;
+    f1:hasCountry countries:jp ;
     f1:name "Toyota"^^xsd:string .
 
 dbpedia_f1:constructor139 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:JP ;
+    f1:hasCountry countries:jp ;
     f1:name "Super Aguri"^^xsd:string .
 
 dbpedia_f1:constructor14 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "March"^^xsd:string ;
     f1:partecipateIn f1:participation535,
         f1:participation544,
@@ -1768,47 +1768,47 @@ dbpedia_f1:constructor14 a dbpedia_f1:FormulaOneTeam ;
         f1:participation566 .
 
 dbpedia_f1:constructor140 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:JP ;
+    f1:hasCountry countries:jp ;
     f1:name "Honda"^^xsd:string .
 
 dbpedia_f1:constructor141 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:JP ;
+    f1:hasCountry countries:jp ;
     f1:name "Kojima"^^xsd:string .
 
 dbpedia_f1:constructor142 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:JP ;
+    f1:hasCountry countries:jp ;
     f1:name "Maki"^^xsd:string .
 
 dbpedia_f1:constructor143 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:AT ;
+    f1:hasCountry countries:at ;
     f1:name "Red Bull"^^xsd:string .
 
 dbpedia_f1:constructor144 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IN ;
+    f1:hasCountry countries:in ;
     f1:name "Force India"^^xsd:string .
 
 dbpedia_f1:constructor145 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:NL ;
+    f1:hasCountry countries:nl ;
     f1:name "Spyker"^^xsd:string .
 
 dbpedia_f1:constructor146 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:NL ;
+    f1:hasCountry countries:nl ;
     f1:name "Spyker MF1"^^xsd:string .
 
 dbpedia_f1:constructor147 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:NL ;
+    f1:hasCountry countries:nl ;
     f1:name "Boro"^^xsd:string .
 
 dbpedia_f1:constructor148 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:RU ;
+    f1:hasCountry countries:ru ;
     f1:name "MF1"^^xsd:string .
 
 dbpedia_f1:constructor149 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:RU ;
+    f1:hasCountry countries:ru ;
     f1:name "Marussia"^^xsd:string .
 
 dbpedia_f1:constructor15 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Leyton House"^^xsd:string ;
     f1:partecipateIn f1:participation10002,
         f1:participation10020,
@@ -2207,47 +2207,47 @@ dbpedia_f1:constructor15 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9997 .
 
 dbpedia_f1:constructor150 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:CH ;
+    f1:hasCountry countries:ch ;
     f1:name "Sauber"^^xsd:string .
 
 dbpedia_f1:constructor151 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:CH ;
+    f1:hasCountry countries:ch ;
     f1:name "Alfa Romeo"^^xsd:string .
 
 dbpedia_f1:constructor152 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:CH ;
+    f1:hasCountry countries:ch ;
     f1:name "Apollon"^^xsd:string .
 
 dbpedia_f1:constructor153 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:CH ;
+    f1:hasCountry countries:ch ;
     f1:name "Bellasi"^^xsd:string .
 
 dbpedia_f1:constructor154 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:CH ;
+    f1:hasCountry countries:ch ;
     f1:name "MBM"^^xsd:string .
 
 dbpedia_f1:constructor155 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:IE ;
+    f1:hasCountry countries:ie ;
     f1:name "Jordan"^^xsd:string .
 
 dbpedia_f1:constructor156 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:HK ;
+    f1:hasCountry countries:hk ;
     f1:name "Theodore"^^xsd:string .
 
 dbpedia_f1:constructor157 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:BR ;
+    f1:hasCountry countries:br ;
     f1:name "Fittipaldi"^^xsd:string .
 
 dbpedia_f1:constructor158 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:CA ;
+    f1:hasCountry countries:ca ;
     f1:name "Wolf"^^xsd:string .
 
 dbpedia_f1:constructor159 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:CA ;
+    f1:hasCountry countries:ca ;
     f1:name "Stebro"^^xsd:string .
 
 dbpedia_f1:constructor16 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Onyx"^^xsd:string ;
     f1:partecipateIn f1:participation1004,
         f1:participation1014,
@@ -2369,23 +2369,23 @@ dbpedia_f1:constructor16 a dbpedia_f1:FormulaOneTeam ;
         f1:participation989 .
 
 dbpedia_f1:constructor160 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:MX ;
+    f1:hasCountry countries:mx ;
     f1:name "Rebaque"^^xsd:string .
 
 dbpedia_f1:constructor161 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:MX ;
+    f1:hasCountry countries:mx ;
     f1:name "Rebaque"^^xsd:string .
 
 dbpedia_f1:constructor162 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Penske"^^xsd:string .
 
 dbpedia_f1:constructor163 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Parnelli"^^xsd:string .
 
 dbpedia_f1:constructor164 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Eagle"^^xsd:string ;
     f1:partecipateIn f1:participation10000,
         f1:participation10011,
@@ -2446,11 +2446,11 @@ dbpedia_f1:constructor164 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9988 .
 
 dbpedia_f1:constructor165 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Scarab"^^xsd:string .
 
 dbpedia_f1:constructor166 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Watson"^^xsd:string ;
     f1:partecipateIn f1:participation9414,
         f1:participation9426,
@@ -2492,7 +2492,7 @@ dbpedia_f1:constructor166 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9856 .
 
 dbpedia_f1:constructor167 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Epperly"^^xsd:string ;
     f1:partecipateIn f1:participation7802,
         f1:participation7832,
@@ -2542,18 +2542,18 @@ dbpedia_f1:constructor167 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8708 .
 
 dbpedia_f1:constructor168 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Phillips"^^xsd:string ;
     f1:partecipateIn f1:participation8279 .
 
 dbpedia_f1:constructor169 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Lesovsky"^^xsd:string ;
     f1:partecipateIn f1:participation8277,
         f1:participation8302 .
 
 dbpedia_f1:constructor17 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "RAM"^^xsd:string ;
     f1:partecipateIn f1:participation1002,
         f1:participation1016,
@@ -2807,7 +2807,7 @@ dbpedia_f1:constructor17 a dbpedia_f1:FormulaOneTeam ;
         f1:participation994 .
 
 dbpedia_f1:constructor170 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Trevis"^^xsd:string ;
     f1:partecipateIn f1:participation7911,
         f1:participation8026,
@@ -2878,7 +2878,7 @@ dbpedia_f1:constructor170 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8726 .
 
 dbpedia_f1:constructor171 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Meskowski"^^xsd:string ;
     f1:partecipateIn f1:participation8655,
         f1:participation8659,
@@ -2887,7 +2887,7 @@ dbpedia_f1:constructor171 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8705 .
 
 dbpedia_f1:constructor172 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Kurtis Kraft"^^xsd:string ;
     f1:partecipateIn f1:participation7913,
         f1:participation7976,
@@ -2947,26 +2947,26 @@ dbpedia_f1:constructor172 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8653 .
 
 dbpedia_f1:constructor173 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Kuzma"^^xsd:string ;
     f1:partecipateIn f1:participation8243,
         f1:participation8549 .
 
 dbpedia_f1:constructor174 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Christensen"^^xsd:string ;
     f1:partecipateIn f1:participation8227,
         f1:participation8240,
         f1:participation8608 .
 
 dbpedia_f1:constructor175 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Ewing"^^xsd:string ;
     f1:partecipateIn f1:participation8172,
         f1:participation8242 .
 
 dbpedia_f1:constructor176 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Moore"^^xsd:string ;
     f1:partecipateIn f1:participation7918,
         f1:participation7921,
@@ -3021,23 +3021,23 @@ dbpedia_f1:constructor176 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8721 .
 
 dbpedia_f1:constructor177 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Dunn"^^xsd:string ;
     f1:partecipateIn f1:participation8552,
         f1:participation8606 .
 
 dbpedia_f1:constructor178 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Elder"^^xsd:string ;
     f1:partecipateIn f1:participation8604 .
 
 dbpedia_f1:constructor179 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Sutton"^^xsd:string ;
     f1:partecipateIn f1:participation8550 .
 
 dbpedia_f1:constructor18 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Spirit"^^xsd:string ;
     f1:partecipateIn f1:participation1005,
         f1:participation1013,
@@ -3386,7 +3386,7 @@ dbpedia_f1:constructor18 a dbpedia_f1:FormulaOneTeam ;
         f1:participation995 .
 
 dbpedia_f1:constructor180 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Stevens"^^xsd:string ;
     f1:partecipateIn f1:participation7640,
         f1:participation7652,
@@ -3434,7 +3434,7 @@ dbpedia_f1:constructor180 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8886 .
 
 dbpedia_f1:constructor181 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Schroeder"^^xsd:string ;
     f1:partecipateIn f1:participation7975,
         f1:participation7985,
@@ -3462,7 +3462,7 @@ dbpedia_f1:constructor181 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8532 .
 
 dbpedia_f1:constructor182 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Pawl"^^xsd:string ;
     f1:partecipateIn f1:participation6605,
         f1:participation6613,
@@ -3489,7 +3489,7 @@ dbpedia_f1:constructor182 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9151 .
 
 dbpedia_f1:constructor183 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Pankratz"^^xsd:string ;
     f1:partecipateIn f1:participation7908,
         f1:participation7925,
@@ -3528,24 +3528,24 @@ dbpedia_f1:constructor183 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8799 .
 
 dbpedia_f1:constructor184 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Nichels"^^xsd:string ;
     f1:partecipateIn f1:participation8020,
         f1:participation8421 .
 
 dbpedia_f1:constructor185 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Bromme"^^xsd:string ;
     f1:partecipateIn f1:participation8497 .
 
 dbpedia_f1:constructor186 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Turner"^^xsd:string ;
     f1:partecipateIn f1:participation8021,
         f1:participation8471 .
 
 dbpedia_f1:constructor187 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Del Roy"^^xsd:string ;
     f1:partecipateIn f1:participation7719,
         f1:participation7729,
@@ -3588,13 +3588,13 @@ dbpedia_f1:constructor187 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8804 .
 
 dbpedia_f1:constructor188 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Sherman"^^xsd:string ;
     f1:partecipateIn f1:participation7992,
         f1:participation8431 .
 
 dbpedia_f1:constructor189 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Deidt"^^xsd:string ;
     f1:partecipateIn f1:participation7821,
         f1:participation7981,
@@ -3611,7 +3611,7 @@ dbpedia_f1:constructor189 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8722 .
 
 dbpedia_f1:constructor19 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Toleman"^^xsd:string ;
     f1:partecipateIn f1:participation1006,
         f1:participation1011,
@@ -3700,7 +3700,7 @@ dbpedia_f1:constructor19 a dbpedia_f1:FormulaOneTeam ;
         f1:participation991 .
 
 dbpedia_f1:constructor190 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Hall"^^xsd:string ;
     f1:partecipateIn f1:participation7877,
         f1:participation7930,
@@ -3721,7 +3721,7 @@ dbpedia_f1:constructor190 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8756 .
 
 dbpedia_f1:constructor191 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Marchese"^^xsd:string ;
     f1:partecipateIn f1:participation7796,
         f1:participation7836,
@@ -3758,18 +3758,18 @@ dbpedia_f1:constructor191 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8768 .
 
 dbpedia_f1:constructor192 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Langley"^^xsd:string ;
     f1:partecipateIn f1:participation7989,
         f1:participation7998 .
 
 dbpedia_f1:constructor193 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Rae"^^xsd:string ;
     f1:partecipateIn f1:participation8400 .
 
 dbpedia_f1:constructor194 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Olson"^^xsd:string ;
     f1:partecipateIn f1:participation7834,
         f1:participation7857,
@@ -3787,7 +3787,7 @@ dbpedia_f1:constructor194 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8764 .
 
 dbpedia_f1:constructor195 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Wetteroth"^^xsd:string ;
     f1:partecipateIn f1:participation7841,
         f1:participation7847,
@@ -3803,7 +3803,7 @@ dbpedia_f1:constructor195 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8762 .
 
 dbpedia_f1:constructor196 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Adams"^^xsd:string ;
     f1:partecipateIn f1:participation7801,
         f1:participation7815,
@@ -3830,12 +3830,12 @@ dbpedia_f1:constructor196 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8787 .
 
 dbpedia_f1:constructor197 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Snowberger"^^xsd:string ;
     f1:partecipateIn f1:participation7812 .
 
 dbpedia_f1:constructor198 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Eagle-Climax"^^xsd:string ;
     f1:partecipateIn f1:participation7761,
         f1:participation7769,
@@ -3849,7 +3849,7 @@ dbpedia_f1:constructor198 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8847 .
 
 dbpedia_f1:constructor199 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Eagle-Weslake"^^xsd:string ;
     f1:partecipateIn f1:participation8850,
         f1:participation8862,
@@ -3860,7 +3860,7 @@ dbpedia_f1:constructor199 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8884 .
 
 dbpedia_f1:constructor2 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "BAR"^^xsd:string ;
     f1:partecipateIn f1:participation1,
         f1:participation108,
@@ -3935,7 +3935,7 @@ dbpedia_f1:constructor2 a dbpedia_f1:FormulaOneTeam ;
         f1:participation97 .
 
 dbpedia_f1:constructor20 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Ensign"^^xsd:string ;
     f1:partecipateIn f1:participation1285,
         f1:participation1295,
@@ -4022,7 +4022,7 @@ dbpedia_f1:constructor20 a dbpedia_f1:FormulaOneTeam ;
         f1:participation2186 .
 
 dbpedia_f1:constructor200 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:US ;
+    f1:hasCountry countries:us ;
     f1:name "Haas F1 Team"^^xsd:string ;
     f1:partecipateIn f1:participation7655,
         f1:participation7660,
@@ -4037,14 +4037,14 @@ dbpedia_f1:constructor200 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8861 .
 
 dbpedia_f1:constructor201 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:AU ;
+    f1:hasCountry countries:au ;
     f1:name "McGuire"^^xsd:string ;
     f1:partecipateIn f1:participation7687,
         f1:participation8859,
         f1:participation8865 .
 
 dbpedia_f1:constructor202 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:NZ ;
+    f1:hasCountry countries:nz ;
     f1:name "Amon"^^xsd:string ;
     f1:partecipateIn f1:participation7147,
         f1:participation7157,
@@ -4062,13 +4062,13 @@ dbpedia_f1:constructor202 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9077 .
 
 dbpedia_f1:constructor203 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:ZA ;
+    f1:hasCountry countries:za ;
     f1:name "LDS"^^xsd:string ;
     f1:partecipateIn f1:participation7264,
         f1:participation7276 .
 
 dbpedia_f1:constructor204 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:ZA ;
+    f1:hasCountry countries:za ;
     f1:name "LDS-Climax"^^xsd:string ;
     f1:partecipateIn f1:participation6449,
         f1:participation6489,
@@ -4101,7 +4101,7 @@ dbpedia_f1:constructor204 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9402 .
 
 dbpedia_f1:constructor205 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:ZA ;
+    f1:hasCountry countries:za ;
     f1:name "LDS-Alfa Romeo"^^xsd:string ;
     f1:partecipateIn f1:participation9411,
         f1:participation9424,
@@ -4143,7 +4143,7 @@ dbpedia_f1:constructor205 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9855 .
 
 dbpedia_f1:constructor206 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:ZW ;
+    f1:hasCountry countries:zw ;
     f1:name "RE"^^xsd:string ;
     f1:partecipateIn f1:participation10010,
         f1:participation10021,
@@ -4206,7 +4206,7 @@ dbpedia_f1:constructor206 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9999 .
 
 dbpedia_f1:constructor207 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:BE ;
+    f1:hasCountry countries:be ;
     f1:name "ENB"^^xsd:string ;
     f1:partecipateIn f1:participation10009,
         f1:participation10022,
@@ -4266,7 +4266,7 @@ dbpedia_f1:constructor207 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9998 .
 
 dbpedia_f1:constructor208 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:ES ;
+    f1:hasCountry countries:es ;
     f1:name "HRT"^^xsd:string ;
     f1:partecipateIn f1:participation10004,
         f1:participation10018,
@@ -4347,7 +4347,7 @@ dbpedia_f1:constructor208 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9991 .
 
 dbpedia_f1:constructor209 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:MY ;
+    f1:hasCountry countries:my ;
     f1:name "Lotus"^^xsd:string ;
     f1:partecipateIn f1:participation10534,
         f1:participation10545,
@@ -4390,7 +4390,7 @@ dbpedia_f1:constructor209 a dbpedia_f1:FormulaOneTeam ;
         f1:participation10937 .
 
 dbpedia_f1:constructor21 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Shadow"^^xsd:string ;
     f1:partecipateIn f1:participation1104,
         f1:participation1116,
@@ -4690,7 +4690,7 @@ dbpedia_f1:constructor21 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9328 .
 
 dbpedia_f1:constructor210 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:MY ;
+    f1:hasCountry countries:my ;
     f1:name "Caterham"^^xsd:string ;
     f1:partecipateIn f1:participation10714,
         f1:participation10724,
@@ -4829,7 +4829,7 @@ dbpedia_f1:constructor210 a dbpedia_f1:FormulaOneTeam ;
         f1:participation12078 .
 
 dbpedia_f1:constructor22 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Surtees"^^xsd:string ;
     f1:partecipateIn f1:participation1288,
         f1:participation1297,
@@ -5093,7 +5093,7 @@ dbpedia_f1:constructor22 a dbpedia_f1:FormulaOneTeam ;
         f1:participation5032 .
 
 dbpedia_f1:constructor23 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Hesketh"^^xsd:string ;
     f1:partecipateIn f1:participation3822,
         f1:participation3832,
@@ -5114,7 +5114,7 @@ dbpedia_f1:constructor23 a dbpedia_f1:FormulaOneTeam ;
         f1:participation7750 .
 
 dbpedia_f1:constructor24 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "BRM"^^xsd:string ;
     f1:partecipateIn f1:participation1657,
         f1:participation1673,
@@ -5167,7 +5167,7 @@ dbpedia_f1:constructor24 a dbpedia_f1:FormulaOneTeam ;
         f1:participation2188 .
 
 dbpedia_f1:constructor25 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "LEC"^^xsd:string ;
     f1:partecipateIn f1:participation1836,
         f1:participation1848,
@@ -5604,7 +5604,7 @@ dbpedia_f1:constructor25 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9318 .
 
 dbpedia_f1:constructor26 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Embassy Hill"^^xsd:string ;
     f1:partecipateIn f1:participation2016,
         f1:participation2803,
@@ -5696,7 +5696,7 @@ dbpedia_f1:constructor26 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9039 .
 
 dbpedia_f1:constructor27 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lyncar"^^xsd:string ;
     f1:partecipateIn f1:participation2198,
         f1:participation2209,
@@ -6030,7 +6030,7 @@ dbpedia_f1:constructor27 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9397 .
 
 dbpedia_f1:constructor28 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Trojan"^^xsd:string ;
     f1:partecipateIn f1:participation2203,
         f1:participation2211,
@@ -6061,7 +6061,7 @@ dbpedia_f1:constructor28 a dbpedia_f1:FormulaOneTeam ;
         f1:participation2566 .
 
 dbpedia_f1:constructor29 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Token"^^xsd:string ;
     f1:partecipateIn f1:participation2200,
         f1:participation2214,
@@ -6162,7 +6162,7 @@ dbpedia_f1:constructor29 a dbpedia_f1:FormulaOneTeam ;
         f1:participation3519 .
 
 dbpedia_f1:constructor3 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Jaguar"^^xsd:string ;
     f1:partecipateIn f1:participation100,
         f1:participation10007,
@@ -6954,7 +6954,7 @@ dbpedia_f1:constructor3 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9996 .
 
 dbpedia_f1:constructor30 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Iso Marlboro"^^xsd:string ;
     f1:partecipateIn f1:participation2369,
         f1:participation2388,
@@ -6991,7 +6991,7 @@ dbpedia_f1:constructor30 a dbpedia_f1:FormulaOneTeam ;
         f1:participation2795 .
 
 dbpedia_f1:constructor31 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Politoys"^^xsd:string ;
     f1:partecipateIn f1:participation2375,
         f1:participation2382,
@@ -7016,7 +7016,7 @@ dbpedia_f1:constructor31 a dbpedia_f1:FormulaOneTeam ;
         f1:participation2793 .
 
 dbpedia_f1:constructor32 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Connew"^^xsd:string ;
     f1:partecipateIn f1:participation2578,
         f1:participation2592,
@@ -7415,7 +7415,7 @@ dbpedia_f1:constructor32 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9396 .
 
 dbpedia_f1:constructor33 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper"^^xsd:string ;
     f1:partecipateIn f1:participation2580,
         f1:participation2591,
@@ -7533,7 +7533,7 @@ dbpedia_f1:constructor33 a dbpedia_f1:FormulaOneTeam ;
         f1:participation4816 .
 
 dbpedia_f1:constructor34 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Protos"^^xsd:string ;
     f1:partecipateIn f1:participation3010,
         f1:participation3032,
@@ -7847,7 +7847,7 @@ dbpedia_f1:constructor34 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9331 .
 
 dbpedia_f1:constructor35 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Shannon"^^xsd:string ;
     f1:partecipateIn f1:participation3012,
         f1:participation3023,
@@ -7931,7 +7931,7 @@ dbpedia_f1:constructor35 a dbpedia_f1:FormulaOneTeam ;
         f1:participation4585 .
 
 dbpedia_f1:constructor36 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Scirocco"^^xsd:string ;
     f1:partecipateIn f1:participation3015,
         f1:participation3027,
@@ -7964,7 +7964,7 @@ dbpedia_f1:constructor36 a dbpedia_f1:FormulaOneTeam ;
         f1:participation3526 .
 
 dbpedia_f1:constructor37 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "BRP"^^xsd:string ;
     f1:partecipateIn f1:participation3016,
         f1:participation3031,
@@ -8164,7 +8164,7 @@ dbpedia_f1:constructor37 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9256 .
 
 dbpedia_f1:constructor38 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Derrington"^^xsd:string ;
     f1:partecipateIn f1:participation3063,
         f1:participation3079,
@@ -8176,7 +8176,7 @@ dbpedia_f1:constructor38 a dbpedia_f1:FormulaOneTeam ;
         f1:participation3189 .
 
 dbpedia_f1:constructor39 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Gilby"^^xsd:string ;
     f1:partecipateIn f1:participation3249,
         f1:participation3274,
@@ -8258,7 +8258,7 @@ dbpedia_f1:constructor39 a dbpedia_f1:FormulaOneTeam ;
         f1:participation5011 .
 
 dbpedia_f1:constructor4 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Arrows"^^xsd:string ;
     f1:partecipateIn f1:participation1000,
         f1:participation1009,
@@ -8665,7 +8665,7 @@ dbpedia_f1:constructor4 a dbpedia_f1:FormulaOneTeam ;
         f1:participation992 .
 
 dbpedia_f1:constructor40 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Emeryson"^^xsd:string ;
     f1:partecipateIn f1:participation3248,
         f1:participation3277,
@@ -8685,7 +8685,7 @@ dbpedia_f1:constructor40 a dbpedia_f1:FormulaOneTeam ;
         f1:participation3524 .
 
 dbpedia_f1:constructor41 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "JBW"^^xsd:string ;
     f1:partecipateIn f1:participation3256,
         f1:participation3273,
@@ -8721,7 +8721,7 @@ dbpedia_f1:constructor41 a dbpedia_f1:FormulaOneTeam ;
         f1:participation3818 .
 
 dbpedia_f1:constructor42 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Ferguson"^^xsd:string ;
     f1:partecipateIn f1:participation3259,
         f1:participation3278,
@@ -8790,11 +8790,11 @@ dbpedia_f1:constructor42 a dbpedia_f1:FormulaOneTeam ;
         f1:participation4782 .
 
 dbpedia_f1:constructor43 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Aston Martin"^^xsd:string .
 
 dbpedia_f1:constructor44 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Vanwall"^^xsd:string ;
     f1:partecipateIn f1:participation3536,
         f1:participation3563,
@@ -8844,7 +8844,7 @@ dbpedia_f1:constructor44 a dbpedia_f1:FormulaOneTeam ;
         f1:participation4583 .
 
 dbpedia_f1:constructor45 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Fry"^^xsd:string ;
     f1:partecipateIn f1:participation3539,
         f1:participation3560,
@@ -9019,7 +9019,7 @@ dbpedia_f1:constructor45 a dbpedia_f1:FormulaOneTeam ;
         f1:participation6447 .
 
 dbpedia_f1:constructor46 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Connaught"^^xsd:string ;
     f1:partecipateIn f1:participation3543,
         f1:participation3561,
@@ -9049,7 +9049,7 @@ dbpedia_f1:constructor46 a dbpedia_f1:FormulaOneTeam ;
         f1:participation4289 .
 
 dbpedia_f1:constructor47 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Alta"^^xsd:string ;
     f1:partecipateIn f1:participation3545,
         f1:participation3565,
@@ -9067,7 +9067,7 @@ dbpedia_f1:constructor47 a dbpedia_f1:FormulaOneTeam ;
         f1:participation3789 .
 
 dbpedia_f1:constructor48 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "HWM"^^xsd:string ;
     f1:partecipateIn f1:participation3992,
         f1:participation4017,
@@ -9103,7 +9103,7 @@ dbpedia_f1:constructor48 a dbpedia_f1:FormulaOneTeam ;
         f1:participation4578 .
 
 dbpedia_f1:constructor49 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Frazer Nash"^^xsd:string ;
     f1:partecipateIn f1:participation3994,
         f1:participation4021,
@@ -9181,7 +9181,7 @@ dbpedia_f1:constructor49 a dbpedia_f1:FormulaOneTeam ;
         f1:participation5238 .
 
 dbpedia_f1:constructor5 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Brawn"^^xsd:string ;
     f1:partecipateIn f1:participation10008,
         f1:participation10019,
@@ -9453,7 +9453,7 @@ dbpedia_f1:constructor5 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9995 .
 
 dbpedia_f1:constructor50 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "ERA"^^xsd:string ;
     f1:partecipateIn f1:participation5044,
         f1:participation5058,
@@ -9501,7 +9501,7 @@ dbpedia_f1:constructor50 a dbpedia_f1:FormulaOneTeam ;
         f1:participation5731 .
 
 dbpedia_f1:constructor51 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Aston Butterworth"^^xsd:string ;
     f1:partecipateIn f1:participation11355,
         f1:participation11364,
@@ -9677,7 +9677,7 @@ dbpedia_f1:constructor51 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9398 .
 
 dbpedia_f1:constructor52 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-Maserati"^^xsd:string ;
     f1:partecipateIn f1:participation5051,
         f1:participation5064,
@@ -9706,7 +9706,7 @@ dbpedia_f1:constructor52 a dbpedia_f1:FormulaOneTeam ;
         f1:participation5716 .
 
 dbpedia_f1:constructor53 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Virgin"^^xsd:string ;
     f1:partecipateIn f1:participation5093,
         f1:participation5109,
@@ -9780,7 +9780,7 @@ dbpedia_f1:constructor53 a dbpedia_f1:FormulaOneTeam ;
         f1:participation6241 .
 
 dbpedia_f1:constructor54 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-OSCA"^^xsd:string ;
     f1:partecipateIn f1:participation5284,
         f1:participation5296,
@@ -9900,7 +9900,7 @@ dbpedia_f1:constructor54 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9391 .
 
 dbpedia_f1:constructor55 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-Borgward"^^xsd:string ;
     f1:partecipateIn f1:participation5516,
         f1:participation5526,
@@ -9955,7 +9955,7 @@ dbpedia_f1:constructor55 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9291 .
 
 dbpedia_f1:constructor56 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-Climax"^^xsd:string ;
     f1:partecipateIn f1:participation5745,
         f1:participation5764,
@@ -10078,7 +10078,7 @@ dbpedia_f1:constructor56 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9383 .
 
 dbpedia_f1:constructor57 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-Castellotti"^^xsd:string ;
     f1:partecipateIn f1:participation5752,
         f1:participation5769,
@@ -10215,7 +10215,7 @@ dbpedia_f1:constructor57 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9392 .
 
 dbpedia_f1:constructor58 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lotus-Climax"^^xsd:string ;
     f1:partecipateIn f1:participation6259,
         f1:participation6274,
@@ -10317,7 +10317,7 @@ dbpedia_f1:constructor58 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9386 .
 
 dbpedia_f1:constructor59 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lotus-Maserati"^^xsd:string ;
     f1:partecipateIn f1:participation6452,
         f1:participation6475,
@@ -10385,7 +10385,7 @@ dbpedia_f1:constructor59 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9395 .
 
 dbpedia_f1:constructor6 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Stewart"^^xsd:string ;
     f1:partecipateIn f1:participation10003,
         f1:participation10015,
@@ -11380,7 +11380,7 @@ dbpedia_f1:constructor6 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9993 .
 
 dbpedia_f1:constructor60 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lotus-BRM"^^xsd:string ;
     f1:partecipateIn f1:participation6485,
         f1:participation6574,
@@ -11415,20 +11415,20 @@ dbpedia_f1:constructor60 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9400 .
 
 dbpedia_f1:constructor61 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lotus-Borgward"^^xsd:string ;
     f1:partecipateIn f1:participation9354,
         f1:participation9360 .
 
 dbpedia_f1:constructor62 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-Alfa Romeo"^^xsd:string ;
     f1:partecipateIn f1:participation6599,
         f1:participation9390,
         f1:participation9399 .
 
 dbpedia_f1:constructor63 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lotus-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation6622,
         f1:participation6649,
@@ -11551,7 +11551,7 @@ dbpedia_f1:constructor63 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9334 .
 
 dbpedia_f1:constructor64 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Brabham-BRM"^^xsd:string ;
     f1:partecipateIn f1:participation6875,
         f1:participation6884,
@@ -11615,7 +11615,7 @@ dbpedia_f1:constructor64 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9284 .
 
 dbpedia_f1:constructor65 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Brabham-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation6695,
         f1:participation6724,
@@ -11627,7 +11627,7 @@ dbpedia_f1:constructor65 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9311 .
 
 dbpedia_f1:constructor66 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Brabham-Climax"^^xsd:string ;
     f1:partecipateIn f1:participation7171,
         f1:participation7206,
@@ -11831,7 +11831,7 @@ dbpedia_f1:constructor66 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9243 .
 
 dbpedia_f1:constructor67 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation6846,
         f1:participation6863,
@@ -11876,7 +11876,7 @@ dbpedia_f1:constructor67 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9249 .
 
 dbpedia_f1:constructor68 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "McLaren-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation6872,
         f1:participation6883,
@@ -11885,12 +11885,12 @@ dbpedia_f1:constructor68 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9221 .
 
 dbpedia_f1:constructor69 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "McLaren-Serenissima"^^xsd:string ;
     f1:partecipateIn f1:participation9223 .
 
 dbpedia_f1:constructor7 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Tyrrell"^^xsd:string ;
     f1:partecipateIn f1:participation1001,
         f1:participation1012,
@@ -12034,7 +12034,7 @@ dbpedia_f1:constructor7 a dbpedia_f1:FormulaOneTeam ;
         f1:participation993 .
 
 dbpedia_f1:constructor70 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Brabham-Repco"^^xsd:string ;
     f1:partecipateIn f1:participation6938,
         f1:participation7018,
@@ -12046,18 +12046,18 @@ dbpedia_f1:constructor70 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9242 .
 
 dbpedia_f1:constructor71 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-Ferrari"^^xsd:string ;
     f1:partecipateIn f1:participation9244 .
 
 dbpedia_f1:constructor72 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-ATS"^^xsd:string ;
     f1:partecipateIn f1:participation7138,
         f1:participation9255 .
 
 dbpedia_f1:constructor73 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "McLaren-BRM"^^xsd:string ;
     f1:partecipateIn f1:participation7003,
         f1:participation7163,
@@ -12077,7 +12077,7 @@ dbpedia_f1:constructor73 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9109 .
 
 dbpedia_f1:constructor74 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Cooper-BRM"^^xsd:string ;
     f1:partecipateIn f1:participation9002,
         f1:participation9007,
@@ -12089,7 +12089,7 @@ dbpedia_f1:constructor74 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9179 .
 
 dbpedia_f1:constructor75 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "BRM-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation7175,
         f1:participation7202,
@@ -12104,13 +12104,13 @@ dbpedia_f1:constructor75 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9096 .
 
 dbpedia_f1:constructor76 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "McLaren-Alfa Romeo"^^xsd:string ;
     f1:partecipateIn f1:participation7244,
         f1:participation9001 .
 
 dbpedia_f1:constructor77 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "March-Alfa Romeo"^^xsd:string ;
     f1:partecipateIn f1:participation7314,
         f1:participation7328,
@@ -12122,7 +12122,7 @@ dbpedia_f1:constructor77 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9005 .
 
 dbpedia_f1:constructor78 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "March-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation8977,
         f1:participation8986,
@@ -12130,7 +12130,7 @@ dbpedia_f1:constructor78 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9017 .
 
 dbpedia_f1:constructor79 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lotus-Pratt &amp; Whitney"^^xsd:string ;
     f1:partecipateIn f1:participation7388,
         f1:participation7398,
@@ -12138,7 +12138,7 @@ dbpedia_f1:constructor79 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8999 .
 
 dbpedia_f1:constructor8 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lola"^^xsd:string ;
     f1:partecipateIn f1:participation191,
         f1:participation20,
@@ -12181,7 +12181,7 @@ dbpedia_f1:constructor8 a dbpedia_f1:FormulaOneTeam ;
         f1:participation7 .
 
 dbpedia_f1:constructor80 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Shadow-Ford"^^xsd:string ;
     f1:partecipateIn f1:participation7308,
         f1:participation7325,
@@ -12215,7 +12215,7 @@ dbpedia_f1:constructor80 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9018 .
 
 dbpedia_f1:constructor81 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Shadow-Matra"^^xsd:string ;
     f1:partecipateIn f1:participation7469,
         f1:participation7607,
@@ -12229,7 +12229,7 @@ dbpedia_f1:constructor81 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8945 .
 
 dbpedia_f1:constructor82 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Brabham-Alfa Romeo"^^xsd:string ;
     f1:partecipateIn f1:participation7556,
         f1:participation7563,
@@ -12280,17 +12280,17 @@ dbpedia_f1:constructor82 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8918 .
 
 dbpedia_f1:constructor83 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Lotus F1"^^xsd:string ;
     f1:partecipateIn f1:participation8906 .
 
 dbpedia_f1:constructor84 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Manor Marussia"^^xsd:string ;
     f1:partecipateIn f1:participation8911 .
 
 dbpedia_f1:constructor85 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Racing Point"^^xsd:string ;
     f1:partecipateIn f1:participation8833,
         f1:participation8835,
@@ -12300,7 +12300,7 @@ dbpedia_f1:constructor85 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8879 .
 
 dbpedia_f1:constructor86 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "BMW Sauber"^^xsd:string ;
     f1:partecipateIn f1:participation7716,
         f1:participation7726,
@@ -12318,7 +12318,7 @@ dbpedia_f1:constructor86 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8846 .
 
 dbpedia_f1:constructor87 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "Rial"^^xsd:string ;
     f1:partecipateIn f1:participation8183,
         f1:participation8325,
@@ -12333,18 +12333,18 @@ dbpedia_f1:constructor87 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8390 .
 
 dbpedia_f1:constructor88 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "Zakspeed"^^xsd:string .
 
 dbpedia_f1:constructor89 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "Kauhsen"^^xsd:string ;
     f1:partecipateIn f1:participation8210,
         f1:participation8567,
         f1:participation8725 .
 
 dbpedia_f1:constructor9 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:GB ;
+    f1:hasCountry countries:gb ;
     f1:name "Footwork"^^xsd:string ;
     f1:partecipateIn f1:participation10012,
         f1:participation10013,
@@ -12687,17 +12687,17 @@ dbpedia_f1:constructor9 a dbpedia_f1:FormulaOneTeam ;
         f1:participation9990 .
 
 dbpedia_f1:constructor90 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "Porsche"^^xsd:string ;
     f1:partecipateIn f1:participation8396 .
 
 dbpedia_f1:constructor91 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "Mercedes"^^xsd:string ;
     f1:partecipateIn f1:participation8429 .
 
 dbpedia_f1:constructor92 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "Klenk"^^xsd:string ;
     f1:partecipateIn f1:participation8107,
         f1:participation8116,
@@ -12711,12 +12711,12 @@ dbpedia_f1:constructor92 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8557 .
 
 dbpedia_f1:constructor93 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "Veritas"^^xsd:string ;
     f1:partecipateIn f1:participation8018 .
 
 dbpedia_f1:constructor94 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "BMW"^^xsd:string ;
     f1:partecipateIn f1:participation8070,
         f1:participation8078,
@@ -12733,7 +12733,7 @@ dbpedia_f1:constructor94 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8594 .
 
 dbpedia_f1:constructor95 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:DE ;
+    f1:hasCountry countries:de ;
     f1:name "AFM"^^xsd:string ;
     f1:partecipateIn f1:participation8117,
         f1:participation8123,
@@ -12770,12 +12770,12 @@ dbpedia_f1:constructor95 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8692 .
 
 dbpedia_f1:constructor96 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Renault"^^xsd:string ;
     f1:partecipateIn f1:participation8509 .
 
 dbpedia_f1:constructor97 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Prost"^^xsd:string ;
     f1:partecipateIn f1:participation8134,
         f1:participation8139,
@@ -12786,12 +12786,12 @@ dbpedia_f1:constructor97 a dbpedia_f1:FormulaOneTeam ;
         f1:participation8632 .
 
 dbpedia_f1:constructor98 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Ligier"^^xsd:string ;
     f1:partecipateIn f1:participation8157 .
 
 dbpedia_f1:constructor99 a dbpedia_f1:FormulaOneTeam ;
-    f1:hasCountry countries:FR ;
+    f1:hasCountry countries:fr ;
     f1:name "Larrousse"^^xsd:string ;
     f1:partecipateIn f1:participation8167,
         f1:participation8190,
