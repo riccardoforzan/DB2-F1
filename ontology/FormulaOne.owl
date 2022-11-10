@@ -53,7 +53,7 @@ xsd:time rdf:type rdfs:Datatype .
                  owl:FunctionalProperty ;
         rdfs:domain [ rdf:type owl:Class ;
                       owl:unionOf ( :Drive
-                                    :Partecipate
+                                    :Participate
                                   )
                     ] ;
         rdfs:range :RaceWeekend .
@@ -88,7 +88,7 @@ xsd:time rdf:type rdfs:Datatype .
 :partecipateIn rdf:type owl:ObjectProperty ,
                         owl:InverseFunctionalProperty ;
                rdfs:domain <http://dbpedia.org/resource/FormulaOneTeam> ;
-               rdfs:range :Partecipate .
+               rdfs:range :Participate .
 
 
 ###  http://www.dei.unipd.it/database2/Formula1Ontology#takePlaceIn
@@ -129,7 +129,7 @@ xsd:time rdf:type rdfs:Datatype .
                                owl:FunctionalProperty ;
                       rdfs:domain [ rdf:type owl:Class ;
                                     owl:unionOf ( :Drive
-                                                  :Partecipate
+                                                  :Participate
                                                 )
                                   ] ;
                       rdfs:range xsd:decimal ;
@@ -141,7 +141,7 @@ xsd:time rdf:type rdfs:Datatype .
                                  owl:FunctionalProperty ;
                         rdfs:domain [ rdf:type owl:Class ;
                                       owl:unionOf ( :Drive
-                                                    :Partecipate
+                                                    :Participate
                                                   )
                                     ] ;
                         rdfs:range xsd:int ;
@@ -240,7 +240,7 @@ xsd:time rdf:type rdfs:Datatype .
 :number_of_wins rdf:type owl:DatatypeProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( :Drive
-                                            :Partecipate
+                                            :Participate
                                           )
                             ] ;
                 rdfs:range xsd:int ;
@@ -786,8 +786,8 @@ xsd:time rdf:type rdfs:Datatype .
         rdfs:comment "The class of Fromula One drivers"@en .
 
 
-###  http://www.dei.unipd.it/database2/Formula1Ontology#Partecipate
-:Partecipate rdf:type owl:Class ;
+###  http://www.dei.unipd.it/database2/Formula1Ontology#Participate
+:Participate rdf:type owl:Class ;
              rdfs:comment "This class models the appearance of a team in a race weekend."@en .
 
 
