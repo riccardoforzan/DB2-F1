@@ -77,11 +77,11 @@ f1:circuit16 a f1:Circuit ;
 
 f1:circuit17 a f1:Circuit ;
     f1:altitude "785"^^xsd:int ;
-    f1:hasCity cities:SÃ£oPaulo ;
+    f1:hasCity cities:SãoPaulo ;
     f1:hasCountry countries:br ;
     f1:latitude -23.7036 ;
     f1:longitude -46.6997 ;
-    f1:name "AutÃ³dromo JosÃ© Carlos Pace"^^xsd:string .
+    f1:name "Autódromo José Carlos Pace"^^xsd:string .
 
 f1:circuit18 a f1:Circuit ;
     f1:altitude "223"^^xsd:int ;
@@ -93,11 +93,11 @@ f1:circuit18 a f1:Circuit ;
 
 f1:circuit19 a f1:Circuit ;
     f1:altitude "578"^^xsd:int ;
-    f1:hasCity cities:NÃ¼rburg ;
+    f1:hasCity cities:Nürburg ;
     f1:hasCountry countries:de ;
     f1:latitude 50.3356 ;
     f1:longitude 6.9475 ;
-    f1:name "NÃ¼rburgring"^^xsd:string .
+    f1:name "Nürburgring"^^xsd:string .
 
 f1:circuit2 a f1:Circuit ;
     f1:altitude "7"^^xsd:int ;
@@ -137,7 +137,7 @@ f1:circuit23 a f1:Circuit ;
     f1:hasCountry countries:ar ;
     f1:latitude -34.6943 ;
     f1:longitude -58.4593 ;
-    f1:name "AutÃ³dromo Juan y Oscar GÃ¡lvez"^^xsd:string .
+    f1:name "Autódromo Juan y Oscar Gálvez"^^xsd:string .
 
 f1:circuit24 a f1:Circuit ;
     f1:altitude "37"^^xsd:int ;
@@ -153,7 +153,7 @@ f1:circuit25 a f1:Circuit ;
     f1:hasCountry countries:pt ;
     f1:latitude 38.7506 ;
     f1:longitude -9.39417 ;
-    f1:name "AutÃ³dromo do Estoril"^^xsd:string .
+    f1:name "Autódromo do Estoril"^^xsd:string .
 
 f1:circuit26 a f1:Circuit ;
     f1:altitude "266"^^xsd:int ;
@@ -189,7 +189,7 @@ f1:circuit29 a f1:Circuit ;
 
 f1:circuit3 a f1:Circuit ;
     f1:altitude "109"^^xsd:int ;
-    f1:hasCity cities:MontmelÃ³ ;
+    f1:hasCity cities:Montmeló ;
     f1:hasCountry countries:es ;
     f1:latitude 41.57 ;
     f1:longitude 2.26111 ;
@@ -201,7 +201,7 @@ f1:circuit30 a f1:Circuit ;
     f1:hasCountry countries:mx ;
     f1:latitude 19.4042 ;
     f1:longitude -99.0907 ;
-    f1:name "AutÃ³dromo Hermanos RodrÃ­guez"^^xsd:string .
+    f1:name "Autódromo Hermanos Rodríguez"^^xsd:string .
 
 f1:circuit31 a f1:Circuit ;
     f1:altitude "345"^^xsd:int ;
@@ -233,7 +233,7 @@ f1:circuit34 a f1:Circuit ;
     f1:hasCountry countries:br ;
     f1:latitude -22.9756 ;
     f1:longitude -43.395 ;
-    f1:name "AutÃ³dromo Internacional Nelson Piquet"^^xsd:string .
+    f1:name "Autódromo Internacional Nelson Piquet"^^xsd:string .
 
 f1:circuit35 a f1:Circuit ;
     f1:altitude "177"^^xsd:int ;
@@ -345,7 +345,7 @@ f1:circuit47 a f1:Circuit ;
     f1:hasCountry countries:es ;
     f1:latitude 41.3664 ;
     f1:longitude 2.15167 ;
-    f1:name "MontjuÃ¯c"^^xsd:string .
+    f1:name "Montjuïc"^^xsd:string .
 
 f1:circuit48 a f1:Circuit ;
     f1:altitude "139"^^xsd:int ;
@@ -557,11 +557,11 @@ f1:circuit70 a f1:Circuit ;
 
 f1:circuit71 a f1:Circuit ;
     f1:altitude "108"^^xsd:int ;
-    f1:hasCity cities:PortimÃ£o ;
+    f1:hasCity cities:Portimão ;
     f1:hasCountry countries:pt ;
     f1:latitude 37.227 ;
     f1:longitude -8.6267 ;
-    f1:name "AutÃ³dromo Internacional do Algarve"^^xsd:string .
+    f1:name "Autódromo Internacional do Algarve"^^xsd:string .
 
 f1:circuit72 a f1:Circuit ;
     f1:altitude "255"^^xsd:int ;

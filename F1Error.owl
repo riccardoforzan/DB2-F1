@@ -7,6 +7,10 @@
 @base <http://www.dei.unipd.it/database2/Formula1Ontology> .
 
 <http://www.dei.unipd.it/database2/Formula1Ontology> rdf:type owl:Ontology ;
+                                                      owl:imports <file:/C:/Users/alelo/Desktop/Database2/project/rdf/circuits.ttl> ,
+                                                                  <file:/C:/Users/alelo/Desktop/Database2/project/rdf/constructors.ttl> ,
+                                                                  <file:/C:/Users/alelo/Desktop/Database2/project/rdf/drivers.ttl> ,
+                                                                  <file:/C:/Users/alelo/Desktop/Database2/project/rdf/raceWeekend.ttl> ;
                                                       rdfs:comment "An Ontology to model Formula1 Championships from 1950 until 2022. It is used to model single races with their results, the drivers and the teams that competed in it."^^xsd:string ;
                                                       rdfs:title "Formula One Ontology"^^xsd:string .
 

@@ -454,7 +454,7 @@ f1:raceWeekEnd1054 a f1:RaceWeekend ;
 
 f1:raceWeekEnd1055 a f1:RaceWeekend ;
     f1:date "2021-11-14"^^xsd:date ;
-    f1:name "SÃ£o Paulo Grand Prix"^^xsd:string ;
+    f1:name "São Paulo Grand Prix"^^xsd:string ;
     f1:round "19"^^xsd:int ;
     f1:takePlaceIn f1:circuit18 ;
     f1:year "2021"^^xsd:int .
