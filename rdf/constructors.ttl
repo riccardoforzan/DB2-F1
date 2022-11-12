@@ -1,5 +1,5 @@
 @prefix countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#> .
-@prefix dbpedia_f1: <https://dbpedia.org/ontology/FormulaOneTeam#> .
+@prefix dbpedia_f1: <http://dbpedia.org/ontology/FormulaOneTeam#> .
 @prefix f1: <http://www.dei.unipd.it/database2/Formula1Ontology#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 

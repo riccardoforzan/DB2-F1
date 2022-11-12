@@ -1,6 +1,7 @@
 @prefix cities: <https://schema.org/City#> .
 @prefix countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#> .
 @prefix f1: <http://www.dei.unipd.it/database2/Formula1Ontology#> .
+@prefix schema_org: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 f1:circuit1 a f1:Circuit ;
@@ -608,4 +609,152 @@ f1:circuit9 a f1:Circuit ;
     f1:latitude 52.0786 ;
     f1:longitude -1.01694 ;
     f1:name "Silverstone Circuit"^^xsd:string .
+
+cities:AbuDhabi schema_org:name "Abu Dhabi"^^xsd:string .
+
+cities:Adelaide schema_org:name "Adelaide"^^xsd:string .
+
+cities:AlDaayen schema_org:name "Al Daayen"^^xsd:string .
+
+cities:Anderstorp schema_org:name "Anderstorp"^^xsd:string .
+
+cities:Austin schema_org:name "Austin"^^xsd:string .
+
+cities:Baku schema_org:name "Baku"^^xsd:string .
+
+cities:Berlin schema_org:name "Berlin"^^xsd:string .
+
+cities:Bern schema_org:name "Bern"^^xsd:string .
+
+cities:Brussels schema_org:name "Brussels"^^xsd:string .
+
+cities:Budapest schema_org:name "Budapest"^^xsd:string .
+
+cities:BuenosAires schema_org:name "Buenos Aires"^^xsd:string .
+
+cities:Casablanca schema_org:name "Casablanca"^^xsd:string .
+
+cities:CastleDonington schema_org:name "Castle Donington"^^xsd:string .
+
+cities:Clermont-Ferrand schema_org:name "Clermont-Ferrand"^^xsd:string .
+
+cities:Dallas schema_org:name "Dallas"^^xsd:string .
+
+cities:Detroit schema_org:name "Detroit"^^xsd:string .
+
+cities:Dijon schema_org:name "Dijon"^^xsd:string .
+
+cities:EasternCapeProvince schema_org:name "Eastern Cape Province"^^xsd:string .
+
+cities:Estoril schema_org:name "Estoril"^^xsd:string .
+
+cities:Florida schema_org:name "Florida"^^xsd:string .
+
+cities:Heusden-Zolder schema_org:name "Heusden-Zolder"^^xsd:string .
+
+cities:Hockenheim schema_org:name "Hockenheim"^^xsd:string .
+
+cities:Imola schema_org:name "Imola"^^xsd:string .
+
+cities:Indianapolis schema_org:name "Indianapolis"^^xsd:string .
+
+cities:Istanbul schema_org:name "Istanbul"^^xsd:string .
+
+cities:Jeddah schema_org:name "Jeddah"^^xsd:string .
+
+cities:JerezdelaFrontera schema_org:name "Jerez de la Frontera"^^xsd:string .
+
+cities:Kent schema_org:name "Kent"^^xsd:string .
+
+cities:KualaLumpur schema_org:name "Kuala Lumpur"^^xsd:string .
+
+cities:LeCastellet schema_org:name "Le Castellet"^^xsd:string .
+
+cities:LeMans schema_org:name "Le Mans"^^xsd:string .
+
+cities:Lisbon schema_org:name "Lisbon"^^xsd:string .
+
+cities:Liverpool schema_org:name "Liverpool"^^xsd:string .
+
+cities:Madrid schema_org:name "Madrid"^^xsd:string .
+
+cities:MagnyCours schema_org:name "Magny Cours"^^xsd:string .
+
+cities:MarinaBay schema_org:name "Marina Bay"^^xsd:string .
+
+cities:Melbourne schema_org:name "Melbourne"^^xsd:string .
+
+cities:MexicoCity schema_org:name "Mexico City"^^xsd:string .
+
+cities:Miami schema_org:name "Miami"^^xsd:string .
+
+cities:Midrand schema_org:name "Midrand"^^xsd:string .
+
+cities:Monte-Carlo schema_org:name "Monte-Carlo"^^xsd:string .
+
+cities:Montmeló schema_org:name "Montmeló"^^xsd:string .
+
+cities:Montreal schema_org:name "Montreal"^^xsd:string .
+
+cities:Monza schema_org:name "Monza"^^xsd:string .
+
+cities:Mugello schema_org:name "Mugello"^^xsd:string .
+
+cities:Nevada schema_org:name "Nevada"^^xsd:string .
+
+cities:NewYorkState schema_org:name "New York State"^^xsd:string .
+
+cities:Nürburg schema_org:name "Nürburg"^^xsd:string .
+
+cities:Okayama schema_org:name "Okayama"^^xsd:string .
+
+cities:Ontario schema_org:name "Ontario"^^xsd:string .
+
+cities:Oporto schema_org:name "Oporto"^^xsd:string .
+
+cities:Oyama schema_org:name "Oyama"^^xsd:string .
+
+cities:Pescara schema_org:name "Pescara"^^xsd:string .
+
+cities:Phoenix schema_org:name "Phoenix"^^xsd:string .
+
+cities:Portimão schema_org:name "Portimão"^^xsd:string .
+
+cities:Quebec schema_org:name "Quebec"^^xsd:string .
+
+cities:Reims schema_org:name "Reims"^^xsd:string .
+
+cities:RiodeJaneiro schema_org:name "Rio de Janeiro"^^xsd:string .
+
+cities:Rouen schema_org:name "Rouen"^^xsd:string .
+
+cities:Sakhir schema_org:name "Sakhir"^^xsd:string .
+
+cities:Shanghai schema_org:name "Shanghai"^^xsd:string .
+
+cities:Silverstone schema_org:name "Silverstone"^^xsd:string .
+
+cities:Sochi schema_org:name "Sochi"^^xsd:string .
+
+cities:Spa schema_org:name "Spa"^^xsd:string .
+
+cities:Spielberg schema_org:name "Spielberg"^^xsd:string .
+
+cities:Styria schema_org:name "Styria"^^xsd:string .
+
+cities:Suzuka schema_org:name "Suzuka"^^xsd:string .
+
+cities:SãoPaulo schema_org:name "São Paulo"^^xsd:string .
+
+cities:UttarPradesh schema_org:name "Uttar Pradesh"^^xsd:string .
+
+cities:Valencia schema_org:name "Valencia"^^xsd:string .
+
+cities:YeongamCounty schema_org:name "Yeongam County"^^xsd:string .
+
+cities:Zandvoort schema_org:name "Zandvoort"^^xsd:string .
+
+cities:Barcelona schema_org:name "Barcelona"^^xsd:string .
+
+cities:California schema_org:name "California"^^xsd:string .
 
