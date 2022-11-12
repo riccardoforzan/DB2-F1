@@ -1,0 +1,51 @@
+1) 
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (COUNT(DISTINCT ?drive) as ?pole_positions) where { 
+    
+    ?driver person:first_name "Lewis"^^xsd:string . 
+    ?driver person:last_name "Hamilton"^^xsd:string . 
+ 	
+    ?driver f1:hasDrivenIn ?drive .
+    ?drive f1:quali_position "1"^^xsd:int . 
+   	
+    ?drive f1:during ?race_weekend . 
+    
+    ?race_weekend f1:year "2021"^^xsd:int .
+            
+}
+
+2)
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (COUNT(DISTINCT ?drive) as ?pole_positions) where { 
+    
+    ?driver person:first_name "Lewis"^^xsd:string . 
+    ?driver person:last_name "Hamilton"^^xsd:string . 
+ 	
+    ?driver f1:hasDrivenIn ?drive .
+    ?drive f1:race_position "1"^^xsd:int . 
+   	
+    ?drive f1:during ?race_weekend . 
+    
+    ?race_weekend f1:year "2021"^^xsd:int .
+            
+}
+
+3)
+
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?driver (COUNT(DISTINCT *) as ?number_victory)  where { 
+ 	
+    ?driver f1:hasDrivenIn ?drive .
+    ?drive f1:race_position "1"^^xsd:int .
+}
+GROUP BY(?driver)
+LIMIT 1

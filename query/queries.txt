@@ -17,4 +17,3 @@
 	- number of championship that he has won 
 	- number of season that he has done
 
-4) Team points at the last race
