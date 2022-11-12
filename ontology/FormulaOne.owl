@@ -77,8 +77,8 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:range :Drive .
 
 
-###  http://www.dei.unipd.it/database2/Formula1Ontology#partecipateIn
-:partecipateIn rdf:type owl:ObjectProperty ,
+###  http://www.dei.unipd.it/database2/Formula1Ontology#participateIn
+:participateIn rdf:type owl:ObjectProperty ,
                         owl:InverseFunctionalProperty ;
                rdfs:domain <https://dbpedia.org/ontology/FormulaOneTeam#FormulaOneTeam> ;
                rdfs:range :Participate .
