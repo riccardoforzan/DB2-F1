@@ -1,7 +1,7 @@
-@prefix cities: <https://schema.org/City#> .
+@prefix cities: <http://schema.org/City#> .
 @prefix countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#> .
 @prefix f1: <http://www.dei.unipd.it/database2/Formula1Ontology#> .
-@prefix schema_org: <https://schema.org/> .
+@prefix schema_org: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 f1:circuit1 a f1:Circuit ;
