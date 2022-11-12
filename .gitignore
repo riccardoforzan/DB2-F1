@@ -26,6 +26,8 @@ dist/
 # JetBrains IDE
 .idea/
 
+.ipynb_checkpoints
+
 # Unit test reports
 TEST*.xml
 
