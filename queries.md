@@ -17,7 +17,7 @@
         <li>Number of championship that he has won</li>
       	<li>For how many constructor has driven</li>
         <li>For how many constructor did he win</li>
-        <li>How many seasons<li>
+        <li>How many seasons</li>
         <li>How many races</li>
         <li>How many pole positions</li>
         <li>How many victories</li>
