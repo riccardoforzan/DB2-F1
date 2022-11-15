@@ -181,7 +181,7 @@ LIMIT 100
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 
 select ?team ?teamName where {
-    ?team f1:driveFor ?drive.
+    ?drive f1:driveFor ?team.
     ?team f1:name ?teamName.
     {
         select ?drive (MIN(?fpt) as ?fastestPit) where { 
