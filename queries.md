@@ -14,16 +14,39 @@
 <li>Teams for which a driver has run</li>
 <li>Driver statistics: For a given driver:</li>
     <ol>
+        <li>Number of championship that he has won</li>
+      	<li>For how many constructor has driven</li>
+        <li>For how many constructor did he win</li>
+        <li>How many seasons<li>
+        <li>How many races</li>
+        <li>How many pole positions</li>
+        <li>How many victories</li>
+        <li>How many times finishes in the first 10 position every year (consistency indicator)</li>
+        <li>How many times finishes in the first 5 position every year (consistency indicator)</li>
+        <li>How many podiums</li>
+        <li>Percentage of podiums to total number of races</li>
+        <li>Percentage of victories to total number of races</li>
+        <li>Best finish in qualifying and race</li>
+        <li>Worst finish in qualifying and race</li>
+        <li>Number of times it reached Q3</li>
         <li>How many DNF in his career</li>
-        <li>how many pole positions and victories</li>
-        <li>percentage of podiums with respect to the total number of races</li>
         <li>number of times that the driver started first and arrived first in a race</li>
-        <li>average number of points for every race</li>
-        <li>number of championship that he has won</li>
-        <li>number of season that he has done</li>
+        <li>How many points year per year in the championship</li>
+        <li>Position year per year in the championship</li>   
     </ol>
 </ol>
 
+<ol>
+	<li>Number of championship that he has won</li>
+	<li>Number of races</li>
+	<li>Number of race win</li>
+	<li>Number of podiums </li>
+	<li>Number of pole positions</li>
+ 	<li>Fastest pit-stop</li>
+	<li>How many dnf for every year</li>
+	<li>How many top 5 finish for every year</li>
+	<li>How many top 10 finish for every year</li>
+</ol>
 ---
 
 ##### Query 1
