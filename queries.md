@@ -37,19 +37,19 @@
     
 <li>Constructor statistics: For a given constructor:</li>
     <ol>
-	   <li>Number of championship that he has won</li>
-	   <li>Number of races</li>
-	   <li>Number of race win</li>
-	   <li>Number of podiums </li>
-	   <li>Number of pole positions</li>
- 	   <li>Fastest pit-stop</li>
-	   <li>How many dnf for every year</li>
-	   <li>How many top 5 finish for every year</li>
-	   <li>How many top 10 finish for every year</li>
+        <li>Number of championship that he has won</li>
+        <li>Number of races</li>
+        <li>Number of race win</li>
+        <li>Number of podiums </li>
+        <li>Number of pole positions</li>
+        <li>Fastest pit-stop</li>
+        <li>How many dnf for every year</li>
+        <li>How many top 5 finish for every year</li>
+        <li>How many top 10 finish for every year</li>
     </ol>
 </ol>
 
----
+
 ---
 
 ##### Query 1
@@ -178,13 +178,30 @@ LIMIT 100
 ##### Query 6
 
 ```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 
+select ?team ?teamName where {
+    ?team f1:driveFor ?drive.
+    ?team f1:name ?teamName.
+    {
+        select ?drive (MIN(?fpt) as ?fastestPit) where { 
+            ?drive a f1:Drive;
+                f1:fastest_pitstop ?fpt.
+            ?drive f1:driveFor ?team. 
+        }
+        group by ?drive
+    }
+}
 ```
 
 ##### Query 7
 
 ```sparql
-
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+select (MIN(?pt) as ?absFastestPit) where { 
+	?drive a f1:Drive;
+        f1:fastest_pitstop ?pt.
+}
 ```
 
 ##### Query 8
