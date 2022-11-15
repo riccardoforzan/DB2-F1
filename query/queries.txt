@@ -16,4 +16,5 @@
 	- average number of points for every race
 	- number of championship that he has won 
 	- number of season that he has done
+12) Teams for which a driver has run
 

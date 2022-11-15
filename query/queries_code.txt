@@ -46,3 +46,103 @@ SELECT ?driver (COUNT(DISTINCT *) as ?number_victory)  where {
 }
 GROUP BY(?driver)
 LIMIT 1
+
+
+4)
+
+
+5)
+PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX prs: <https://w3id.org/MON/person.owl#>
+
+select ?pilot ?name ?year (MIN(?lap_time) AS ?best_lap_time ) where {
+    ?circuit :name "Circuit de Monaco".
+    ?raceWeekend :takePlaceIn ?circuit;
+                 :year ?year .
+    ?race :during ?raceWeekend;
+          :race_fastest_lap ?lap_time.
+    ?pilot :hasDrivenIn ?race;
+           prs:firstName ?pilotName;
+           prs:lastName ?pilotSurname.   
+    BIND(CONCAT(?pilotName," ", ?pilotSurname) AS ?name)
+}
+GROUP BY ?pilot ?name ?year
+ORDER BY ?best_lap_time
+LIMIT 100
+
+
+6)
+
+
+7)
+
+
+8) 
+PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX prs: <https://w3id.org/MON/person.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints where{
+    ?pilot :hasDrivenIn ?drive;
+           prs:firstName ?pilotName;
+           prs:lastName ?pilotSurname.
+    ?drive :cp_points_after_race ?maxpoints;
+    		:during ?raceWeekend.
+    ?raceWeekend :year ?year.
+            
+    FILTER (?year = "2021"^^xsd:int)
+    {
+	select ?year (MAX(?points) AS ?maxpoints) where { 
+		?raceWeekend :year ?year .
+    	?drive a :Drive;
+            :during ?raceWeekend;
+            :cp_points_after_race ?points.
+	}
+        GROUPBY (?year)
+	} 
+}
+
+
+9)
+PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?team ?teamName ?maxpoints where {
+    ?partecipate :cp_points_after_race ?maxpoints;
+                 :during ?raceWeekend .
+    ?raceWeekend :year "2016"^^xsd:int .
+    ?team :participateIn ?partecipate ;
+          :name ?teamName .
+	{
+        select (MAX(?points) AS ?maxpoints) where { 
+		?raceWeekend :year "2016"^^xsd:int .
+    	?partecipate a :Participate;
+                :during ?raceWeekend;
+        	    :cp_points_after_race ?points.
+	}
+    }
+}
+
+
+10)
+PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#>
+
+select (COUNT(?raceWeekend) AS ?totalRaces) where { 
+    
+    ?circuit :hasCountry countries:us.
+    ?raceWeekend :takePlaceIn ?circuit;
+                 :year "2000"^^xsd:int .
+}
+
+
+12)
+PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+select DISTINCT ?pilot ?team ?teamName where {
+    ?pilot person:lastName "Hamilton";
+           person:firstName "Lewis";
+           :hasDrivenIn ?drive.
+    ?drive :driveFor ?team.
+    ?team :name ?teamName .
+}
+
