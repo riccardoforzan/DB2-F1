@@ -285,3 +285,236 @@ select ?driver (COUNT(?drive) as ?dnf) where {
 }
 GROUP BY ?driver
 ```
+
+##### Query 12.4
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT(DISTINCT ?year) as ?nSeasons)  where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+	?drive f1:during ?raceWeekend . 
+    ?raceWeekend f1:year ?year . 
+        
+}
+```
+
+##### Query 12.5
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+    
+    ?drive a f1:Drive
+}
+```
+
+##### Query 12.6
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT(*) as ?nPolePosition)  where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+	?drive f1:quali_position "1"^^xsd:int
+}
+
+```
+##### Query 12.7
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT(*) as ?nPolePosition)  where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+	?drive f1:race_position "1"^^xsd:int
+}
+
+```
+
+##### Query 12.10
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT(*) as ?nPolePosition)  where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+    ?drive f1:race_position ?position .
+    FILTER (?position = 1 || ?position = 2 || ?position = 3)
+}
+
+```
+
+##### Query 12.11
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (?nPolePosition / ?nRaces * 100 as ?perc) where { 
+    {
+        SELECT (COUNT(*) as ?nPolePosition)  where { 
+            ?driver person:firstName "Lewis" ;
+                    person:lastName "Hamilton" ;
+                    f1:hasDrivenIn ?drive .
+            ?drive f1:quali_position "1"^^xsd:int
+        }
+    } 
+    {
+        SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+                ?driver person:firstName "Lewis" ;
+                        person:lastName "Hamilton" ;
+                        f1:hasDrivenIn ?drive .
+
+                ?drive a f1:Drive
+       }
+        
+    }
+}
+
+```
+
+##### Query 12.12
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (?nVictories / ?nRaces * 100 as ?perc) where { 
+    {
+        SELECT (COUNT(*) as ?nVictories)  where { 
+            ?driver person:firstName "Lewis" ;
+                    person:lastName "Hamilton" ;
+                    f1:hasDrivenIn ?drive .
+            ?drive f1:race_position "1"^^xsd:int
+        }
+    } 
+    {
+        SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+                ?driver person:firstName "Lewis" ;
+                        person:lastName "Hamilton" ;
+                        f1:hasDrivenIn ?drive .
+
+                ?drive a f1:Drive
+       }
+        
+    }
+}
+
+```
+
+##### Query 12.13
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace)   where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+    ?drive f1:race_position ?race_position ; 
+    	   f1:quali_position ?quali_position
+}
+
+```
+
+##### Query 12.14
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (MAX(?quali_position) as ?bestQuali) (MAX(?race_position) as ?bestRace)   where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+    ?drive f1:race_position ?race_position ; 
+    	   f1:quali_position ?quali_position
+}
+
+```
+
+##### Query 12.15
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT(DISTINCT ?drive) as ?q3_quali) where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+    ?drive f1:q3_time ?q3_time
+    
+} 
+
+```
+
+##### Query 12.16
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+select ?driver (COUNT(?drive) as ?dnf) where {
+    ?driver a f1:Driver;
+            f1:hasDrivenIn ?drive.
+
+    ?drive f1:status ?status.
+
+    #Get the driver which last name is
+    ?driver person:last_name "Bottas" .
+
+    #Exclude all the drives that have been completed
+    FILTER ( ?status != "Finished" && REGEX(?status, "^(?!.*Lap).*$"))
+}
+GROUP BY ?driver
+```
+##### Query 12.17
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT(*) as ?nVictoryFromPole)  where { 
+ 	?driver person:firstName "Lewis" ;
+            person:lastName "Hamilton" ;
+			f1:hasDrivenIn ?drive .
+	?drive f1:race_position "1"^^xsd:int . 
+    ?drive f1:quali_position "1"^^xsd:int . 
+}
+
+```
+
