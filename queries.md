@@ -15,8 +15,8 @@
 <li>Driver statistics: For a given driver:</li>
     <ol>
         <li>Number of championship that he has won</li>
-      	<li>For how many constructor has driven</li>
-        <li>For how many constructor did he win</li>
+      	<li>For which constructors has driven</li>
+        <li>For which constructors did he win a race</li>
         <li>How many seasons</li>
         <li>How many races</li>
         <li>How many pole positions</li>
@@ -286,6 +286,45 @@ select ?driver (COUNT(?drive) as ?dnf) where {
 GROUP BY ?driver
 ```
 
+##### Query 12.2
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+
+SELECT ?cons where { 
+ 	
+    ?driver person:firstName "Lewis" ; 
+            person:lastName "Hamilton" ; 
+            f1:hasDrivenIn ?drive .
+    
+    ?drive f1:driveFor ?cons . 
+    
+} 
+GROUP BY ?cons 
+```
+
+##### Query 12.3
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+
+SELECT ?cons where { 
+ 	
+    ?driver person:firstName "Lewis" ; 
+            person:lastName "Hamilton" ; 
+            f1:hasDrivenIn ?drive .
+    
+    ?drive f1:driveFor ?cons ;
+    		f1:race_position "1"^^xsd:int 
+    
+} 
+GROUP BY ?cons 
+```
+
 ##### Query 12.4
 
 ```sparql
@@ -348,6 +387,46 @@ SELECT (COUNT(*) as ?nPolePosition)  where {
 	?drive f1:race_position "1"^^xsd:int
 }
 
+```
+
+##### Query 12.8
+
+```sparql
+SELECT ?year (COUNT(*) as ?top5Finishes) where { 
+ 	
+    ?driver person:firstName "Lewis" ; 
+            person:lastName "Hamilton" ; 
+            f1:hasDrivenIn ?drive .
+    
+    ?drive f1:race_position ?race_pos ; 
+    	   f1:during ?rwe .
+    
+    ?rwe f1:year ?year .
+    FILTER (?race_pos <= 10)
+    
+}  
+GROUP BY ?year
+ORDER BY ?year
+```
+
+##### Query 12.9
+
+```sparql
+SELECT ?year (COUNT(*) as ?top5Finishes) where { 
+ 	
+    ?driver person:firstName "Lewis" ; 
+            person:lastName "Hamilton" ; 
+            f1:hasDrivenIn ?drive .
+    
+    ?drive f1:race_position ?race_pos ; 
+    	   f1:during ?rwe .
+    
+    ?rwe f1:year ?year .
+    FILTER (?race_pos <= 5)
+    
+}  
+GROUP BY ?year
+ORDER BY ?year
 ```
 
 ##### Query 12.10
