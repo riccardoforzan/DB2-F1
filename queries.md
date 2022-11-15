@@ -34,19 +34,22 @@
         <li>How many points year per year in the championship</li>
         <li>Position year per year in the championship</li>   
     </ol>
+    
+<li>Constructor statistics: For a given constructor:</li>
+    <ol>
+	   <li>Number of championship that he has won</li>
+	   <li>Number of races</li>
+	   <li>Number of race win</li>
+	   <li>Number of podiums </li>
+	   <li>Number of pole positions</li>
+ 	   <li>Fastest pit-stop</li>
+	   <li>How many dnf for every year</li>
+	   <li>How many top 5 finish for every year</li>
+	   <li>How many top 10 finish for every year</li>
+    </ol>
 </ol>
 
-<ol>
-	<li>Number of championship that he has won</li>
-	<li>Number of races</li>
-	<li>Number of race win</li>
-	<li>Number of podiums </li>
-	<li>Number of pole positions</li>
- 	<li>Fastest pit-stop</li>
-	<li>How many dnf for every year</li>
-	<li>How many top 5 finish for every year</li>
-	<li>How many top 10 finish for every year</li>
-</ol>
+---
 ---
 
 ##### Query 1
