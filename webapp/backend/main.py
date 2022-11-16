@@ -1,9 +1,20 @@
 from typing import Union
 from fastapi import FastAPI, HTTPException, Form
 from SPARQLWrapper import SPARQLWrapper, JSON
+from fastapi.middleware.cors import CORSMiddleware
 
+# Create FastAPI endpoint and allow all origins
 app = FastAPI()
+origins = ["*"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
+# Set up the SPARQLWrapper to perform queries in GraphDB
 sparql = SPARQLWrapper("http://localhost:7200/repositories/formula1")
 sparql.setMethod('POST')
 sparql.setReturnFormat(JSON)
