@@ -12,11 +12,11 @@
 <li>Who is the pilot that has won the driver championship in a given year?</li>
 <li>Which is the team that has won the constructor championship in a given year?</li>
 <li>How many races have been done in a given nation in a given year?</li>
-<li>Teams for which a driver has run</li>
 <li>Which is the final driver championship standing for a given year?</li>
 <li>Which is the driver championship standing after a given race week-end?</li>
 <li>Which is the driver with the biggest number of points gained in the driver championship?</li>
 </ol>
+
 Driver statistics for our web app: For a given driver:
     <ol>
         <li>Number of championship that he has won</li>
@@ -38,6 +38,7 @@ Driver statistics for our web app: For a given driver:
         <li>number of times that the driver started first and arrived first in a race</li>
         <li>How many points year per year in the championship</li>
         <li>Position year per year in the championship</li>   
+        <li>Average points per race in every year</li>
     </ol>
     
 Constructor statistics: For a given constructor:
@@ -322,20 +323,6 @@ select (COUNT(?raceWeekend) AS ?totalRaces) where {
 ##### Query 12
 
 ```sparql
-PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
-PREFIX person: <https://w3id.org/MON/person.owl#>
-select DISTINCT ?pilot ?team ?teamName where {
-    ?pilot person:lastName "Hamilton";
-           person:firstName "Lewis";
-           :hasDrivenIn ?drive.
-    ?drive :driveFor ?team.
-    ?team :name ?teamName .
-}
-```
-
-##### Query 13
-
-```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -369,7 +356,7 @@ select ?driver ?name ?surname ?finalPoints where {
 ORDER BY desc(?finalPoints)
 ```
 
-##### Query 14
+##### Query 13
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -393,7 +380,7 @@ select ?driver ?name ?surname ?finalPoints where {
 }
 ORDER BY desc(?finalPoints)
 ```
-##### Query 15
+##### Query 14
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -419,7 +406,9 @@ select ?driver ?name ?surname ?finalPoints where {
 }
 ```
 
-##### Query 13.1
+##### Driver Statistics 
+
+##### Query 1
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -455,7 +444,7 @@ select (COUNT(*) as ?wins) where {
 }
 ```
 
-##### Query 12.2
+##### Query 2
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -474,7 +463,7 @@ SELECT ?cons where {
 GROUP BY ?cons 
 ```
 
-##### Query 12.3
+##### Query 3
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -494,7 +483,7 @@ SELECT ?cons where {
 GROUP BY ?cons 
 ```
 
-##### Query 12.4
+##### Query 4
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -511,7 +500,7 @@ SELECT (COUNT(DISTINCT ?year) as ?nSeasons)  where {
 }
 ```
 
-##### Query 12.5
+##### Query 5
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -527,7 +516,7 @@ SELECT (COUNT( DISTINCT *) as ?nRaces)  where {
 }
 ```
 
-##### Query 12.6
+##### Query 6
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -542,7 +531,7 @@ SELECT (COUNT(*) as ?nPolePosition)  where {
 }
 
 ```
-##### Query 12.7
+##### Query 7
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -558,7 +547,7 @@ SELECT (COUNT(*) as ?nPolePosition)  where {
 
 ```
 
-##### Query 12.8
+##### Query 8
 
 ```sparql
 SELECT ?year (COUNT(*) as ?top5Finishes) where { 
@@ -578,7 +567,7 @@ GROUP BY ?year
 ORDER BY ?year
 ```
 
-##### Query 12.9
+##### Query 9
 
 ```sparql
 SELECT ?year (COUNT(*) as ?top5Finishes) where { 
@@ -598,7 +587,7 @@ GROUP BY ?year
 ORDER BY ?year
 ```
 
-##### Query 12.10
+##### Query 10
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -615,7 +604,7 @@ SELECT (COUNT(*) as ?nPolePosition)  where {
 
 ```
 
-##### Query 12.11
+##### Query 11
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -645,7 +634,7 @@ SELECT (?nPolePosition / ?nRaces * 100 as ?perc) where {
 
 ```
 
-##### Query 12.12
+##### Query 12
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -675,7 +664,7 @@ SELECT (?nVictories / ?nRaces * 100 as ?perc) where {
 
 ```
 
-##### Query 12.13
+##### Query 13
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -692,7 +681,7 @@ SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace)  
 
 ```
 
-##### Query 12.14
+##### Query 14
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -709,7 +698,7 @@ SELECT (MAX(?quali_position) as ?bestQuali) (MAX(?race_position) as ?bestRace)  
 
 ```
 
-##### Query 12.15
+##### Query 15
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -726,7 +715,7 @@ SELECT (COUNT(DISTINCT ?drive) as ?q3_quali) where {
 
 ```
 
-##### Query 12.16
+##### Query 16
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -748,7 +737,7 @@ select ?driver (COUNT(?drive) as ?dnf) where {
 }
 GROUP BY ?driver
 ```
-##### Query 12.17
+##### Query 17
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -766,7 +755,7 @@ SELECT (COUNT(*) as ?nVictoryFromPole)  where {
 
 ```
 
-##### Query 12.18
+##### Query 18
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -805,7 +794,7 @@ select ?year ?points where {
 ORDER BY ?year
 ```
 
-##### Query 12.19
+##### Query 19
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
