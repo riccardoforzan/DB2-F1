@@ -13,6 +13,9 @@
 <li>Which is the team that has won the constructor championship in a given year?</li>
 <li>How many races have been done in a given nation in a given year?</li>
 <li>Teams for which a driver has run</li>
+<li>Which is the final driver championship standing for a given year?</li>
+<li>Which is the driver championship standing after a given race week-end?</li>
+<li>Which is the driver with the biggest number of points gained in the driver championship?</li>
 </ol>
 Driver statistics for our web app: For a given driver:
     <ol>
@@ -327,6 +330,92 @@ select DISTINCT ?pilot ?team ?teamName where {
            :hasDrivenIn ?drive.
     ?drive :driveFor ?team.
     ?team :name ?teamName .
+}
+```
+
+##### Query 13
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+
+select ?driver ?name ?surname ?finalPoints where {
+
+    ?driver person:firstName ?name ;
+            person:lastName ?surname . 
+
+    ?driver f1:hasDrivenIn ?drive.
+    ?drive f1:cp_position_after_race ?finalPos ;
+           f1:cp_points_after_race ?finalPoints ;
+           f1:during ?rwe.
+
+    #Get the result only of the last race of the given year
+    FILTER(?rwe = ?race){
+        select distinct ?race where {
+            ?race a f1:RaceWeekend;
+                  f1:round ?round;
+                  FILTER (?round = ?lastRace){
+                select (MAX(?round) as ?lastRace) where {
+                    ?raceWeekends f1:round ?round;
+                                  f1:year "2021"^^xsd:int .
+                }
+            }
+        }
+    }
+
+}
+ORDER BY desc(?finalPoints)
+```
+
+##### Query 14
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+
+select ?driver ?name ?surname ?finalPoints where {
+
+    ?driver person:firstName ?name ;
+            person:lastName ?surname . 
+
+    ?driver f1:hasDrivenIn ?drive.
+    ?drive f1:cp_position_after_race ?finalPos ;
+           f1:cp_points_after_race ?finalPoints ;
+           f1:during ?rwe.
+
+    ?rwe f1:round "3"^^xsd:int;
+         f1:year "2021"^^xsd:int . 
+
+}
+ORDER BY desc(?finalPoints)
+```
+##### Query 15
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+
+select ?driver ?name ?surname ?finalPoints where {
+
+    ?driver person:firstName ?name ;
+            person:lastName ?surname . 
+
+    ?driver f1:hasDrivenIn ?drive.
+    ?drive f1:cp_points_after_race ?finalPoints . 
+    
+    FILTER (?finalPoints = ?maxPoints) {
+        SELECT (MAX (?points) as ?maxPoints) WHERE {
+            ?drive a f1:Drive . 
+        	?drive f1:cp_points_after_race ?points 
+    	}
+    }
+
 }
 ```
 
