@@ -3,8 +3,9 @@
 <ol>
 <li>How many pole positions has a given pilot done on a given year?</li>
 <li>How many races has a given pilot won in a given year?</li>
-<li>Who is the pilot with the biggest number of victory?</li>
+<li>Who is the pilot with the biggest number of race victory?</li>
 <li>Which is the team with the biggest number of victories of the constructor championship?</li>
+<li>Which is the pilot with the biggest number of victories of the driver championship?</li>
 <li>Who is the pilot with the best lap time in a given circuit?</li>
 <li>Which is the team with the fastest pit-stop in a given race?</li>
 <li>Which is the team with the fastest pit-stop in absolute?</li>
@@ -12,7 +13,8 @@
 <li>Which is the team that has won the constructor championship in a given year?</li>
 <li>How many races have been done in a given nation in a given year?</li>
 <li>Teams for which a driver has run</li>
-<li>Driver statistics: For a given driver:</li>
+</ol>
+Driver statistics for our web app: For a given driver:
     <ol>
         <li>Number of championship that he has won</li>
       	<li>For which constructors has driven</li>
@@ -35,7 +37,7 @@
         <li>Position year per year in the championship</li>   
     </ol>
     
-<li>Constructor statistics: For a given constructor:</li>
+Constructor statistics: For a given constructor:
     <ol>
         <li>Number of championship that he has won</li>
         <li>Number of races</li>
@@ -99,13 +101,17 @@ SELECT (COUNT(DISTINCT ?drive) as ?pole_positions) where {
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
 
-SELECT ?driver (COUNT(DISTINCT *) as ?number_victory)  where {
+SELECT ?driver ?name ?last_name(COUNT(*) as ?number_victory)  where {
 
+    ?driver person:firstName ?name ;
+            person:lastName ?last_name . 
     ?driver f1:hasDrivenIn ?drive .
     ?drive f1:race_position "1"^^xsd:int .
 }
-GROUP BY(?driver)
+GROUP BY ?driver ?name ?last_name
+ORDER BY DESC (?number_victory) 
 LIMIT 1
 ```
 
@@ -153,7 +159,51 @@ ORDER BY desc(?wins)
 LIMIT 1
 ```
 
-##### Query 5
+##### Query 5 AA
+
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+
+select ?driver ?name ?surname (COUNT(?driver) as ?wins) where {
+
+    ?driver person:firstName ?name ;
+            person:lastName ?surname . 
+
+    ?driver f1:hasDrivenIn ?drive.
+    ?drive f1:cp_position_after_race ?finalPos ;
+           f1:during ?rwe.
+
+    #Get the result only of the last race of the year
+    FILTER(?rwe = ?race){
+        select distinct ?race where {
+            ?race a f1:RaceWeekend;
+                  f1:round ?round;
+                  f1:year ?y;
+                  FILTER (?round = ?lastRace && ?y = ?year){
+                select (MAX(?round) as ?lastRace) ?year where {
+                    ?raceWeekends a f1:RaceWeekend;
+                                  f1:round ?round;
+                                  f1:year ?year.
+                }
+                group by ?year
+                order by asc(?year)
+            }
+        }
+    }
+
+    #Get only the teams that won
+    FILTER(?finalPos = "1"^^xsd:int)
+
+}
+GROUP BY ?driver ?name ?surname
+ORDER BY desc(?wins)
+LIMIT 1
+```
+
+##### Query 6
 
 ```sparql
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -175,7 +225,7 @@ ORDER BY ?best_lap_time
 LIMIT 100
 ```
 
-##### Query 6
+##### Query 7
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -194,7 +244,7 @@ select ?team ?teamName where {
 }
 ```
 
-##### Query 7
+##### Query 8
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -204,7 +254,7 @@ select (MIN(?pt) as ?absFastestPit) where {
 }
 ```
 
-##### Query 8
+##### Query 9
 
 ```sparql
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -232,7 +282,7 @@ select DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints where{
 }
 ```
 
-##### Query 9
+##### Query 10
 
 ```sparql
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -253,7 +303,7 @@ select ?team ?teamName ?maxpoints where {
 }
 ```
 
-##### Query 10
+##### Query 11
 
 ```sparql
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -266,7 +316,7 @@ select (COUNT(?raceWeekend) AS ?totalRaces) where {
 }
 ```
 
-##### Query 11
+##### Query 12
 
 ```sparql
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -280,7 +330,7 @@ select DISTINCT ?pilot ?team ?teamName where {
 }
 ```
 
-##### Query 12.1
+##### Query 13.1
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
