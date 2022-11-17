@@ -943,3 +943,23 @@ SELECT (MIN(?fpt) as ?fastestPit)  where {
      	   
 }
 ```
+
+##### Query 7
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT ?year (COUNT( DISTINCT *) as ?dnf)  where { 
+    ?cons  f1:name "McLaren".
+    ?drive f1:driveFor ?cons;
+    	   f1:status ?status;
+           f1:during ?rwe .
+    ?rwe f1:year ?year .
+        
+    FILTER ( ?status != "Finished" && REGEX(?status, "^(?!.*Lap).*$"))
+     	   
+}
+GROUP BY ?year
+ORDER BY ?year
+```
