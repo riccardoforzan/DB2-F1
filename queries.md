@@ -900,3 +900,18 @@ SELECT (COUNT( DISTINCT *) as ?nWinRaces)  where {
     FILTER (?position = 1)
 } 
 ```
+
+##### Query 4
+```sparql
+
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT (COUNT( DISTINCT *) as ?nWinRaces)  where { 
+    ?cons  f1:name "McLaren".
+    ?drive f1:driveFor ?cons.
+    ?drive f1:race_position ?position .
+    FILTER (?position = 1 || ?position = 2 || ?position = 3)
+} 
+```
