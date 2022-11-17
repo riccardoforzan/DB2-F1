@@ -963,3 +963,22 @@ SELECT ?year (COUNT( DISTINCT *) as ?dnf)  where {
 GROUP BY ?year
 ORDER BY ?year
 ```
+
+##### Query 8
+```sparql
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#Person>
+
+SELECT ?year (COUNT( DISTINCT *) as ?top5Finishes)  where { 
+    ?cons  f1:name "McLaren".
+    ?drive f1:driveFor ?cons;
+    	   f1:race_position ?race_pos ;
+           f1:during ?rwe .
+    ?rwe f1:year ?year .
+    FILTER (?race_pos <= 5)
+             	   
+}
+GROUP BY ?year
+ORDER BY ?year
+```
