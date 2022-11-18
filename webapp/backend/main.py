@@ -15,7 +15,9 @@ app.add_middleware(
 )
 
 # Set up the SPARQLWrapper to perform queries in GraphDB
-sparql = SPARQLWrapper("http://localhost:7200/repositories/formula1")
+# Riccardo sparql = SPARQLWrapper("http://localhost:7200/repositories/formula1")
+
+sparql = SPARQLWrapper("http://manuelubuntu:7200/repositories/Formula1")
 sparql.setMethod('POST')
 sparql.setReturnFormat(JSON)
 
@@ -34,12 +36,12 @@ def get_drivers():
 
     query = """
         PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
-        PREFIX person: <https://w3id.org/MON/person.owl#Person>
+        PREFIX person: <https://w3id.org/MON/person.owl#>
 
         select ?driver (CONCAT(?fn, ' ', ?ln) as ?name) where {
             ?driver a f1:Driver ;
-                    person:last_name ?ln ;
-                    person:first_name ?fn .
+                    person:lastName ?ln ;
+                    person:firstName ?fn .
         }
     """
 
@@ -50,3 +52,25 @@ def get_drivers():
         return ret["results"]["bindings"]
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/driver /stats")
+def get_drivers_stats():
+    query = """
+        PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+        PREFIX person: <https://w3id.org/MON/person.owl#>
+
+        select ?driver (CONCAT(?fn, ' ', ?ln) as ?name) where {
+            ?driver a f1:Driver ;
+                    person:lastName ?ln ;
+                    person:firstName ?fn .
+        }
+    """
+
+    sparql.setQuery(query)
+
+    try:
+        ret = sparql.queryAndConvert()
+        return ret["results"]["bindings"]
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+

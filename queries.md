@@ -1,8 +1,8 @@
 # Queries
 
 <ol>
-<li>How many pole positions has a given pilot done on a given year?</li>
-<li>How many races has a given pilot won in a given year?</li>
+<li>Which is the last italian driver to win a driver championship?</li >
+<li>Which is, for every year, the most liked race</li>
 <li>Who is the pilot with the biggest number of race victory?</li>
 <li>Which is the team with the biggest number of victories of the constructor championship?</li>
 <li>Which is the pilot with the biggest number of victories of the driver championship?</li>
@@ -62,42 +62,71 @@ Constructor statistics: For a given constructor:
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
-PREFIX person: <https://w3id.org/MON/person.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+PREFIX countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#>
 
-SELECT (COUNT(DISTINCT ?drive) as ?pole_positions) where {
+SELECT ?driver ?name ?surname ?year WHERE {
 
-    ?driver person:firstName "Lewis"^^xsd:string ;
-            person:lastName "Hamilton"^^xsd:string ;
-            f1:hasDrivenIn ?drive .
+    ?driver person:firstName ?name ;
+    	    person:lastName ?surname ; 
+		    f1:hasDrivenIn ?drive ; 
+    		f1:nationality countries:it . 
+    
+    ?drive f1:during ?rwe ; 
+    	   f1:cp_position_after_race "1"^^xsd:int . 
+   	
+    ?rwe f1:year ?year .
 
-    ?drive f1:quali_position "1"^^xsd:int ;
-   	       f1:during ?race_weekend .
-
-    ?race_weekend f1:year "2021"^^xsd:int .
-
+    #Get the result only of the last race of every year
+    FILTER(?rwe = ?race)
+    {
+        SELECT DISTINCT ?race WHERE {
+            ?race f1:round ?round;
+                  f1:year ?y;
+                  FILTER (?round = ?lastRace && ?y = ?year)
+            	  {
+                		SELECT (MAX(?round) as ?lastRace) ?year WHERE {
+                        	?raceWeekends f1:round ?round;
+                                      f1:year ?year.
+                    	}
+                    	GROUP BY ?year
+            	  }
+        }
+    }	
+            
 }
+ORDER BY DESC (?year) 
+LIMIT 1
+
+
 ```
 
 ##### Query 2
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
-PREFIX person: <https://w3id.org/MON/person.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT (COUNT(DISTINCT ?drive) as ?pole_positions) where {
+SELECT ?year ?name ?rate WHERE {
+	
+    ?rw f1:name ?name ;
+        f1:year ?year; 
+        f1:fans_rating ?rate
+    
+    FILTER (?year = ?yearR && ?rate = ?maxRate)
+    
+    {
+    	SELECT ?yearR (MAX(?rate) AS ?maxRate) WHERE {
+          	?rw f1:year ?yearR; 
+   			    f1:fans_rating ?rate .
+		}
+        GROUP BY ?yearR
 
-    ?driver person:firstName "Lewis"^^xsd:string ;
-            person:lastName "Hamilton"^^xsd:string ;
-            f1:hasDrivenIn ?drive .
+    }         
+}   
 
-    ?drive f1:race_position "1"^^xsd:int ;
-           f1:during ?race_weekend .
-
-    ?race_weekend f1:year "2021"^^xsd:int .
-
-}
 ```
 
 ##### Query 3
@@ -107,7 +136,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-SELECT ?driver ?name ?last_name(COUNT(*) as ?number_victory)  where {
+SELECT ?driver ?name ?last_name(COUNT(*) as ?number_victory)  WHERE {
 
     ?driver person:firstName ?name ;
             person:lastName ?last_name . 
@@ -127,7 +156,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-select ?team ?teamName (COUNT(?team) as ?wins) where {
+SELECT ?team ?teamName (COUNT(?team) as ?wins) WHERE {
 
     ?team rdf:type dbpedia_f1:FormulaOneTeam;
           f1:name ?teamName.
@@ -138,18 +167,18 @@ select ?team ?teamName (COUNT(?team) as ?wins) where {
 
     #Get the result only of the last race of the year
     FILTER(?rwe = ?race){
-        select distinct ?race where {
+        SELECT distinct ?race WHERE {
             ?race a f1:RaceWeekend;
                   f1:round ?round;
                   f1:year ?y;
                   FILTER (?round = ?lastRace && ?y = ?year){
-                select (MAX(?round) as ?lastRace) ?year where {
+                SELECT (MAX(?round) as ?lastRace) ?year WHERE {
                     ?raceWeekends a f1:RaceWeekend;
                                   f1:round ?round;
                                   f1:year ?year.
                 }
-                group by ?year
-                order by asc(?year)
+                GROUP BY ?year
+                ORDER BY asc(?year)
             }
         }
     }
@@ -163,7 +192,7 @@ ORDER BY desc(?wins)
 LIMIT 1
 ```
 
-##### Query 5 AA
+##### Query 5 
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
@@ -171,7 +200,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select ?driver ?name ?surname (COUNT(?driver) as ?wins) where {
+SELECT ?driver ?name ?surname (COUNT(?driver) as ?wins) WHERE {
 
     ?driver person:firstName ?name ;
             person:lastName ?surname . 
@@ -182,18 +211,18 @@ select ?driver ?name ?surname (COUNT(?driver) as ?wins) where {
 
     #Get the result only of the last race of the year
     FILTER(?rwe = ?race){
-        select distinct ?race where {
+        SELECT distinct ?race WHERE {
             ?race a f1:RaceWeekend;
                   f1:round ?round;
                   f1:year ?y;
                   FILTER (?round = ?lastRace && ?y = ?year){
-                select (MAX(?round) as ?lastRace) ?year where {
+                SELECT (MAX(?round) as ?lastRace) ?year WHERE {
                     ?raceWeekends a f1:RaceWeekend;
                                   f1:round ?round;
                                   f1:year ?year.
                 }
-                group by ?year
-                order by asc(?year)
+                GROUP BY ?year
+                ORDER BY asc(?year)
             }
         }
     }
@@ -213,7 +242,7 @@ LIMIT 1
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX prs: <https://w3id.org/MON/person.owl#>
 
-select ?pilot ?name ?year (MIN(?lap_time) AS ?best_lap_time ) where {
+SELECT ?pilot ?name ?year (MIN(?lap_time) AS ?best_lap_time ) WHERE {
     ?circuit :name "Circuit de Monaco".
     ?raceWeekend :takePlaceIn ?circuit;
                  :year ?year .
@@ -234,16 +263,16 @@ LIMIT 100
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 
-select ?team ?teamName where {
+SELECT ?team ?teamName WHERE {
     ?drive f1:driveFor ?team.
     ?team f1:name ?teamName.
     {
-        select ?drive (MIN(?fpt) as ?fastestPit) where { 
+        SELECT ?drive (MIN(?fpt) as ?fastestPit) WHERE { 
             ?drive a f1:Drive;
                 f1:fastest_pitstop ?fpt.
             ?drive f1:driveFor ?team. 
         }
-        group by ?drive
+        GROUP BY ?drive
     }
 }
 ```
@@ -252,7 +281,7 @@ select ?team ?teamName where {
 
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
-select (MIN(?pt) as ?absFastestPit) where { 
+SELECT (MIN(?pt) as ?absFastestPit) WHERE { 
 	?drive a f1:Drive;
         f1:fastest_pitstop ?pt.
 }
@@ -265,7 +294,7 @@ PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX prs: <https://w3id.org/MON/person.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-select DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints where{
+SELECT DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints WHERE{
     ?pilot :hasDrivenIn ?drive;
            prs:firstName ?pilotName;
            prs:lastName ?pilotSurname.
@@ -275,7 +304,7 @@ select DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints where{
 
     FILTER (?year = "2021"^^xsd:int)
     {
-	select ?year (MAX(?points) AS ?maxpoints) where {
+	SELECT ?year (MAX(?points) AS ?maxpoints) WHERE {
 		?raceWeekend :year ?year .
     	?drive a :Drive;
             :during ?raceWeekend;
@@ -291,14 +320,14 @@ select DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints where{
 ```sparql
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-select ?team ?teamName ?maxpoints where {
+SELECT ?team ?teamName ?maxpoints WHERE {
     ?partecipate :cp_points_after_race ?maxpoints;
                  :during ?raceWeekend .
     ?raceWeekend :year "2016"^^xsd:int .
     ?team :participateIn ?partecipate ;
           :name ?teamName .
 	{
-        select (MAX(?points) AS ?maxpoints) where {
+        SELECT (MAX(?points) AS ?maxpoints) WHERE {
 		?raceWeekend :year "2016"^^xsd:int .
     	?partecipate a :Participate;
                 :during ?raceWeekend;
@@ -313,7 +342,7 @@ select ?team ?teamName ?maxpoints where {
 PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#>
 
-select (COUNT(?raceWeekend) AS ?totalRaces) where {
+SELECT (COUNT(?raceWeekend) AS ?totalRaces) WHERE {
     ?circuit :hasCountry countries:us.
     ?raceWeekend :takePlaceIn ?circuit;
                  :year "2000"^^xsd:int .
@@ -328,7 +357,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select ?driver ?name ?surname ?finalPoints where {
+SELECT ?driver ?name ?surname ?finalPoints WHERE {
 
     ?driver person:firstName ?name ;
             person:lastName ?surname . 
@@ -340,11 +369,11 @@ select ?driver ?name ?surname ?finalPoints where {
 
     #Get the result only of the last race of the given year
     FILTER(?rwe = ?race){
-        select distinct ?race where {
+        SELECT distinct ?race WHERE {
             ?race a f1:RaceWeekend;
                   f1:round ?round;
                   FILTER (?round = ?lastRace){
-                select (MAX(?round) as ?lastRace) where {
+                SELECT (MAX(?round) as ?lastRace) WHERE {
                     ?raceWeekends f1:round ?round;
                                   f1:year "2021"^^xsd:int .
                 }
@@ -364,7 +393,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select ?driver ?name ?surname ?finalPoints where {
+SELECT ?driver ?name ?surname ?finalPoints WHERE {
 
     ?driver person:firstName ?name ;
             person:lastName ?surname . 
@@ -388,7 +417,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select ?driver ?name ?surname ?finalPoints where {
+SELECT ?driver ?name ?surname ?finalPoints WHERE {
 
     ?driver person:firstName ?name ;
             person:lastName ?surname . 
@@ -416,7 +445,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select (COUNT(*) as ?wins) where {
+SELECT (COUNT(*) as ?wins) WHERE {
 
     ?driver person:firstName "Lewis" ;
     	   person:lastName "Hamilton" ; 
@@ -427,16 +456,16 @@ select (COUNT(*) as ?wins) where {
 
     #Get the result only of the last race of the year
     FILTER(?rwe = ?race){
-        select distinct ?race where {
+        SELECT distinct ?race WHERE {
             ?race f1:round ?round;
                   f1:year ?y;
                   FILTER (?round = ?lastRace && ?y = ?year){
-                    select (MAX(?round) as ?lastRace) ?year where {
+                    SELECT (MAX(?round) as ?lastRace) ?year WHERE {
                         ?raceWeekends f1:round ?round;
                                       f1:year ?year.
                     }
-                    group by ?year
-                    order by asc(?year)
+                    GROUP BY ?year
+                    ORDER BY asc(?year)
             }
         }
     }
@@ -451,16 +480,18 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-SELECT ?cons where { 
+SELECT ?cons ?name WHERE { 
  	
     ?driver person:firstName "Lewis" ; 
             person:lastName "Hamilton" ; 
             f1:hasDrivenIn ?drive .
     
     ?drive f1:driveFor ?cons . 
+
+    ?cons f1:name ?name
     
 } 
-GROUP BY ?cons 
+GROUP BY ?cons ?name 
 ```
 
 ##### Query 3
@@ -470,17 +501,18 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-SELECT ?cons where { 
- 	
+SELECT ?cons ?name where { 
+
     ?driver person:firstName "Lewis" ; 
             person:lastName "Hamilton" ; 
             f1:hasDrivenIn ?drive .
-    
+
     ?drive f1:driveFor ?cons ;
-    		f1:race_position "1"^^xsd:int 
-    
-} 
-GROUP BY ?cons 
+            f1:race_position "1"^^xsd:int . 
+
+    ?cons f1:name ?name .
+}  
+GROUP BY ?cons ?name
 ```
 
 ##### Query 4
@@ -490,7 +522,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT(DISTINCT ?year) as ?nSeasons)  where { 
+SELECT (COUNT(DISTINCT ?year) as ?nSeasons)  WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -507,7 +539,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+SELECT (COUNT( DISTINCT *) as ?nRaces)  WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -523,7 +555,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT(*) as ?nPolePosition)  where { 
+SELECT (COUNT(*) as ?nPolePosition)  WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -538,7 +570,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT(*) as ?nPolePosition)  where { 
+SELECT (COUNT(*) as ?nRaceVictories)  WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -550,7 +582,10 @@ SELECT (COUNT(*) as ?nPolePosition)  where {
 ##### Query 8
 
 ```sparql
-SELECT ?year (COUNT(*) as ?top5Finishes) where { 
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+SELECT ?year (COUNT(*) as ?top10Finishes) WHERE { 
  	
     ?driver person:firstName "Lewis" ; 
             person:lastName "Hamilton" ; 
@@ -570,7 +605,10 @@ ORDER BY ?year
 ##### Query 9
 
 ```sparql
-SELECT ?year (COUNT(*) as ?top5Finishes) where { 
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX person: <https://w3id.org/MON/person.owl#>
+SELECT ?year (COUNT(*) as ?top5Finishes) WHERE { 
  	
     ?driver person:firstName "Lewis" ; 
             person:lastName "Hamilton" ; 
@@ -594,7 +632,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT(*) as ?nPolePosition)  where { 
+SELECT (COUNT(*) as ?nPodiums)  WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -611,9 +649,9 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (?nPolePosition / ?nRaces * 100 as ?perc) where { 
+SELECT (?nPolePosition / ?nRaces * 100 as ?perc) WHERE { 
     {
-        SELECT (COUNT(*) as ?nPolePosition)  where { 
+        SELECT (COUNT(*) as ?nPolePosition)  WHERE { 
             ?driver person:firstName "Lewis" ;
                     person:lastName "Hamilton" ;
                     f1:hasDrivenIn ?drive .
@@ -621,7 +659,7 @@ SELECT (?nPolePosition / ?nRaces * 100 as ?perc) where {
         }
     } 
     {
-        SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+        SELECT (COUNT( DISTINCT *) as ?nRaces)  WHERE { 
                 ?driver person:firstName "Lewis" ;
                         person:lastName "Hamilton" ;
                         f1:hasDrivenIn ?drive .
@@ -641,9 +679,9 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (?nVictories / ?nRaces * 100 as ?perc) where { 
+SELECT (?nVictories / ?nRaces * 100 as ?perc) WHERE { 
     {
-        SELECT (COUNT(*) as ?nVictories)  where { 
+        SELECT (COUNT(*) as ?nVictories)  WHERE { 
             ?driver person:firstName "Lewis" ;
                     person:lastName "Hamilton" ;
                     f1:hasDrivenIn ?drive .
@@ -651,7 +689,7 @@ SELECT (?nVictories / ?nRaces * 100 as ?perc) where {
         }
     } 
     {
-        SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+        SELECT (COUNT( DISTINCT *) as ?nRaces)  WHERE { 
                 ?driver person:firstName "Lewis" ;
                         person:lastName "Hamilton" ;
                         f1:hasDrivenIn ?drive .
@@ -671,7 +709,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace)   where { 
+SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace)   WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -686,9 +724,9 @@ SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace)  
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX person: <https://w3id.org/MON/person.owl#Person>
+PREFIX person: <https://w3id.org/MON/person.owl#>
 
-SELECT (MAX(?quali_position) as ?bestQuali) (MAX(?race_position) as ?bestRace)   where { 
+SELECT (MAX(?quali_position) as ?worstQuali) (MAX(?race_position) as ?worstRace)   WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -705,7 +743,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT(DISTINCT ?drive) as ?q3_quali) where { 
+SELECT (COUNT(DISTINCT ?drive) as ?q3_quali) WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -721,7 +759,7 @@ SELECT (COUNT(DISTINCT ?drive) as ?q3_quali) where {
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX person: <https://w3id.org/MON/person.owl#Person>
+PREFIX person: <https://w3id.org/MON/person.owl#>
 
 select ?driver (COUNT(?drive) as ?dnf) where {
     ?driver a f1:Driver;
@@ -730,7 +768,7 @@ select ?driver (COUNT(?drive) as ?dnf) where {
     ?drive f1:status ?status.
 
     #Get the driver which last name is
-    ?driver person:last_name "Bottas" .
+    ?driver person:lastName "Bottas" .
 
     #Exclude all the drives that have been completed
     FILTER ( ?status != "Finished" && REGEX(?status, "^(?!.*Lap).*$"))
@@ -745,7 +783,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT(*) as ?nVictoryFromPole)  where { 
+SELECT (COUNT(*) as ?nVictoryFromPole)  WHERE { 
  	?driver person:firstName "Lewis" ;
             person:lastName "Hamilton" ;
 			f1:hasDrivenIn ?drive .
@@ -763,7 +801,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select ?year ?points where {
+SELECT ?year ?points WHERE {
 
     ?driver person:firstName "Lewis" ;
     	   person:lastName "Hamilton" ; 
@@ -776,16 +814,16 @@ select ?year ?points where {
 
     #Get the result only of the last race of the year
     FILTER(?rwe = ?race){
-        select distinct ?race where {
+        SELECT distinct ?race WHERE {
             ?race f1:round ?round;
                   f1:year ?y;
                   FILTER (?round = ?lastRace && ?y = ?year){
-                    select (MAX(?round) as ?lastRace) ?year where {
+                    SELECT (MAX(?round) as ?lastRace) ?year WHERE {
                         ?raceWeekends f1:round ?round;
                                       f1:year ?year.
                     }
-                    group by ?year
-                    order by asc(?year)
+                    GROUP BY ?year
+                    ORDER BY asc(?year)
             }
         }
     }	
@@ -802,7 +840,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select ?year ?cp_pos where {
+SELECT ?year ?cp_pos WHERE {
 
     ?driver person:firstName "Lewis" ;
     	   person:lastName "Hamilton" ; 
@@ -815,16 +853,16 @@ select ?year ?cp_pos where {
 
     #Get the result only of the last race of the year
     FILTER(?rwe = ?race){
-        select distinct ?race where {
+        SELECT distinct ?race WHERE {
             ?race f1:round ?round;
                   f1:year ?y;
                   FILTER (?round = ?lastRace && ?y = ?year){
-                    select (MAX(?round) as ?lastRace) ?year where {
+                    SELECT (MAX(?round) as ?lastRace) ?year WHERE {
                         ?raceWeekends f1:round ?round;
                                       f1:year ?year.
                     }
-                    group by ?year
-                    order by asc(?year)
+                    GROUP BY ?year
+                    ORDER BY asc(?year)
             }
         }
     }	
@@ -843,7 +881,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select (COUNT(*) as ?wins) where {
+SELECT (COUNT(*) as ?wins) WHERE {
 
                              
     ?drive f1:cp_position_after_race "1"^^xsd:int;
@@ -856,16 +894,16 @@ select (COUNT(*) as ?wins) where {
 
     #Get the result only of the last race of the year
     FILTER(?rwe = ?race){
-        select distinct ?race where {
+        SELECT distinct ?race WHERE {
             ?race f1:round ?round;
                   f1:year ?y;
                   FILTER (?round = ?lastRace && ?y = ?year){
-                    select (MAX(?round) as ?lastRace) ?year where {
+                    SELECT (MAX(?round) as ?lastRace) ?year WHERE {
                         ?raceWeekends f1:round ?round;
                                       f1:year ?year.
                     }
-                    group by ?year
-                    order by asc(?year)
+                    GROUP BY ?year
+                    ORDER BY asc(?year)
             }
         }
     }
@@ -879,7 +917,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+SELECT (COUNT( DISTINCT *) as ?nRaces)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons.
      	   
@@ -893,7 +931,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT( DISTINCT *) as ?nWinRaces)  where { 
+SELECT (COUNT( DISTINCT *) as ?nWinRaces)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons.
     ?drive f1:race_position ?position .
@@ -908,7 +946,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT( DISTINCT *) as ?nWinRaces)  where { 
+SELECT (COUNT( DISTINCT *) as ?nWinRaces)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons.
     ?drive f1:race_position ?position .
@@ -922,7 +960,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
+SELECT (COUNT( DISTINCT *) as ?nRaces)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons.
     ?drive f1:quali_position "1"^^xsd:int.
@@ -936,7 +974,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT (MIN(?fpt) as ?fastestPit)  where { 
+SELECT (MIN(?fpt) as ?fastestPit)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons;
            f1:fastest_pitstop ?fpt.
@@ -950,7 +988,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT ?year (COUNT( DISTINCT *) as ?dnf)  where { 
+SELECT ?year (COUNT( DISTINCT *) as ?dnf)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons;
     	   f1:status ?status;
@@ -970,7 +1008,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT ?year (COUNT( DISTINCT *) as ?top5Finishes)  where { 
+SELECT ?year (COUNT( DISTINCT *) as ?top5Finishes)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons;
     	   f1:race_position ?race_pos ;
@@ -989,7 +1027,7 @@ PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-SELECT ?year (COUNT( DISTINCT *) as ?top5Finishes)  where { 
+SELECT ?year (COUNT( DISTINCT *) as ?top5Finishes)  WHERE { 
     ?cons  f1:name "McLaren".
     ?drive f1:driveFor ?cons;
     	   f1:race_position ?race_pos ;
