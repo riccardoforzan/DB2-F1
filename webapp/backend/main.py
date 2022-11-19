@@ -2,6 +2,7 @@ from typing import Union
 from fastapi import FastAPI, HTTPException, Form
 from SPARQLWrapper import SPARQLWrapper, JSON
 from fastapi.middleware.cors import CORSMiddleware
+import stats 
 
 # Create FastAPI endpoint and allow all origins
 app = FastAPI()
@@ -53,24 +54,8 @@ def get_drivers():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/driver /stats")
-def get_drivers_stats():
-    query = """
-        PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
-        PREFIX person: <https://w3id.org/MON/person.owl#>
-
-        select ?driver (CONCAT(?fn, ' ', ?ln) as ?name) where {
-            ?driver a f1:Driver ;
-                    person:lastName ?ln ;
-                    person:firstName ?fn .
-        }
-    """
-
-    sparql.setQuery(query)
-
-    try:
-        ret = sparql.queryAndConvert()
-        return ret["results"]["bindings"]
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
+@app.get("/drivers/{driverName}-{driverSurname}/stat")
+def get_driver_stat(driverName, driverSurname):
+    driverStats = stats.driverStats(sparql, driverName, driverSurname)
+    return driverStats
+ 
