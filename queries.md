@@ -647,7 +647,7 @@ SELECT (COUNT(*) as ?nPodiums)  WHERE {
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX person: <https://w3id.org/MON/person.owl#Person>
+PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (?nPolePosition / ?nRaces * 100 as ?perc) WHERE { 
     {
@@ -655,7 +655,8 @@ SELECT (?nPolePosition / ?nRaces * 100 as ?perc) WHERE {
             ?driver person:firstName "Lewis" ;
                     person:lastName "Hamilton" ;
                     f1:hasDrivenIn ?drive .
-            ?drive f1:quali_position "1"^^xsd:int
+            ?drive f1:race_position ?position .
+       		FILTER (?position = 1 || ?position = 2 || ?position = 3)
         }
     } 
     {
