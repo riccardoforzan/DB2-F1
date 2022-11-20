@@ -255,7 +255,7 @@ SELECT ?pilot ?name ?year (MIN(?lap_time) AS ?best_lap_time ) WHERE {
 }
 GROUP BY ?pilot ?name ?year
 ORDER BY ?best_lap_time
-LIMIT 100
+LIMIT 1
 ```
 
 ##### Query 7
@@ -290,25 +290,25 @@ SELECT (MIN(?pt) as ?absFastestPit) WHERE {
 ##### Query 9
 
 ```sparql
-PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX prs: <https://w3id.org/MON/person.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints WHERE{
-    ?pilot :hasDrivenIn ?drive;
+    ?pilot f1:hasDrivenIn ?drive;
            prs:firstName ?pilotName;
            prs:lastName ?pilotSurname.
-    ?drive :cp_points_after_race ?maxpoints;
-    		:during ?raceWeekend.
-    ?raceWeekend :year ?year.
+    ?drive f1:cp_points_after_race ?maxpoints;
+    	   f1:during ?raceWeekend.
+    ?raceWeekend f1:year ?year.
 
     FILTER (?year = "2021"^^xsd:int)
     {
 	SELECT ?year (MAX(?points) AS ?maxpoints) WHERE {
-		?raceWeekend :year ?year .
-    	?drive a :Drive;
-            :during ?raceWeekend;
-            :cp_points_after_race ?points.
+		?raceWeekend f1:year ?year .
+    	?drive a f1:Drive;
+            f1:during ?raceWeekend;
+            f1:cp_points_after_race ?points.
 	}
         GROUPBY (?year)
 	}
@@ -318,20 +318,22 @@ SELECT DISTINCT ?pilot ?pilotName ?pilotSurname ?maxpoints WHERE{
 ##### Query 10
 
 ```sparql
-PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
+PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 SELECT ?team ?teamName ?maxpoints WHERE {
-    ?partecipate :cp_points_after_race ?maxpoints;
-                 :during ?raceWeekend .
-    ?raceWeekend :year "2016"^^xsd:int .
-    ?team :participateIn ?partecipate ;
-          :name ?teamName .
+    ?partecipate f1:cp_points_after_race ?maxpoints;
+                 f1:during ?raceWeekend .
+    ?raceWeekend f1:year "2016"^^xsd:int .
+    ?team f1:participateIn ?partecipate ;
+          f1:name ?teamName .
 	{
         SELECT (MAX(?points) AS ?maxpoints) WHERE {
-		?raceWeekend :year "2016"^^xsd:int .
-    	?partecipate a :Participate;
-                :during ?raceWeekend;
-        	    :cp_points_after_race ?points.
+		?raceWeekend f1:year "2016"^^xsd:int .
+    	?partecipate a f1:Participate;
+                f1:during ?raceWeekend;
+        	    f1:cp_points_after_race ?points.
+		}
 	}
 }
 ```
@@ -343,9 +345,9 @@ PREFIX : <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX countries: <http://eulersharp.sourceforge.net/2003/03swap/countries#>
 
 SELECT (COUNT(?raceWeekend) AS ?totalRaces) WHERE {
-    ?circuit :hasCountry countries:us.
-    ?raceWeekend :takePlaceIn ?circuit;
-                 :year "2000"^^xsd:int .
+    ?circuit f1:hasCountry countries:us.
+    ?raceWeekend f1:takePlaceIn ?circuit;
+                 f1:year "2000"^^xsd:int .
 }
 ```
 
@@ -520,7 +522,7 @@ GROUP BY ?cons ?name
 ```sparql
 PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX person: <https://w3id.org/MON/person.owl#Person>
+PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT(DISTINCT ?year) as ?nSeasons)  WHERE { 
  	?driver person:firstName "Lewis" ;
