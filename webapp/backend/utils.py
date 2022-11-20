@@ -46,7 +46,6 @@ def get_teams(sparql, driverId):
     query = Template("""
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT ?cons ?name WHERE { 
 
@@ -66,13 +65,14 @@ def get_teams(sparql, driverId):
     sparql.setQuery(query)
     ret = sparql.queryAndConvert()
     
-    r = ret["results"]["bindings"][0]
+    r = ret["results"]["bindings"]
 
     cons = [] 
 
-    for key, value in r.items():
-        if(key == "name"):
-            cons.append(value['value'])
+    for item in r:
+        for key, value in item.items():
+            if(key == "name"):
+                cons.append(value['value'])
 
     return cons
 
@@ -80,7 +80,6 @@ def get_teams_won(sparql, driverId):
     query = Template("""
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT ?cons ?name WHERE { 
 
@@ -100,13 +99,14 @@ def get_teams_won(sparql, driverId):
     sparql.setQuery(query)
     ret = sparql.queryAndConvert()
     
-    r = ret["results"]["bindings"][0]
+    r = ret["results"]["bindings"]
 
     cons = [] 
 
-    for key, value in r.items():
-        if(key == "name"):
-            cons.append(value['value'])
+    for item in r:
+        for key, value in item.items():
+            if(key == "name"):
+                cons.append(value['value'])
 
     return cons
 
@@ -116,7 +116,6 @@ def get_seasons_count(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT (COUNT(DISTINCT ?year) as ?nSeasons)  WHERE { 
         ?driver f1:hasDrivenIn ?drive .
@@ -131,7 +130,7 @@ def get_seasons_count(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["nSeasons"]["value"]
 
 def get_races_count(sparql, driverId):
     
@@ -139,7 +138,6 @@ def get_races_count(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT (COUNT( DISTINCT *) as ?nRaces)  WHERE { 
         ?driver f1:hasDrivenIn ?drive .
@@ -154,7 +152,7 @@ def get_races_count(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["nRaces"]["value"]
 
 def get_pole_positions_count(sparql, driverId):
     
@@ -166,7 +164,7 @@ def get_pole_positions_count(sparql, driverId):
 
     SELECT (COUNT(*) as ?nPolePosition)  WHERE { 
         ?driver f1:hasDrivenIn ?drive .
-        FILTER(?driver = f1:driver$driveId)
+        FILTER(?driver = f1:driver$driverId)
         ?drive f1:quali_position "1"^^xsd:int
     }
 
@@ -176,7 +174,7 @@ def get_pole_positions_count(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["nPolePosition"]["value"]
 
 def get_wins_count(sparql, driverId):
     
@@ -184,7 +182,6 @@ def get_wins_count(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT (COUNT(*) as ?nRaceVictories)  WHERE { 
         ?driver f1:hasDrivenIn ?drive .
@@ -198,7 +195,7 @@ def get_wins_count(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["nRaceVictories"]["value"]
 
 def get_top_ten_position_by_year(sparql, driverId):
     
@@ -206,7 +203,6 @@ def get_top_ten_position_by_year(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
     SELECT ?year (COUNT(*) as ?top10Finishes) WHERE { 
         
         ?driver f1:hasDrivenIn ?drive .
@@ -227,8 +223,20 @@ def get_top_ten_position_by_year(sparql, driverId):
     sparql.setQuery(query)
     ret = sparql.queryAndConvert()
     
-    r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    r = ret["results"]["bindings"]
+
+    yf = {}
+
+    for item in r:
+        year = 0
+
+        for key, value in item.items():
+            if(key == "year"):
+                year = (value['value'])                
+            if(key == "top10Finishes"):
+                yf[year] = value['value']
+
+    return yf
 
 def get_top_five_position_by_year(sparql, driverId):
 
@@ -236,7 +244,6 @@ def get_top_five_position_by_year(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
     SELECT ?year (COUNT(*) as ?top5Finishes) WHERE { 
         
         ?driver f1:hasDrivenIn ?drive .
@@ -257,8 +264,20 @@ def get_top_five_position_by_year(sparql, driverId):
     sparql.setQuery(query)
     ret = sparql.queryAndConvert()
     
-    r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    r = ret["results"]["bindings"]
+
+    tf = {}
+
+    for item in r:
+        year = 0
+
+        for key, value in item.items():
+            if(key == "year"):
+                year = (value['value'])                
+            if(key == "top5Finishes"):
+                tf[year] = value['value']
+
+    return tf
 
 def get_podiums(sparql, driverId):
 
@@ -266,7 +285,6 @@ def get_podiums(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT (COUNT(*) as ?nPodiums)  WHERE { 
         ?driver f1:hasDrivenIn ?drive .
@@ -281,7 +299,7 @@ def get_podiums(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["nPodiums"]["value"]
 
 def get_percentage_of_podiums_wrt_total_races(sparql, driverId):
 
@@ -289,7 +307,6 @@ def get_percentage_of_podiums_wrt_total_races(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT (?nPolePosition / ?nRaces * 100 as ?perc) WHERE { 
         {
@@ -305,8 +322,7 @@ def get_percentage_of_podiums_wrt_total_races(sparql, driverId):
                     ?driver f1:hasDrivenIn ?drive .
                     FILTER(?driver = f1:driver$driverId)
                     ?drive a f1:Drive
-        }
-            
+            }   
         }
     }
 
@@ -316,7 +332,7 @@ def get_percentage_of_podiums_wrt_total_races(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["perc"]["value"]
 
 def get_percentage_of_wins_wrt_total_races(sparql, driverId):
 
@@ -324,7 +340,6 @@ def get_percentage_of_wins_wrt_total_races(sparql, driverId):
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT (?nVictories / ?nRaces * 100 as ?perc) WHERE { 
         {
@@ -338,7 +353,6 @@ def get_percentage_of_wins_wrt_total_races(sparql, driverId):
             SELECT (COUNT( DISTINCT *) as ?nRaces)  WHERE { 
                     ?driver f1:hasDrivenIn ?drive .
                     FILTER(?driver = f1:driver$driverId)
-
                     ?drive a f1:Drive
             }   
         }
@@ -350,7 +364,7 @@ def get_percentage_of_wins_wrt_total_races(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["perc"]["value"]
 
 def best_finish_in_qualifying_and_race(sparql, driverId):
 
@@ -360,11 +374,11 @@ def best_finish_in_qualifying_and_race(sparql, driverId):
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX person: <https://w3id.org/MON/person.owl#Person>
 
-    SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace)   WHERE { 
+    SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace) WHERE { 
         ?driver f1:hasDrivenIn ?drive .
         FILTER(?driver = f1:driver$driverId)
         ?drive f1:race_position ?race_position ; 
-            f1:quali_position ?quali_position
+            f1:quali_position ?quali_position .
     }
 
     """).safe_substitute(driverId=driverId)
@@ -373,17 +387,19 @@ def best_finish_in_qualifying_and_race(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return {
+        "bestQuali" : r["bestQuali"]["value"],
+        "bestRace" : r["bestRace"]["value"],
+    }
 
-def worts_finish_in_qualifying_and_race(sparql, driverId):
+def worst_finish_in_qualifying_and_race(sparql, driverId):
 
     query = Template("""
 
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
-    SELECT (MAX(?quali_position) as ?worstQuali) (MAX(?race_position) as ?worstRace)   WHERE { 
+    SELECT (MAX(?quali_position) as ?worstQuali) (MAX(?race_position) as ?worstRace) WHERE { 
         ?driver f1:hasDrivenIn ?drive .
         FILTER(?driver = f1:driver$driverId)
         ?drive f1:race_position ?race_position ; 
@@ -396,7 +412,10 @@ def worts_finish_in_qualifying_and_race(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return {
+        "worstQuali" : r["worstQuali"]["value"],
+        "worstRace" : r["worstRace"]["value"],
+    }
 
 def count_times_q3_reached(sparql, driverId):
 
@@ -419,7 +438,7 @@ def count_times_q3_reached(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["q3_quali"]["value"]
 
 def count_first_in_qualifying_and_won_race(sparql, driverId):
 
@@ -443,7 +462,7 @@ def count_first_in_qualifying_and_won_race(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["nVictoryFromPole"]["value"]
 
 def driver_championship_points_year_by_year(sparql, driverId):
 
@@ -452,7 +471,6 @@ def driver_championship_points_year_by_year(sparql, driverId):
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT ?year ?points WHERE {
 
@@ -469,13 +487,13 @@ def driver_championship_points_year_by_year(sparql, driverId):
             SELECT distinct ?race WHERE {
                 ?race f1:round ?round;
                     f1:year ?y;
-                    FILTER (?round = ?lastRace && ?y = ?year){
-                        SELECT (MAX(?round) as ?lastRace) ?year WHERE {
-                            ?raceWeekends f1:round ?round;
-                                        f1:year ?year.
-                        }
-                        GROUP BY ?year
-                        ORDER BY asc(?year)
+                FILTER (?round = ?lastRace && ?y = ?year){
+                    SELECT (MAX(?round) as ?lastRace) ?year WHERE {
+                        ?raceWeekends f1:round ?round;
+                                    f1:year ?year.
+                    }
+                    GROUP BY ?year
+                    ORDER BY asc(?year)
                 }
             }
         }	
@@ -488,8 +506,20 @@ def driver_championship_points_year_by_year(sparql, driverId):
     sparql.setQuery(query)
     ret = sparql.queryAndConvert()
     
-    r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    r = ret["results"]["bindings"]
+
+    points = {}
+
+    for item in r:
+        year = 0
+
+        for key, value in item.items():
+            if(key == "year"):
+                year = (value['value'])                
+            if(key == "points"):
+                points[year] = value['value']
+
+    return points
 
 def driver_championship_positions_year_by_year(sparql, driverId):
 
@@ -498,16 +528,15 @@ def driver_championship_positions_year_by_year(sparql, driverId):
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT ?year ?cp_pos WHERE {
 
         ?driver f1:hasDrivenIn ?drive .
-        FILTER(?driver = f1:driver$driverId)
-                
+        FILTER(?driver = f1:driver1)
+
         ?drive f1:during ?rwe ; 
             f1:cp_position_after_race ?cp_pos . 
-        
+
         ?rwe f1:year ?year .
 
         #Get the result only of the last race of the year
@@ -516,17 +545,17 @@ def driver_championship_positions_year_by_year(sparql, driverId):
                 ?race f1:round ?round;
                     f1:year ?y;
                     FILTER (?round = ?lastRace && ?y = ?year){
-                        SELECT (MAX(?round) as ?lastRace) ?year WHERE {
-                            ?raceWeekends f1:round ?round;
-                                        f1:year ?year.
-                        }
-                        GROUP BY ?year
-                        ORDER BY asc(?year)
+                    SELECT (MAX(?round) as ?lastRace) ?year WHERE {
+                        ?raceWeekends f1:round ?round;
+                                    f1:year ?year.
+                    }
+                    GROUP BY ?year
+                    ORDER BY asc(?year)
                 }
             }
         }	
 
-    } 
+    }
     ORDER BY ?year
 
     """).safe_substitute(driverId=driverId)
@@ -534,8 +563,20 @@ def driver_championship_positions_year_by_year(sparql, driverId):
     sparql.setQuery(query)
     ret = sparql.queryAndConvert()
     
-    r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    r = ret["results"]["bindings"]
+
+    pos = {}
+
+    for item in r:
+        year = 0
+
+        for key, value in item.items():
+            if(key == "year"):
+                year = (value['value'])                
+            if(key == "cp_pos"):
+                pos[year] = value['value']
+
+    return pos
 
 def driver_dnf(sparql, driverId):
 
@@ -544,7 +585,6 @@ def driver_dnf(sparql, driverId):
     PREFIX f1: <http://www.dei.unipd.it/database2/Formula1Ontology#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX person: <https://w3id.org/MON/person.owl#>
 
     SELECT ?driver (COUNT(?drive) as ?dnf) WHERE {
         ?driver a f1:Driver;
@@ -564,7 +604,7 @@ def driver_dnf(sparql, driverId):
     ret = sparql.queryAndConvert()
     
     r = ret["results"]["bindings"][0]
-    return r["wins"]["value"]
+    return r["dnf"]["value"]
 
 """
 @param sparql configured wrapper
