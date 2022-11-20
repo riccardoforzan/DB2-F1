@@ -7,19 +7,13 @@ import queries as qrs
 @param driverSurname surname of the driver for which retrieving stats
 @return dictionary with all the driver stats
 """
-def driverStats(sparqlW, driverName, driverSurname): 
+def driverStats(sparqlW, driverURI): 
 
     sparql = sparqlW
 
-    #set driver name and surname in the queries
-
-    driverName = "Lewis"
-    driverSurname = "Hamilton"
-
     for i in range(0, len(qrs.queries)) :
         query = qrs.queries[i]
-        query = query.replace(" NAME ", driverName)
-        query = query.replace(" SURNAME ", driverSurname)
+        query = query.replace("?driver", "f1:"+driverURI)
         qrs.queries[i] = query
 
     sparql.setQuery(qrs.queries[0])
@@ -30,7 +24,7 @@ def driverStats(sparqlW, driverName, driverSurname):
         ret = sparql.queryAndConvert()
         
         r = ret["results"]["bindings"][0] 
-        stats = {'cp_win' : r["wins"]["value"]} 
+        stats = {'cp_win' : r["wins"]["value"]}
     except Exception as e:
         print(e)
 
@@ -290,4 +284,9 @@ def driverStats(sparqlW, driverName, driverSurname):
     except Exception as e:
         print(e)
 
-    #print(stats)
+    for i in range(0, len(qrs.queries)) :
+        query = qrs.queries[i]
+        query = query.replace("f1:"+driverURI, "?driver")
+        qrs.queries[i] = query
+
+    return stats

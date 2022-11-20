@@ -7,8 +7,8 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 
 select (COUNT(*) as ?wins) where {
 
-    ?driver person:firstName " NAME " ;
-           person:lastName " SURNAME " ; 
+    ?driver person:firstName ?fName ;
+           person:lastName  ?lName ; 
            f1:hasDrivenIn ?drive .
 
     ?drive f1:cp_position_after_race "1"^^xsd:int ;
@@ -39,8 +39,8 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT ?cons ?name WHERE { 
  	
-    ?driver person:firstName " NAME " ; 
-            person:lastName " SURNAME " ; 
+    ?driver person:firstName ?fName ; 
+            person:lastName ?lName ; 
             f1:hasDrivenIn ?drive .
     
     ?drive f1:driveFor ?cons . 
@@ -58,8 +58,8 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT ?cons ?name where { 
 
-    ?driver person:firstName " NAME " ; 
-            person:lastName " SURNAME " ; 
+    ?driver person:firstName ?fName ; 
+            person:lastName ?lName ; 
             f1:hasDrivenIn ?drive .
 
     ?drive f1:driveFor ?cons ;
@@ -76,8 +76,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT(DISTINCT ?year) as ?nSeasons)  where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
     ?drive f1:during ?raceWeekend . 
     ?raceWeekend f1:year ?year . 
@@ -91,8 +91,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
 
     ?drive a f1:Drive
@@ -105,8 +105,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT(*) as ?nPolePosition)  where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
     ?drive f1:quali_position "1"^^xsd:int
 }
@@ -118,8 +118,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT(*) as ?nRaceVictories)  where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
     ?drive f1:race_position "1"^^xsd:int
 }
@@ -132,8 +132,8 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT ?year (COUNT(*) as ?top10Finishes) where { 
 
-    ?driver person:firstName " NAME " ; 
-            person:lastName " SURNAME " ; 
+    ?driver person:firstName ?fName ; 
+            person:lastName ?lName ; 
             f1:hasDrivenIn ?drive .
 
     ?drive f1:race_position ?race_pos ; 
@@ -153,8 +153,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 SELECT ?year (COUNT(*) as ?top5Finishes) where { 
 
-    ?driver person:firstName " NAME " ; 
-            person:lastName " SURNAME " ; 
+    ?driver person:firstName ?fName ; 
+            person:lastName ?lName ; 
             f1:hasDrivenIn ?drive .
 
     ?drive f1:race_position ?race_pos ; 
@@ -174,8 +174,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT(*) as ?nPodiums)  WHERE { 
- 	?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+ 	?driver person:firstName ?fName ;
+            person:lastName ?lName ;
 			f1:hasDrivenIn ?drive .
     ?drive f1:race_position ?position .
     FILTER (?position = 1 || ?position = 2 || ?position = 3)
@@ -190,16 +190,16 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 SELECT (?nPolePosition / ?nRaces * 100 as ?perc) where { 
     {
         SELECT (COUNT(*) as ?nPolePosition)  where { 
-            ?driver person:firstName " NAME " ;
-                    person:lastName " SURNAME " ;
+            ?driver person:firstName ?fName ;
+                    person:lastName ?lName ;
                     f1:hasDrivenIn ?drive .
             ?drive f1:quali_position "1"^^xsd:int
         }
     } 
     {
         SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
-                ?driver person:firstName " NAME " ;
-                        person:lastName " SURNAME " ;
+                ?driver person:firstName ?fName ;
+                        person:lastName ?lName ;
                         f1:hasDrivenIn ?drive .
 
                 ?drive a f1:Drive
@@ -217,16 +217,16 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 SELECT (?nVictories / ?nRaces * 100 as ?perc) where { 
     {
         SELECT (COUNT(*) as ?nVictories)  where { 
-            ?driver person:firstName " NAME " ;
-                    person:lastName " SURNAME " ;
+            ?driver person:firstName ?fName ;
+                    person:lastName ?lName ;
                     f1:hasDrivenIn ?drive .
             ?drive f1:race_position "1"^^xsd:int
         }
     } 
     {
         SELECT (COUNT( DISTINCT *) as ?nRaces)  where { 
-                ?driver person:firstName " NAME " ;
-                        person:lastName " SURNAME " ;
+                ?driver person:firstName ?fName ;
+                        person:lastName ?lName ;
                         f1:hasDrivenIn ?drive .
 
                 ?drive a f1:Drive
@@ -242,8 +242,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (MIN(?quali_position) as ?bestQuali) (MIN(?race_position) as ?bestRace)   where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
     ?drive f1:race_position ?race_position ; 
            f1:quali_position ?quali_position
@@ -256,8 +256,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (MAX(?quali_position) as ?worstQuali) (MAX(?race_position) as ?worstRace)   where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
     ?drive f1:race_position ?race_position ; 
            f1:quali_position ?quali_position
@@ -270,8 +270,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT(DISTINCT ?drive) as ?q3_quali) where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
     ?drive f1:q3_time ?q3_time
 
@@ -284,19 +284,19 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
-select ?driver (COUNT(?drive) as ?dnf) where {
+select ?lName (COUNT(?drive) as ?dnf) where {
     ?driver a f1:Driver;
             f1:hasDrivenIn ?drive.
 
     ?drive f1:status ?status.
 
     #Get the driver which last name is
-    ?driver person:lastName " SURNAME " .
+    ?driver person:lastName ?lName .
 
     #Exclude all the drives that have been completed
     FILTER ( ?status != "Finished" && REGEX(?status, "^(?!.*Lap).*$"))
 }
-GROUP BY ?driver
+GROUP BY ?lName
 
 """ , """
 
@@ -306,8 +306,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX person: <https://w3id.org/MON/person.owl#>
 
 SELECT (COUNT(*) as ?nVictoryFromPole)  where { 
-    ?driver person:firstName " NAME " ;
-            person:lastName " SURNAME " ;
+    ?driver person:firstName ?fName ;
+            person:lastName ?lName ;
             f1:hasDrivenIn ?drive .
     ?drive f1:race_position "1"^^xsd:int . 
     ?drive f1:quali_position "1"^^xsd:int . 
@@ -322,8 +322,8 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 
 select ?year ?points where {
 
-    ?driver person:firstName " NAME " ;
-           person:lastName " SURNAME " ; 
+    ?driver person:firstName ?fName ;
+           person:lastName ?lName ; 
            f1:hasDrivenIn ?drive .
 
     ?drive f1:during ?rwe ; 
@@ -359,8 +359,8 @@ PREFIX person: <https://w3id.org/MON/person.owl#>
 
 select ?year ?cp_pos where {
 
-    ?driver person:firstName " NAME " ;
-           person:lastName " SURNAME " ; 
+    ?driver person:firstName ?fName ;
+           person:lastName ?lName ; 
            f1:hasDrivenIn ?drive .
 
     ?drive f1:during ?rwe ; 

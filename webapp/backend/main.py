@@ -18,7 +18,9 @@ app.add_middleware(
 # Set up the SPARQLWrapper to perform queries in GraphDB
 # Riccardo sparql = SPARQLWrapper("http://localhost:7200/repositories/formula1")
 
-sparql = SPARQLWrapper("http://manuelubuntu:7200/repositories/Formula1")
+# Manuel sparql = SPARQLWrapper("http://manuelubuntu:7200/repositories/Formula1")
+sparql = SPARQLWrapper("http://localhost:7200/repositories/DB2Project")
+
 sparql.setMethod('POST')
 sparql.setReturnFormat(JSON)
 
@@ -54,8 +56,8 @@ def get_drivers():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/drivers/{driverName}-{driverSurname}/stat")
-def get_driver_stat(driverName, driverSurname):
-    driverStats = stats.driverStats(sparql, driverName, driverSurname)
+@app.get("/drivers/{driverURI}/stats")
+async def get_driver_stat(driverURI):
+    driverStats = stats.driverStats(sparql, driverURI)
     return driverStats
  
