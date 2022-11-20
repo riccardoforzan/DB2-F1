@@ -611,23 +611,93 @@ def driver_dnf(sparql, driverId):
 @param driverId ID of the driver for which stats are requested
 @return dictionary with all the driver stats
 """
-def driverStats(sparql, driverId):
+def driver_stats(sparql, driverId):
 
     stats = {}
 
     try:
-        stats['wins'] = get_number_of_wins(sparql, driverId)
+        stats['cp_win'] = get_number_of_cp_wins(sparql, driverId)
     except Exception as e:
         print(e)
 
     try:
-        stats['constructors'] = get_teams(sparql, driverId)
+        stats['constructor'] = get_teams(sparql, driverId)
     except Exception as e:
         print(e)
 
     try:
-        stats['constructors_wins'] = get_teams_won(sparql, driverId)
+        stats['constructor_win'] = get_teams_won(sparql, driverId)
     except Exception as e:
         print(e)
     
+    try:
+        stats['season_number'] = get_seasons_count(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['races_number'] = get_races_count(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['pole_number'] = get_pole_positions_count(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['victories_number'] = get_wins_count(sparql, driverId)
+    except Exception as e:
+        print(e)
+        
+    try:
+        stats['perc_vic_races'] = get_percentage_of_wins_wrt_total_races(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['podiums'] = get_podiums(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['perc_pod_races'] = get_percentage_of_podiums_wrt_total_races(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['best_quali'] = best_finish_in_qualifying_and_race(sparql, driverId)['bestQuali']
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['worst_quali'] = worst_finish_in_qualifying_and_race(sparql, driverId)['worstQuali']
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['best_race'] = best_finish_in_qualifying_and_race(sparql, driverId)['bestRace']
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['worst_race'] = worst_finish_in_qualifying_and_race(sparql, driverId)['worstRace']
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['q3_quali'] = count_times_q3_reached(sparql, driverId)
+    except Exception as e:
+        print(e)
+    
+    try:
+        stats['dnf'] = driver_dnf(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        stats['victory_from_pole'] = count_first_in_qualifying_and_won_race(sparql, driverId)
+    except Exception as e:
+        print(e)  
+
     return stats

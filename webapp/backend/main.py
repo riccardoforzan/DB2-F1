@@ -5,7 +5,7 @@ from fastapi.encoders import jsonable_encoder
 from fastapi import FastAPI, HTTPException, Form
 from SPARQLWrapper import SPARQLWrapper, JSON
 from fastapi.middleware.cors import CORSMiddleware
-from utils import driverStats 
+from utils import driver_stats
 
 #Read env file
 load_dotenv()
@@ -61,8 +61,8 @@ def get_drivers():
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/drivers/{driverURI}/stats")
-def get_driver_stat(driverURI):
-    stats = driverStats(sparql, driverURI)
+def get_driver_stat(driverURI):    
+    stats = driver_stats(sparql, driverURI)
     return jsonable_encoder(stats)
  
 if __name__ == "__main__":
