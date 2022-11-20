@@ -1,8 +1,16 @@
+import os
+import uvicorn
+from dotenv import load_dotenv
 from typing import Union
 from fastapi import FastAPI, HTTPException, Form
 from SPARQLWrapper import SPARQLWrapper, JSON
 from fastapi.middleware.cors import CORSMiddleware
-import stats 
+from utils import driverStats 
+
+#Read env file
+load_dotenv()
+SPARQL_ENDPOINT_URL = os.getenv('SPARQL_ENDPOINT_URL')
+EXPOSED_PORT = int(os.getenv('EXPOSED_PORT'))
 
 # Create FastAPI endpoint and allow all origins
 app = FastAPI()
@@ -16,14 +24,12 @@ app.add_middleware(
 )
 
 # Set up the SPARQLWrapper to perform queries in GraphDB
-# Riccardo sparql = SPARQLWrapper("http://localhost:7200/repositories/formula1")
-
-sparql = SPARQLWrapper("http://manuelubuntu:7200/repositories/Formula1")
+sparql = SPARQLWrapper(SPARQL_ENDPOINT_URL)
 sparql.setMethod('POST')
 sparql.setReturnFormat(JSON)
 
 @app.post("/query")
-def execute_raw_query(query: str = Form()):
+def execute_raw_query(query):
     sparql.setQuery(query)
 
     try:
@@ -54,8 +60,10 @@ def get_drivers():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/drivers/{driverName}-{driverSurname}/stat")
-def get_driver_stat(driverName, driverSurname):
-    driverStats = stats.driverStats(sparql, driverName, driverSurname)
-    return driverStats
+@app.get("/drivers/{driverURI}/stats")
+def get_driver_stat(driverURI):
+    stats = driverStats(sparql, driverURI)
+    return stats
  
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=EXPOSED_PORT)
