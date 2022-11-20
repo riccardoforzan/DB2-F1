@@ -1,7 +1,7 @@
 import os
 import uvicorn
 from dotenv import load_dotenv
-from typing import Union
+from fastapi.encoders import jsonable_encoder
 from fastapi import FastAPI, HTTPException, Form
 from SPARQLWrapper import SPARQLWrapper, JSON
 from fastapi.middleware.cors import CORSMiddleware
@@ -63,7 +63,7 @@ def get_drivers():
 @app.get("/drivers/{driverURI}/stats")
 def get_driver_stat(driverURI):
     stats = driverStats(sparql, driverURI)
-    return stats
+    return jsonable_encoder(stats)
  
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=EXPOSED_PORT)
