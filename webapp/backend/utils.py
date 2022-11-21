@@ -701,3 +701,34 @@ def driver_stats(sparql, driverId):
         print(e)  
 
     return stats
+
+"""
+@param sparql configured wrapper
+@param driverId ID of the driver for which stats are requested
+@return dictionary with all the driver charts
+"""
+def driver_charts(sparql, driverId):
+
+    charts = {}
+
+    try:
+        charts["driver_championship_points_year_by_year"] = driver_championship_points_year_by_year(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        charts["driver_championship_positions_year_by_year"] = driver_championship_positions_year_by_year(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        charts["get_top_ten_position_by_year"] = get_top_ten_position_by_year(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    try:
+        charts["get_top_five_position_by_year"] = get_top_five_position_by_year(sparql, driverId)
+    except Exception as e:
+        print(e)
+
+    return charts

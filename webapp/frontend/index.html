@@ -242,6 +242,7 @@
                 const driverId = ($(this).val().split("#")[1]).replace('driver','');
                 console.log(driverId);
                 fetchStats(driverId);
+                fetchCharts(driverId);
             });
 
             function fetchStats(driverId) {
@@ -305,7 +306,7 @@
                             "worst_race",
                             "q3_quali",
                             "dnf",
-                            "victory_from_pole",
+                            "victory_from_pole"
                         ];
                         data["perc_vic_races"] =
                             parseFloat(data["perc_vic_races"]).toFixed(2) + "%";
@@ -320,96 +321,116 @@
         </script>
 
         <script>
-            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-            var yValues = [55, 49, 44, 24, 15];
-            var barColors = ["black "];
+            function fetchCharts(driverId) {
+                fetch(url + "/" + driverId + "/charts")
+                        .then((response) => response.json())
+                        .then((data) => {
+                                
+                            var xValues = Object.keys(data["driver_championship_points_year_by_year"])
 
-            new Chart("pointCpYear", {
-                type: "bar",
-                data: {
-                    labels: xValues,
-                    datasets: [
-                        {
-                            backgroundColor: barColors,
-                            data: yValues,
-                        },
-                    ],
-                },
-                options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: "Points year per year in the Driver Championship",
-                    },
-                },
-            });
+                            var yValues = Object.values(data["driver_championship_points_year_by_year"])
+                            var barColors = ["black "];
 
-            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-            var yValues = [55, 49, 44, 24, 15];
-            var barColors = ["black "];
+                            new Chart("pointCpYear", {
+                                type: "bar",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [
+                                        {
+                                            backgroundColor: barColors,
+                                            data: yValues,
+                                        },
+                                    ],
+                                },
+                                options: {
+                                    legend: { display: false },
+                                    title: {
+                                        display: true,
+                                        text: "Points year per year in the Driver Championship",
+                                    },
+                                },
+                            });
 
-            new Chart("positionCpYear", {
-                type: "bar",
-                data: {
-                    labels: xValues,
-                    datasets: [
-                        {
-                            backgroundColor: barColors,
-                            data: yValues,
-                        },
-                    ],
-                },
-                options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: "Points year per year in the Driver Championship",
-                    },
-                },
-            });
+                            
+                            var xValues = Object.keys(data["driver_championship_positions_year_by_year"])
 
-            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-            var yValues = [55, 49, 44, 24, 15];
-            var barColors = ["black "];
+                            var yValues = Object.values(data["driver_championship_positions_year_by_year"])
+                            var barColors = ["black "];
 
-            new Chart("top10year", {
-                type: "bar",
-                data: {
-                    labels: xValues,
-                    datasets: [
-                        {
-                            backgroundColor: barColors,
-                            data: yValues,
-                        },
-                    ],
-                },
-                options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: "Points year per year in the Driver Championship",
-                    },
-                },
-            });
-            new Chart("top5year", {
-                type: "bar",
-                data: {
-                    labels: xValues,
-                    datasets: [
-                        {
-                            backgroundColor: barColors,
-                            data: yValues,
-                        },
-                    ],
-                },
-                options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: "Position year per year in the Driver Championship",
-                    },
-                },
-            });
+                            new Chart("positionCpYear", {
+                                type: "bar",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [
+                                        {
+                                            backgroundColor: barColors,
+                                            data: yValues,
+                                        },
+                                    ],
+                                },
+                                options: {
+                                    legend: { display: false },
+                                    title: {
+                                        display: true,
+                                        text: "Position year per year in the Driver Championship",
+                                    },
+                                },
+                            });
+
+                            
+                            var xValues = Object.keys(data["get_top_ten_position_by_year"])
+
+                            var yValues = Object.values(data["get_top_ten_position_by_year"])
+                            var barColors = ["black "];
+
+                            new Chart("top10year", {
+                                type: "bar",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [
+                                        {
+                                            backgroundColor: barColors,
+                                            data: yValues,
+                                        },
+                                    ],
+                                },
+                                options: {
+                                    legend: { display: false },
+                                    title: {
+                                        display: true,
+                                        text: "Top 10 race finishes year per year",
+                                    },
+                                },
+                            });
+
+                            var xValues = Object.keys(data["get_top_five_position_by_year"])
+
+                            var yValues = Object.values(data["get_top_five_position_by_year"])
+                            var barColors = ["black "];
+                            new Chart("top5year", {
+                                type: "bar",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [
+                                        {
+                                            backgroundColor: barColors,
+                                            data: yValues,
+                                        },
+                                    ],
+                                },
+                                options: {
+                                    legend: { display: false },
+                                    title: {
+                                        display: true,
+                                        text: "Top 5 race finishes year per year",
+                                    },
+                                },
+                            });
+                            
+                        });
+
+            
+        }
         </script>
     </body>
 </html>
