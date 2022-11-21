@@ -532,7 +532,7 @@ def driver_championship_positions_year_by_year(sparql, driverId):
     SELECT ?year ?cp_pos WHERE {
 
         ?driver f1:hasDrivenIn ?drive .
-        FILTER(?driver = f1:driver1)
+        FILTER(?driver = f1:driver$driverId)
 
         ?drive f1:during ?rwe ; 
             f1:cp_position_after_race ?cp_pos . 

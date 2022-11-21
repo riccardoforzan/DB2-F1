@@ -121,21 +121,13 @@ function fetchCharts(driverId) {
         .then((response) => response.json())
         .then((data) => {
 
-            $("#chartsDiv").empty();
-            $("#chartsDiv").append("<canvas id=\"pointCpYear\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
-            $("#chartsDiv").append("<canvas id=\"positionCpYear\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
-            $("#chartsDiv").append("<canvas id=\"top10year\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
-            $("#chartsDiv").append("<canvas id=\"top5year\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
-
             var xValues = Object.keys(
                 data["driver_championship_points_year_by_year"]
             );
-
             var yValues = Object.values(
                 data["driver_championship_points_year_by_year"]
             );
             var barColors = ["black "];
-
             new Chart("pointCpYear", {
                 type: "bar",
                 data: {
@@ -159,12 +151,10 @@ function fetchCharts(driverId) {
             var xValues = Object.keys(
                 data["driver_championship_positions_year_by_year"]
             );
-
             var yValues = Object.values(
                 data["driver_championship_positions_year_by_year"]
             );
             var barColors = ["black "];
-
             new Chart("positionCpYear", {
                 type: "bar",
                 data: {
@@ -186,10 +176,8 @@ function fetchCharts(driverId) {
             });
 
             var xValues = Object.keys(data["get_top_ten_position_by_year"]);
-
             var yValues = Object.values(data["get_top_ten_position_by_year"]);
             var barColors = ["black "];
-
             new Chart("top10year", {
                 type: "bar",
                 data: {
@@ -211,7 +199,6 @@ function fetchCharts(driverId) {
             });
 
             var xValues = Object.keys(data["get_top_five_position_by_year"]);
-
             var yValues = Object.values(data["get_top_five_position_by_year"]);
             var barColors = ["black "];
             new Chart("top5year", {
