@@ -1,0 +1,311 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "position": {
+        "x": 232.3715035427886,
+        "y": -232.8205353967012
+      },
+      "caption": "Person",
+      "labels": [
+        "W3ID"
+      ],
+      "properties": {
+        "lastName": "string",
+        "firstName": "string",
+        "birthDate": "date"
+      },
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 816.4974960713795,
+        "y": -100.45311254287094
+      },
+      "caption": "Country",
+      "labels": [
+        "EULERSHARP"
+      ],
+      "properties": {},
+      "style": {
+        "node-color": "#fda1ff"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 232.3715035427886,
+        "y": 111.05741926361473
+      },
+      "caption": "Driver",
+      "labels": [],
+      "properties": {
+        "number": "int",
+        "code": "string"
+      },
+      "style": {
+        "node-color": "#a4dd00"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 1094.1879872923332,
+        "y": 235.21946197446857
+      },
+      "caption": "Circuit",
+      "labels": [],
+      "properties": {
+        "name": "string",
+        "altitude": "int",
+        "longitude": "decimal",
+        "latitude": "decimal"
+      },
+      "style": {
+        "node-color": "#4d4d4d"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 706.013947591168,
+        "y": 235.21946197446857
+      },
+      "caption": "City",
+      "labels": [
+        "SCHEMA.ORG"
+      ],
+      "properties": {
+        "name": "string"
+      },
+      "style": {
+        "node-color": "#cccccc"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 1497.1178056983922,
+        "y": 292.50320643621126
+      },
+      "caption": "FormulaOne Team",
+      "labels": [
+        "DBPEDIA"
+      ],
+      "properties": {
+        "name": "string"
+      },
+      "style": {
+        "node-color": "#194d33"
+      }
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 1064.187216607925,
+        "y": 542.4557985880157
+      },
+      "caption": "Participate",
+      "labels": [],
+      "properties": {
+        "cp_position_after_race": "int",
+        "cp_points_after_race": "decimal",
+        "number_of_wins_after_race": "int"
+      },
+      "style": {
+        "node-color": "#7b64ff"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 640.4772462727134,
+        "y": 634.1804555860488
+      },
+      "caption": "Race Weekend",
+      "labels": [],
+      "properties": {
+        "name": "string",
+        "date": "date",
+        "round": "int",
+        "year": "int",
+        "fans_rating": "decimal"
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": 232.37150354278856,
+        "y": 454.9353739239307
+      },
+      "caption": "Drive",
+      "labels": [],
+      "properties": {
+        "pitstop_count": "int",
+        "longest_pitstop": "decimal",
+        "fastest_pitstop": "decimal",
+        "race_position": "int",
+        "quali_position": "int",
+        "sprint_position": "int",
+        "q1_time": "decimal",
+        "q2_time": "decimal",
+        "q3_time": "decimal",
+        "cp_points_after_race": "decimal",
+        "cp_position_after_race": "int",
+        "race_fastest_lap": "decimal",
+        "status": "string",
+        "number_of_wins": "int"
+      },
+      "style": {
+        "node-color": "#f44e3b"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": ":nationality",
+      "style": {},
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n2"
+    },
+    {
+      "id": "n1",
+      "type": "rdfs:subClassOf",
+      "style": {},
+      "properties": {},
+      "fromId": "n3",
+      "toId": "n1"
+    },
+    {
+      "id": "n2",
+      "type": ":hasCountry",
+      "style": {},
+      "properties": {},
+      "fromId": "n4",
+      "toId": "n2"
+    },
+    {
+      "id": "n3",
+      "type": ":hasCity",
+      "style": {},
+      "properties": {},
+      "fromId": "n4",
+      "toId": "n5"
+    },
+    {
+      "id": "n4",
+      "type": ":hasCountry",
+      "style": {},
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n2"
+    },
+    {
+      "id": "n6",
+      "type": ":participateIn",
+      "style": {},
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n8"
+    },
+    {
+      "id": "n7",
+      "type": ":during",
+      "style": {},
+      "properties": {},
+      "fromId": "n8",
+      "toId": "n9"
+    },
+    {
+      "id": "n8",
+      "type": ":during",
+      "style": {},
+      "properties": {},
+      "fromId": "n10",
+      "toId": "n9"
+    },
+    {
+      "id": "n9",
+      "type": ":hasDrivenIn",
+      "style": {},
+      "properties": {},
+      "fromId": "n3",
+      "toId": "n10"
+    },
+    {
+      "id": "n10",
+      "type": ":takePlaceIn",
+      "style": {},
+      "properties": {},
+      "fromId": "n9",
+      "toId": "n4"
+    },
+    {
+      "id": "n11",
+      "type": ":driveFor",
+      "style": {},
+      "properties": {},
+      "fromId": "n10",
+      "toId": "n6"
+    }
+  ]
+}
