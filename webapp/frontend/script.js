@@ -3,6 +3,7 @@ const statsSpinner = $("#statsSpinner");
 const statsDiv = $("#statsDiv");
 const chartsSpinner = $("#chartsSpinner");
 const chartsDiv = $("#chartsDiv");
+const chartsContainer = $("#chartsContainer");
 
 driverSelect.on("change", function () {
     const driverId = $(this).val();
@@ -31,7 +32,6 @@ fetch(url)
  * @param {*} driverId
  */
 function fetchStats(driverId) {
-
     statsSpinner.show();
     statsDiv.hide();
 
@@ -113,19 +113,20 @@ function fetchStats(driverId) {
  * @param {*} driverId
  */
 function fetchCharts(driverId) {
-
     chartsSpinner.show();
     chartsDiv.hide();
 
     fetch(url + "/" + driverId + "/charts")
         .then((response) => response.json())
         .then((data) => {
-
-            $("#chartsDiv").empty();
-            $("#chartsDiv").append("<canvas id=\"pointCpYear\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
-            $("#chartsDiv").append("<canvas id=\"positionCpYear\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
-            $("#chartsDiv").append("<canvas id=\"top10year\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
-            $("#chartsDiv").append("<canvas id=\"top5year\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
+            
+            $("#chartsContainer").empty();
+            $("#chartsContainer").append(
+                '<canvas id="pointCpYear" style="display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;"></canvas>' +
+                    '<canvas id="positionCpYear" style="display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;"></canvas>' +
+                    '<canvas id="top10year" style="display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;"></canvas>' +
+                    '<canvas id="top5year" style="display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;"></canvas>'
+            );
 
             var xValues = Object.keys(
                 data["driver_championship_points_year_by_year"]
@@ -150,6 +151,15 @@ function fetchCharts(driverId) {
                     title: {
                         display: true,
                         text: "Points year per year in the Driver Championship",
+                    },
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true,
+                                },
+                            },
+                        ],
                     },
                 },
             });
@@ -178,6 +188,15 @@ function fetchCharts(driverId) {
                         display: true,
                         text: "Position year per year in the Driver Championship",
                     },
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true,
+                                },
+                            },
+                        ],
+                    },
                 },
             });
 
@@ -201,6 +220,15 @@ function fetchCharts(driverId) {
                         display: true,
                         text: "Top 10 race finishes year per year",
                     },
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true,
+                                },
+                            },
+                        ],
+                    },
                 },
             });
 
@@ -223,6 +251,15 @@ function fetchCharts(driverId) {
                     title: {
                         display: true,
                         text: "Top 5 race finishes year per year",
+                    },
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true,
+                                },
+                            },
+                        ],
                     },
                 },
             });
