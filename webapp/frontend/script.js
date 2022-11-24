@@ -121,6 +121,12 @@ function fetchCharts(driverId) {
         .then((response) => response.json())
         .then((data) => {
 
+            $("#chartsDiv").empty();
+            $("#chartsDiv").append("<canvas id=\"pointCpYear\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
+            $("#chartsDiv").append("<canvas id=\"positionCpYear\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
+            $("#chartsDiv").append("<canvas id=\"top10year\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
+            $("#chartsDiv").append("<canvas id=\"top5year\" style=\"display: inline-block;margin-left: 2 em;width: 100%;max-width: 600px;\"></canvas>");
+
             var xValues = Object.keys(
                 data["driver_championship_points_year_by_year"]
             );
