@@ -54,7 +54,7 @@ Start the server by
 
 ```sh
 
-+uvicorn main:app --reload
+uvicorn main:app --reload
 
 ```
 
