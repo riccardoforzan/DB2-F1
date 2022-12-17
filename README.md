@@ -45,3 +45,17 @@ of the data to the production of the <code>.ttl</code> files. All the produced <
 
 All the queries that we want to perform on our Database are saved in the <code>Queries.md</code> file. For all the queries we present the purpose of the query and the code. There are 13 main queries and then other queries 
 that we use in our WebApp for retrieving some driver statistics. If you want to run these queries in your GraphDB instance you can upload all the <code>.ttl</code> files contained in the <code>/rdf</code> directory.
+
+## WebApp
+
+Our WebApp is based on FastAPI and all the code is contained in the <code>/WebApp</code> directory. In the <code>/backend</code> directory you can find the server code. The instruction to start the server are the following.
+
++Start the server by 
+
++```sh
+
++uvicorn main:app --reload
+
++```
+
+Then you can open the <code>index.html</code> file that is contained in the <code>/frontend directory</code>
