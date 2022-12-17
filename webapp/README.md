@@ -1,8 +1,9 @@
 # WebApp
 
 The web application we developed is composed by two parts:
-- Backend
-- Frontend
+
+* Backend
+* Frontend
 
 # Backend
 
