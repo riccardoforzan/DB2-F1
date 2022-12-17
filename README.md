@@ -48,9 +48,8 @@ that we use in our WebApp for retrieving some driver statistics. If you want to 
 
 ## WebApp
 
-Our WebApp is based on FastAPI and all the code is contained in the <code>/WebApp</code> directory. In the <code>/backend</code> directory you can find the server code. The instruction to start the server are the following.
+Our WebApp is based on FastAPI and all the code is contained in the <code>/WebApp</code> directory. In the <code>/backend</code> directory you can find the server code. The instruction to start the server is the following.
 
-Start the server by 
 
 ```sh
 
@@ -58,4 +57,4 @@ uvicorn main:app --reload
 
 ```
 
-Then you can open the <code>index.html</code> file that is contained in the <code>/frontend directory</code>
+Then you can open the <code>index.html</code> file that is contained in the <code>/frontend directory</code> and searching for a driver. Obviously your GraphDB instance must be running.
