@@ -66,4 +66,4 @@ There are 13 main queries and then other queries that we use in our WebApp for r
 If you want to run these queries in your GraphDB instance you can upload all the <code>.ttl</code> files contained in the <code>/rdf</code> directory.
 
 ## WebApp
-You can find instructions inside the [README.md](webapp/README.md)
+You can find instructions inside the [README.md](./webapp/README.md)

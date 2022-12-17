@@ -1,8 +1,8 @@
 # WebApp
 
 The web application we developed is composed by two parts:
-* [Backend](#markdown-header-backend)
-* [Frontend](#markdown-header-frontend)
+- Backend
+- Frontend
 
 # Backend
 
