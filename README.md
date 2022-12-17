@@ -50,12 +50,12 @@ that we use in our WebApp for retrieving some driver statistics. If you want to 
 
 Our WebApp is based on FastAPI and all the code is contained in the <code>/WebApp</code> directory. In the <code>/backend</code> directory you can find the server code. The instruction to start the server are the following.
 
-+Start the server by 
+Start the server by 
 
-+```sh
+```sh
 
 +uvicorn main:app --reload
 
-+```
+```
 
 Then you can open the <code>index.html</code> file that is contained in the <code>/frontend directory</code>
